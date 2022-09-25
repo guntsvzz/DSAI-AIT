@@ -19,7 +19,7 @@ class HashTable:
         #challenge: handle negative keys and string
         if (type(key) == str):
             key = hash(key)  #returns a number for you
-            
+        
         if ((type(key) == int) | (type(key) == float)):
             if (key < 0):
                 key = hash(float(key)) * -1  #first convert to float, then hash it
@@ -37,20 +37,18 @@ class HashTable:
     def insert(self, key, val):
         key    = self._prehash(key)  #clean neg numbers or string
         bucket = self._hash(key)     #get the position of the hashtable
-        
-        # found = False
-        # #check whether the key duplicates
-        # for i, (bkey, bval) in enumerate(bucket):
-        #     if bkey == key:
-        #         found = True
-        #         pos_dup = i
-        #         break
         found, pos_dup, _ = self.search(key)
                 
         #if the key duplicates, only update the value
         if(found):
-            bucket[pos_dup] = (key, val)
-            #Probing 
+            #Probing
+            if bucket[pos_dup] != None:
+                bucket = self._hash(key+1)
+                # print('Bucket',bucket)   
+                bucket.append((key, val))
+            else:
+                bucket[pos_dup] = (key, val) 
+
         else: #if the key does not exist, append and #if something is there already, append
             bucket.append((key, val))
             
