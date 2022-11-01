@@ -48,6 +48,7 @@ RETURN f
 #4.1
 MATCH (u:User)-[:POSTED]->(p:Post)
 RETURN u.name, count(p);
+
 #4.2
 MATCH (u:User)-[:FRIEND]->(m:User)
 RETURN u.name, collect(m) AS FriendsName
