@@ -14,9 +14,13 @@ This project is
     - Graphical User Interface using Tkinter
 - algorithm.py
     1. Transition-Based Dependency Parsing
-        - Stack : Enqueue and Dequeue 
+        - Stack : Enqueue and Dequeue *Complete*
         - Stack and Buffer
+            - Projective using Arc-Standard *Complete*
+            - Nonjective using Arc-Eager *Future*
         - Dependency Tree
+            - BST *Complete*
+            - DFS *Complete*
     2. Graph-Based Dependency Parsing
         - Chu-Liu-Edmonds : Maximum Spanning Tree
 
