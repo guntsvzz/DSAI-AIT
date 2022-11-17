@@ -1,5 +1,5 @@
 # Autistic Application using Dependency Parsing 
-This project aims to create Graphical User Interface(GUI) which is support special kids with autism and other non-verbal communicators and manipulate data using algorithms then comparing each other with time complexity. 
+This project aims to create Graphical User Interface(GUI) which is support special kids with autism and other non-verbal communicators and particularly related to Data structures and algorithms by using Dependency Parsing which is a part of Speech and Language Processing. Then comparing efficiency of each algorithm.
 
 ## Dependencies :
 - Tkinter Library
