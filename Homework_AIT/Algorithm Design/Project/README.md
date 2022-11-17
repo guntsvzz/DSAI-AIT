@@ -11,7 +11,7 @@ This project aims to create Graphical User Interface(GUI) which is support speci
 ## Components
 
 - main.py
-    - Graphical User Interface using Tkinter
+    - Graphical User Interface using Tkinter *InProgress*
 - algorithm.ipynb
     1. Transition-Based Dependency Parsing
         - Stack : Enqueue and Dequeue *Complete*
