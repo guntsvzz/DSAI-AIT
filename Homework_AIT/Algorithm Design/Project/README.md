@@ -11,7 +11,11 @@
     - Graphical User Interface using Tkinter
 - algorithm.py
     1. Transition-Based Dependency Parsing
+        - Stack : Enqueue and Dequeue 
+        - Stack and Buffer
+        - Dependency Tree
     2. Graph-Based Dependency Parsing
+        - Chu-Liu-Edmonds : Maximum Spanning Tree
 
 ## Future Work
 - Implementation Non-projective
