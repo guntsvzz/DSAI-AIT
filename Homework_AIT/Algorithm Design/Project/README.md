@@ -21,7 +21,7 @@ This project aims to create Graphical User Interface(GUI) which is support speci
         - Dependency Tree
             - Breath-first Search (BST) *Complete*
             - Depth-first Search (DFS) *Complete*
-            - Beam Serach *InProgress*
+            - Beam Search *InProgress*
     2. Graph-Based Dependency Parsing
         - Chu-Liu-Edmonds : Maximum Spanning Tree *InProgress*
 
