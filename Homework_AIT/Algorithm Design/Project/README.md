@@ -2,7 +2,7 @@
 
 ## Dependencies :
 - Tkinter Library
-- Scipy Library
+- Spacy Library
     - en_web_core_sm model
 
 ## Components
