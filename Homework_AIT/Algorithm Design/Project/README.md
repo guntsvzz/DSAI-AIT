@@ -1,8 +1,11 @@
 # Autistic Application using Dependency Parsing
+This project is 
 
 ## Dependencies :
 - Tkinter Library
+    - https://docs.python.org/3/library/tkinter.html
 - Spacy Library
+    - https://spacy.io/usage/spacy-101
     - en_web_core_sm model
 
 ## Components
