@@ -25,6 +25,10 @@ This project aims to create Graphical User Interface(GUI) which is support speci
     2. Graph-Based Dependency Parsing
         - Chu-Liu-Edmonds : Maximum Spanning Tree *InProgress*
 
+## Limitation
+- 
+- 
+
 ## Future Work
 - Implementation Non-projective
 - Implementation Oracle using Machine Learning Model
