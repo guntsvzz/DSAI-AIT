@@ -19,8 +19,9 @@ This project aims to create Graphical User Interface(GUI) which is support speci
             - Projective using Arc-Standard *Complete*
             - Nonjective using Arc-Eager *FutureWork*
         - Dependency Tree
-            - BST *Complete*
-            - DFS *Complete*
+            - Breath-first Search (BST) *Complete*
+            - Depth-first Search (DFS) *Complete*
+            - Beam Serach *InProgress*
     2. Graph-Based Dependency Parsing
         - Chu-Liu-Edmonds : Maximum Spanning Tree *InProgress*
 
