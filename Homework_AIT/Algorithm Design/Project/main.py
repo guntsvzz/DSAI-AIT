@@ -1,18 +1,61 @@
 from tkinter import *
-
+    
 root = Tk()
 root.geometry('800x500')
 root.title('Application')
 root.resizable(False,False)
+
+text_list = list()
+
+def addText(text):
+    global text_list 
+    text_list.append(text)
+    
+    return text_list
+def deleteText():
+    global text_list
+    text_list.pop(-1)
+
+    return text_list
+def convertText():
+    word_list = " ".join(text_list)
+    return word_list
+
 #Tap Bar
-frame1 = Frame(root,width=800,height=50,bg='white') 
+frame1 = Frame(root,width=800,height=50,bg='grey') 
 frame1.pack()
-DeleteButton = Button(frame1,text='Delete',bg='grey',width=10,height=3)
+DeleteButton = Button(frame1,text='Delete',bg='grey',width=10,height=3,command=deleteText)
 DeleteButton.place(x=680,y=25,anchor='c')
-ConfirmButton = Button(frame1,text='Confirm',bg='grey',width=10,height=3)
+ConfirmButton = Button(frame1,text='Confirm',bg='grey',width=10,height=3,command=convertText)
 ConfirmButton.place(x=760,y=25,anchor='c')
 #Icon Bar
 frame2 = Frame(root,width=800,height=450,bg='coral') 
 frame2.pack()
+
+
+for x in range(3):
+    Grid.columnconfigure(frame2,x,weight=1)
+for y in range(3):
+    Grid.columnconfigure(frame2,x,weight=1)
+
+A = Button(frame2,text='A',bg='orange',command=lambda:add("I"))
+B = Button(frame2,text='B',bg='orange',command=lambda:add("I"))
+C = Button(frame2,text='C',bg='orange',command=lambda:add("I"))
+D = Button(frame2,text='D',bg='orange',command=lambda:add("I"))
+E = Button(frame2,text='E',bg='orange',command=lambda:add("I"))
+F = Button(frame2,text='F',bg='orange',command=lambda:add("I"))
+G = Button(frame2,text='G',bg='orange',command=lambda:add("I"))
+H = Button(frame2,text='H',bg='orange',command=lambda:add("I"))
+I = Button(frame2,text='I',bg='orange',command=lambda:add("I"))
+
+A.grid(row=0,column=0,sticky='NSEW')
+B.grid(row=0,column=1,sticky='NSEW')
+C.grid(row=0,column=2,sticky='NSEW')
+D.grid(row=1,column=0,sticky='NSEW')
+E.grid(row=1,column=1,sticky='NSEW')
+F.grid(row=1,column=2,sticky='NSEW')
+G.grid(row=2,column=0,sticky='NSEW')
+H.grid(row=2,column=1,sticky='NSEW')
+I.grid(row=2,column=2,sticky='NSEW')
 
 root.mainloop()
