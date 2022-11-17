@@ -12,17 +12,17 @@ This project is
 
 - main.py
     - Graphical User Interface using Tkinter
-- algorithm.py
+- algorithm.ipynb
     1. Transition-Based Dependency Parsing
         - Stack : Enqueue and Dequeue *Complete*
         - Stack and Buffer
             - Projective using Arc-Standard *Complete*
-            - Nonjective using Arc-Eager *Future*
+            - Nonjective using Arc-Eager *FutureWork*
         - Dependency Tree
             - BST *Complete*
             - DFS *Complete*
     2. Graph-Based Dependency Parsing
-        - Chu-Liu-Edmonds : Maximum Spanning Tree
+        - Chu-Liu-Edmonds : Maximum Spanning Tree *InProgress*
 
 ## Future Work
 - Implementation Non-projective
