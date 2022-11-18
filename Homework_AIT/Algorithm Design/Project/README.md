@@ -29,13 +29,15 @@ This project aims to create Graphical User Interface (GUI) which is support spec
         - Chu-Liu-Edmonds : Maximum Spanning Tree *InProgress*
 
 ## Limitation
-- 
+- Compound Sentence has to change ARC-Standard to ARC-Eager algorithm instead 
 - 
 
 ## Future Work
 - Implementation Non-projective
 - Implementation Oracle using Machine Learning Model
-- Implementatio arc-eager
+- Implementatio arc-eager algorithm
+- Agreement Structure : For example: He drink(s)
+- Add Speech
 
 ## Reference
 - Chapter 15 Dependency Parsing, Speech and Language Processing. Daniel Jurafsky & James H. Martin. Copyright c 2019. All rights reserved. Draft of October 2, 2019.
