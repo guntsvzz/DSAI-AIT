@@ -17,3 +17,7 @@
 - AT82.08 Computer Vision (CV)
 
 - AT82.10 Recent Trends in Machine Learning (RTML)
+
+# Semester Aug 2023 
+
+- AT 
