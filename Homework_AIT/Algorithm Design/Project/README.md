@@ -1,8 +1,7 @@
 # Autistic Application using Dependency Parsing 
 This project aims to create Graphical User Interface (GUI) which is support special kids with autism and other non-verbal communicators and particularly related to Data structures and algorithms by using Dependency Parsing which is a part of Speech and Language Processing. Then comparing efficiency of each algorithm.
 
-*Tentative Image, it will be change later on*  
-<img src = "figures/proloque2go.jpeg" width="600">
+<img src = "figures/GUI.jpg" width="600">
 
 ## Dependencies :
 - Tkinter Library
@@ -14,7 +13,7 @@ This project aims to create Graphical User Interface (GUI) which is support spec
 ## Components
 
 - main.py
-    - Graphical User Interface using Tkinter *InProgress*
+    - Graphical User Interface using Tkinter *Complete*
 - algorithm.ipynb
     1. Transition-Based Dependency Parsing
         - Stack : Enqueue and Dequeue *Complete*
@@ -37,7 +36,7 @@ This project aims to create Graphical User Interface (GUI) which is support spec
 - Implementation Oracle using Machine Learning Model
 - Implementatio arc-eager algorithm
 - Agreement Structure : For example: He drink(s)
-- Add Speech
+- Add Speech interactive
 
 ## Reference
 - Chapter 15 Dependency Parsing, Speech and Language Processing. Daniel Jurafsky & James H. Martin. Copyright c 2019. All rights reserved. Draft of October 2, 2019.
