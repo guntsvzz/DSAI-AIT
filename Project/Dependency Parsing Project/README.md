@@ -14,13 +14,21 @@ This project aims to create Graphical User Interface (GUI) which is support spec
 
 - main.py
     - Graphical User Interface using Tkinter *Complete*
-- algorithm.ipynb
+- util.py
+    - Dependency Grammar
+        - Stack
+        - Stack and Buffer
+    - Graph
+        - BFS
+        - DFS
+
+- DepenceyParsing.ipynb
     1. Transition-Based Dependency Parsing (Projective)
         - Stack : Enqueue and Dequeue *Complete*
         - Stack and Buffer
             - Projective using Arc-Standard *Complete*
             - Nonjective using Arc-Eager *FutureWork*
-        - Dependency Tree
+        - Dependency Graph
             - Breath-first Search (BST) *Complete*
             - Depth-first Search (DFS) *Complete*
             - Beam Search *FutureWork*
