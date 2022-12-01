@@ -36,9 +36,27 @@ def mainScreen():
         return text_list
         
     def convertText():
+        global s,word_list,graph,new_config
         word_list = " ".join(text_list)
-        print(word_list)
-        return word_list
+        # print(word_list)
+        # return word_list
+        word_list = convertToSpacy(word_list)
+        #Stack
+        s = Stack()
+        for i in range(len(word_list)):
+            s.push(word_list[i][1])
+        print(s.container)
+        #StackandBuffer
+        new_config = SaB(word_list)
+        graph = convertToList(new_config)
+        print(graph)
+        #BFS
+        BFS(graph,'0')
+        #DFS
+        DFS(graph,'0')
+        #Comparision
+        comparision(word_list,s,graph)
+
 
     txt_input = StringVar(value="0")
     text_list = []

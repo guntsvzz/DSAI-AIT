@@ -1,6 +1,10 @@
-from gui import mainScreen
 import spacy
 from spacy import displacy
+import matplotlib.pyplot as plt
+import numpy as np
+import math
+import random
+from timeit import timeit
 
 def convertToSpacy(text):
     nlp=spacy.load('en_core_web_sm/en_core_web_sm-3.4.1/')
@@ -156,4 +160,28 @@ def DFS(graph,s):
             DFS(graph,neighbor)
 
 
-###############################################################################################3
+###############################################################################################
+
+def comparision(word_list,s,graph):
+    num_samples = range(len(word_list))
+    c = 1/500000
+    time_interval_Stack = []
+    time_interval_BFS = []
+    time_interval_DFS = []
+
+    for n in num_samples:
+        time1 = timeit('s.push(num_samples)',number=1,globals=globals())
+        time_interval_Stack.append(time1)
+        time2 = timeit('BFS(graph,str(0))',number=1,globals=globals())
+        time_interval_BFS.append(time2)
+        time3 = timeit('DFS(graph,str(0))',number=1,globals=globals())
+        time_interval_DFS.append(time3)
+
+    plt.plot(num_samples,time_interval_Stack,label='Stack')
+    plt.plot(num_samples,time_interval_BFS,label='BFS')
+    plt.plot(num_samples,time_interval_DFS,label='DFS')
+    plt.legend()
+    plt.xlabel("Number of samples")
+    plt.ylabel("Time Complexity")
+    plt.title("Time Complexity Comparison")
+    plt.show()
