@@ -23,9 +23,9 @@ This project aims to create Graphical User Interface (GUI) which is support spec
         - Dependency Tree
             - Breath-first Search (BST) *Complete*
             - Depth-first Search (DFS) *Complete*
-            - Beam Search *InProgress*
+            - Beam Search *FutureWork*
     2. Graph-Based Dependency Parsing
-        - Chu-Liu-Edmonds : Maximum Spanning Tree *InProgress*
+        - Chu-Liu-Edmonds : Maximum Spanning Tree *FutureWork*
 
 ## Limitation
 - Compound Sentence has to change ARC-Standard to ARC-Eager algorithm instead 
