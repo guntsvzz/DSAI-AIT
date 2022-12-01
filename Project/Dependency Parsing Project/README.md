@@ -29,7 +29,6 @@ This project aims to create Graphical User Interface (GUI) which is support spec
 
 ## Limitation
 - Compound Sentence has to change ARC-Standard to ARC-Eager algorithm instead 
-- 
 
 ## Future Work
 - Implementation Non-projective
