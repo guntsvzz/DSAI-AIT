@@ -163,22 +163,27 @@ def DFS(graph,s):
 
 ###############################################################################################
 
-def comparision(word_list,s,graph):
-    num_samples = range(len(word_list))
+def comparision(word_list):
+    num_samples = [i for i in range(len(word_list))]
     c = 1/500000
+    s = Stack()
     time_interval_Stack = []
+    time_interval_Graph = []
     time_interval_BFS = []
     time_interval_DFS = []
 
     for n in num_samples:
-        time1 = timeit('s.push(num_samples)',number=1,globals=globals())
+        time1 = timeit('s.push(n)',number=1,globals=globals())
         time_interval_Stack.append(time1)
-        time2 = timeit('BFS(graph,str(0))',number=1,globals=globals())
-        time_interval_BFS.append(time2)
-        time3 = timeit('DFS(graph,str(0))',number=1,globals=globals())
-        time_interval_DFS.append(time3)
+        time2 = timeit('DependencyGraph(word_list,new_config)',number=1,globals=globals())
+        time_interval_Graph.append(time2)
+        time3 = timeit('BFS(graph,str(n))',number=1,globals=globals())
+        time_interval_BFS.append(time3)
+        time4 = timeit('DFS(graph,str(n))',number=1,globals=globals())
+        time_interval_DFS.append(time4)
 
     plt.plot(num_samples,time_interval_Stack,label='Stack')
+    plt.plot(num_samples,time_interval_Graph,label='Graph')
     plt.plot(num_samples,time_interval_BFS,label='BFS')
     plt.plot(num_samples,time_interval_DFS,label='DFS')
     plt.legend()
