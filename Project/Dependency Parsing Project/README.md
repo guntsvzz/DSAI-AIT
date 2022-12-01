@@ -40,5 +40,5 @@ This project aims to create Graphical User Interface (GUI) which is support spec
 
 ## Reference
 - Chapter 15 Dependency Parsing, Speech and Language Processing. Daniel Jurafsky & James H. Martin. Copyright c 2019. All rights reserved. Draft of October 2, 2019.
-- Covington, M. (2001). A fundamental algorithm for dependency parsing. In Proceedings of the 39th Annual ACM Southeast Conference, 95–102.
-- Nivre, J. (2003). An efficient algorithm for projective dependency parsing. In Proceedings of the 8th International Workshop on Parsing Technologies (IWPT).
+- Covington, M. A. (2001). A fundamental algorithm for dependency parsing. In Proceedings of the 39th annual ACM southeast conference (Vol. 1).
+- Nivre, J. (2003, April). An efficient algorithm for projective dependency parsing. In Proceedings of the eighth international conference on parsing technologies (pp. 149-160).
