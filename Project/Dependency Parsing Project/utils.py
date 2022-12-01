@@ -163,7 +163,7 @@ def DFS(graph,s):
 
 ###############################################################################################
 
-def comparision(word_list,new_config):
+def comparision(word_list,new_config,DGraph,s):
     import time
     import matplotlib.pyplot as plt
     time_interval_Stack = []
