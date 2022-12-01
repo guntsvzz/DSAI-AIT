@@ -55,7 +55,7 @@ def mainScreen():
         #DFS
         DFS(graph,'0')
         #Comparision
-        comparision(word_list,s,graph)
+        comparision(word_list,new_config)
 
 
     txt_input = StringVar(value="0")

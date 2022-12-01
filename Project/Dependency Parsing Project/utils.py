@@ -163,24 +163,34 @@ def DFS(graph,s):
 
 ###############################################################################################
 
-def comparision(word_list):
-    num_samples = [i for i in range(len(word_list))]
-    c = 1/500000
-    s = Stack()
+def comparision(word_list,new_config):
+    import time
+    import matplotlib.pyplot as plt
     time_interval_Stack = []
     time_interval_Graph = []
     time_interval_BFS = []
     time_interval_DFS = []
-
+    num_samples = [i for i in range(len(word_list))]
     for n in num_samples:
-        time1 = timeit('s.push(n)',number=1,globals=globals())
-        time_interval_Stack.append(time1)
-        time2 = timeit('DependencyGraph(word_list,new_config)',number=1,globals=globals())
-        time_interval_Graph.append(time2)
-        time3 = timeit('BFS(graph,str(n))',number=1,globals=globals())
-        time_interval_BFS.append(time3)
-        time4 = timeit('DFS(graph,str(n))',number=1,globals=globals())
-        time_interval_DFS.append(time4)
+        start_time = time.time()
+        s.push(n)
+        elapsed_time = time.time() - start_time
+        time_interval_Stack.append(elapsed_time)
+
+        start_time = time.time()
+        DependencyGraph(word_list,new_config)
+        elapsed_time = time.time() - start_time
+        time_interval_Graph.append(elapsed_time)
+
+        start_time = time.time()
+        BFS(DGraph,str(0))
+        elapsed_time = time.time() - start_time
+        time_interval_BFS.append(elapsed_time)
+
+        start_time = time.time()
+        DFS(DGraph,str(0))
+        elapsed_time = time.time() - start_time
+        time_interval_DFS.append(elapsed_time)
 
     plt.plot(num_samples,time_interval_Stack,label='Stack')
     plt.plot(num_samples,time_interval_Graph,label='Graph')
