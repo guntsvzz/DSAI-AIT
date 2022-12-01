@@ -8,21 +8,19 @@ from timeit import timeit
 
 ###############################################################################################
 
+import spacy
+from spacy import displacy
 def convertToSpacy(text):
     nlp=spacy.load('en_core_web_sm/en_core_web_sm-3.4.1/')
-    # text= 'book the flight through houston' #arc-eager
-    # text = 'I am hungry' #arc-standard
-    # text = 'Viken will join the board as a nonexecutive director Nov 29'
     word_list = list()
-    # dep_list = list()
+    print ("{:<5} | {:<10} | {:<8} | {:<10} | {:<20}".format('Index','Token','Relation','Head', 'Children'))
+    print ("-" * 70)
     for index,token in enumerate(nlp(text)):
-        print(index+1, token.text,'=>',token.dep_,'=>',token.head.text)
-        # text = np.array([index+1,token.text,token.dep_])
-        # np.append(list_text,text)
+        print ("{:<5} | {:<10} | {:<8} | {:<10} | {:<20}"
+         .format(str(index+1),str(token.text), str(token.dep_), str(token.head.text), str([child for child in token.children])))
         word_list.append((index+1,token.text,token.head.text,token.dep_)) #token.dep_ 
-        # dep_list.append((token.text,token.dep_,token.head.text))
     displacy.render(nlp(text),jupyter=True)
-        
+      
     return word_list
 
 ###############################################################################################
@@ -112,16 +110,17 @@ def SaB(word_list):
     print(new_config)
     return new_config
 
-def convertToList(new_config):
-    #store to list
+def DependencyGraph(word_list,new_config):
     from collections import defaultdict
-    graph = defaultdict(list)
+    graph_default = defaultdict(list)
+    for i in range(len(word_list)+1):
+        # for j in range(len(word_list)+1):
+        # graph_default.setdefault(i)
+        graph_default[f'{i}'] = []
     for i in new_config.arcs:
-        graph[f"{i[0][0]}"].append(f"{i[2][0]}")
-    print('Original graph :\n',graph)
-    graph_sort = dict(sorted(graph.items()))
-    print('Sorted graph :\n', graph_sort)
-    return graph
+    #     graph_default[i[0][0]][i[2][0]] = ((i[2][0],i[2][0]))
+        graph_default[f"{i[0][0]}"].append(f'{i[2][0]}')
+    return graph_default
 
 ###############################################################################################3
 

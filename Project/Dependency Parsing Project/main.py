@@ -7,11 +7,11 @@ def mainScreen():
     location = [50,150,250,350,450,550]
     list1 = ['I' ,'you'  ,'it'   ,'this','that' ,'we']
     list2 = ['is','am'   ,'are'  ,'do'  ,'have' ,'can']
-    list3 = ['go', 'want','like' ,'get' ,'help' ,'stop']
+    list3 = ['go', 'want','like' ,'get' ,'help' ,'eat']
     list4 = ['to','in'   ,'for'  ,'for' ,'up'   ,'with']
-    list5 = ['not','more','good','now','different','finished']
+    list5 = ['apple','banana','orange','grape','durian','Kiwi']
     list6 = ['what','how','when','where','who','why']
-    list7 = ['hi','please','wait','let\'s','yes','no']
+    list7 = ['sleep','talk','swim','write','read','drink']
     list8 = ['and','or','because','but','so','if'] #,'than','as','else','until','a','the']
 
     window = Tk()
@@ -48,7 +48,7 @@ def mainScreen():
         print(s.container)
         #StackandBuffer
         new_config = SaB(word_list)
-        graph = convertToList(new_config)
+        graph = DependencyGraph(word_list,new_config)
         print(graph)
         #BFS
         BFS(graph,'0')
