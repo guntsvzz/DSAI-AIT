@@ -1,5 +1,5 @@
 # ignore ALL .pdf files
-Reference/*.pdf
+reference/*.pdf
 
 dependencyTree.ipynb
 
