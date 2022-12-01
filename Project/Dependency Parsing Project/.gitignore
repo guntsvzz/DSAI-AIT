@@ -1,0 +1,6 @@
+# ignore ALL .pdf files
+Reference/*.pdf
+
+dependencyTree.ipynb
+
+arch_depends_oracle.py
