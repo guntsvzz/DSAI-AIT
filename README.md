@@ -14,10 +14,11 @@
 
 - AT82.05 Artificial Intelligence: Natural Language Understanding (NLU)
 
-- AT82.08 Computer Vision (CV)
-
 - AT82.10 Recent Trends in Machine Learning (RTML)
 
-# Semester Aug 2023 
+- AT82.09 Human-Computer Interaction and Information Visualization
 
-- AT 
+# Inter Semester (Tentative)
+- AT82.08 Computer Vision (CV)
+
+# Semester Aug 2023 
