@@ -16,7 +16,7 @@
 
 - AT82.10 Recent Trends in Machine Learning (RTML)
 
-- AT82.09 Human-Computer Interaction and Information Visualization
+- AT82.09 Human-Computer Interaction and Information Visualization (HCI)
 
 # Inter Semester (Tentative)
 - AT82.08 Computer Vision (CV)
