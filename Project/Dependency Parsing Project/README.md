@@ -3,6 +3,9 @@ This project aims to create Graphical User Interface (GUI) which is support spec
 
 <img src = "figures/GUI.jpg" width="600">
 
+## Presentation :
+- http://bit.ly/3uf1Txs
+
 ## Dependencies :
 - Tkinter Library
     - https://docs.python.org/3/library/tkinter.html
