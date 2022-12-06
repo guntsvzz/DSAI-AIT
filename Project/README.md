@@ -1,8 +1,8 @@
 # Project
 - AT70.24 Data Structures and Algorithms
-    - Dependency Parsing Project
+    - Dependency Parsing 
 - AT82.01 Computer Programming for Data Science and Artificial Intelligence 
-    - EEG Chronic Stress Project
+    - EEG Chronic Stress 
 - AT82.02 Data Modeling and Management (DMM)
     - Relational Model
     - Document Model
