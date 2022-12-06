@@ -8,5 +8,5 @@
     - Document Model
     - Graph Model
 - AT82.03 Machine Learning (ML)
-    - Training Mario with DQN
+    - DDQN, PG and PPO with Mario
 
