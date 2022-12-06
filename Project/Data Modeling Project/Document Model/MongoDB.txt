@@ -1,0 +1,174 @@
+### Question 1 Insert a new customer
+db.customer.insertOne(
+    {
+        "customer_id": 101,
+        "firstname": "Todsavad",
+        "middlename": null,
+        "lastname": "Tangtortan",
+        "mobile_number": "213-893-4886",
+        "points": 0,
+        "username": "todsavad123",
+        "email": "todsavad123@gmail.com.",
+        "password": "e57hjrSGv",
+        "address": [
+            {
+                "street": "589 Bangna Center",
+                "city": "Bangna",
+                "state": null,
+                "country": "Thailand",
+                "zipcode": 10270
+            }
+        ],
+        "registeredAt": ISODate(),
+        "createdAt": ISODate()
+    }
+)
+
+### Question 2 Update product price
+db.product.updateOne(
+    { "product_id" : 2, "product_types.price": 5353 }, 
+    { $set: { "product_types.$.price": 1012 } }
+)
+
+
+db.product.find(
+	{$'product_types.price' : {$gt: 500}}
+)
+
+
+### Show product price which is more than 5000 
+db.product.find(
+	{'product_types.price' : {$gt: 5000}},
+	{product_id:1,'product_types.price':1}
+).sort({'product_types.price': 1})
+
+
+### Show product is not available to sell
+db.product.find(
+	{'product_types.details.avalibilty' : "false"},
+	{product_id:1,product_name:1,'product_types.details.avalibilty':1,'product_types.details.size':1}
+)
+
+### Show the number of item with each vendors 
+db.product.aggregate([
+  { $unwind: '$product_types' },
+  { $unwind: '$product_types.details' },
+  {
+    $group: {
+      _id: '$vendor_id',
+      Total: { $sum: '$product_types.details.quantity' },
+    },
+  }
+]).sort({Total:-1})
+
+### Which payment method that customer prefer
+db.order.aggregate([{
+ $lookup: {
+  from: 'customer',
+  localField: 'customer_id',
+  foreignField: 'customer_id',
+  as: 'CustomerInfo'
+ }
+}, {
+ $group: {
+  _id: '$payment_method',
+  count: {
+   $sum: 1
+  }
+ }
+}])
+
+
+#######################################
+{
+  from: 'product',
+  localField: 'vendor_id',
+  foreignField: 'vendor_id',
+  as: 'Result'
+}
+#######################################
+
+
+
+
+
+
+
+
+
+
+
+db.course.insertOne(
+    {
+        "course_id ": 31,
+        "title": "Machine learning",
+        "category ": ["Machine learning", "AI"],
+        "learningHour ": "100",
+        "CourseFee ": "30000",
+        "Language": "English",
+        "teachBy ": "Matthew Dailey",
+        "instructorrating": "4.95",
+        "skills": ["Python","Machine Learning","AI"],
+        "syllabus": Introduction to Machine Learning,
+        "createdAt": ISODate()
+    }
+)
+
+db.order.aggregate([{
+ $lookup: {
+  from: 'registraion',
+  localField: 'registraion_id',
+  foreignField: 'registraion_id',
+  as: 'registraionInfo'
+ }
+}, {
+ $group: {
+  _id: '$learner_id',
+  count: {
+   $sum: 1
+  }
+ }
+}])
+
+
+db.order.aggregate([{
+ $lookup: {
+  from: 'course',
+  localField: 'course_id',
+  foreignField: 'course_id',
+  as: 'courseInfo'
+ }
+}, {
+ $group: {
+  _id: '$teachBy',
+  count: {
+   $sum: 1
+  }
+ }
+}])
+
+
+
+
+db.course.aggregate([{
+ $match: {
+  category : ["SQL", "Data Analysis"]
+  learningHour : {$lt : 20}
+  Language : "English"
+ }
+}])
+
+db.learner.aggregate([{
+ $lookup: {
+  from: 'registraion',
+  localField: 'registraion_id',
+  foreignField: 'registraion_id',
+  as: 'registraionInfo'
+ }
+}, {
+ $match: {
+  skills : ["SQL", "NoSQL"]
+  registraionInfo.createdAt : {$gte:ISODate("2022-01-01"),$lt:ISODate("2022-12-31"}
+  }
+ }
+}])

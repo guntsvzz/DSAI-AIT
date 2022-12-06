@@ -1,0 +1,76 @@
+# load item csv into node graph
+load csv with headers from 'file:///item.csv' as row
+merge (i:Item {item_id: row.item_id,
+category_id: row.category_id,
+category_name: row.category_name,
+item_name: row.item_name,
+country_name: row.country_name,
+description: row.description,
+item_rating: row.item_rating,
+price: row.price,
+discount: row.discount,
+price_afd: row.price_afd,
+quantity: row.quantity,
+year_of_production: row.year_of_production,
+rating: row.rating,
+vendor_id: row.vendor_id,
+createdAt: row.createdAt
+})
+return count(i)
+
+# load vendor csv into node graph
+load csv with headers from 'file:///vendor.csv' as row
+merge (v:vendor {
+    vendor_id: row.vendor_id,
+    vendor_name: row.vendor_name,
+    email: row.email,
+    loacation: row.location,
+    originCountry: row.originCountry,
+    phone_number: row.phone_number,
+    status: row.status,
+    createdAt: row.createdAt,
+    updatedAt: row.updatedAt
+})
+return count(v)
+
+# create relationship
+match (i:Item)
+match (v:vendor)
+where i.vendor_id = v.vendor_id
+and i.vendor_id is not null
+and v.vendor_id is not null
+merge (v)-[S:Supplies]->(i)
+
+
+# load vendor csv into node graph
+load csv with headers from 'file:///vendor.csv' as row
+merge (v:vendor {
+    vendor_id: row.vendor_id,
+    storename: row.storename,
+    firstname : row.firstname,
+    lastname : row.lastname,
+    mobile_number : row.mobile_number,
+    email: row.email,
+    address: row.address,
+    password: row.password,
+    registeredAt: row.registeredAt,
+    updatedAt: row.updatedAt
+})
+return count(v)
+
+#delete fk
+
+
+create (ml:Course {
+    course_id : 31,
+    title: Machine learning,
+    category : Machine learning,
+    learningHour : 100,
+    CourseFee : 30000,
+    Language: "English",
+    teachBy : Matthew Dailey,
+    instructorrating: 4.95,
+    skills: [Python Machine,Learning AI],
+    syllabus: Introduction to Machine Learning
+    createdAt: date()
+})

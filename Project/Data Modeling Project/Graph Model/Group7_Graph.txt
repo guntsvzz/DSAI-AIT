@@ -1,0 +1,180 @@
+LOAD CSV WITH HEADERS from 'file:///vendorGraph.csv' as row 
+merge (v:vendor {
+    vendor_id : row.vendor_id,
+    first_name : row.first_name,
+    last_name : row.last_name,
+    username : row.username,
+    password: row.password,
+    mobile_number : row.mobile_number,
+    email: row.email,
+    registeredAt: row.registeredAt,
+    createdAt: row.createdAt,
+    address : row.address,
+    city_name : row.city_name
+})
+return count(v)
+
+LOAD CSV WITH HEADERS from 'file:///customerGraph.csv' as row 
+merge (c:customer {
+    customer_id: row.customer_id,
+    firstname : row.firstname,
+    lastname : row.lastname,
+    username : row.username,
+    password: row.password,
+    mobile_number : row.mobile_number,
+    email: row.email,
+    registeredAt: row.registeredAt,
+    createdAt: row.createdAt,
+    address : row.address,
+    location_id : row.location_id
+})
+return count(c)
+
+
+LOAD CSV WITH HEADERS from 'file:///reviewGraph.csv' as row 
+merge (r:review {
+    review_id: row.review_id,
+    customer_id: row.customer_id,
+    product_id : row.product_id,
+    feedback : row.feedback,
+    rating : row.rating,
+    createdAt : row.createdAt
+})
+return count(r)
+
+LOAD CSV WITH HEADERS from 'file:///locationGraph.csv' as row 
+merge (l:location {
+    location_id: row.location_id,
+    city_name: row.city_name,
+    street_name : row.street_name,
+    state_name : row.state_name
+})
+return count(l)
+
+LOAD CSV WITH HEADERS from 'file:///productGraph.csv' as row 
+merge (p:product {
+    product_id : row.product_id,
+    vendor_id : row.vendor_id,
+    category_name : row.category_name,
+    price : row.price,
+    quantity : row.quantity,
+    availability : row.availability,
+    description: row.description
+})
+return count(p)
+
+LOAD CSV WITH HEADERS from 'file:///orderGraph.csv' as row 
+merge (o:order {
+    order_id: row.order_id,
+    invoice_number : row.invoice_number,
+    customer_id : row.customer_id,
+    ordered_date : row.ordered_date,
+    createdAt : row.createdAt,
+    updatedAt: row.updatedAt,
+    delivery_date : row.delivery_date,
+    delivery_status : row.delivery_status,
+    returned_reason : row.returned_reason,
+    street_name : row.street_name
+})
+return count(o)
+
+LOAD CSV WITH HEADERS from 'file:///orderproductGraph.csv' as row 
+merge (op:orderproduct {
+    order_product_id : row.order_product_id,
+    order_id: row.order_id,
+    product_id : row.product_id,
+    createdAt : row.createdAt,
+    updatedAt: row.updatedAt,
+    quantity : row.quantity
+})
+return count(op)
+
+# create relationship customer to review
+match (c:customer)
+match (r:review)
+where c.customer_id = r.customer_id
+and c.customer_id is not null
+and r.customer_id is not null
+merge (c)-[Re:Reviews]->(r)
+
+# create relationship customer to order
+match (c:customer)
+match (o:order)
+where c.customer_id = o.customer_id
+and c.customer_id is not null
+and o.customer_id is not null
+merge (c)-[O:Orders]->(o)
+
+# create relationship customer to location
+match (c:customer)
+match (l:location)
+where c.location_id = l.location_id
+and c.location_id is not null
+and l.location_id is not null
+merge (c)-[Li:Livein]->(l)
+
+# create relationship product to review
+match (p:product)
+match (r:review)
+where p.product_id = r.product_id
+and p.product_id is not null
+and r.product_id is not null
+merge (c)-[H:Has]->(r)
+
+# create relationship vendor to product
+match (v:vendor)
+match (p:product)
+where v.vendor_id = p.vendor_id
+and v.vendor_id is not null
+and p.vendor_id is not null
+merge (v)-[S:Supplies]->(p)
+
+# create relationship vendor to location #fix
+match (v:vendor)
+match (l:location)
+where v.city_name = l.city_name
+and v.city_name is not null
+and l.city_name is not null
+merge (v)-[Lo:LocateAt]->(l)
+
+# create relationship orderproduct to product
+match (op:orderproduct)
+match (p:product)
+where op.product_id = p.product_id
+and op.product_id is not null
+and p.product_id is not null
+merge (op)-[C:Contains]->(p)
+
+# create relationship order to orderproduct
+match (o:order)
+match (op:orderproduct)
+where o.order_id = op.order_id
+and o.order_id is not null
+and op.order_id is not null
+merge (o)-[Sho:Show]->(op)
+
+# create relationship order to payment
+match (o:order)
+match (pay:payment)
+where o.order_id = pay.payment_id
+and o.order_id is not null
+and pay.payment_id is not null
+merge (o)-[M:Makes]->(pay)
+
+# create relationship order to location #fix
+match (o:order)
+match (l:location)
+where o.street_name = l.street_name
+and o.street_name is not null
+and l.street_name is not null
+merge (o)-[Sh:ShipTo]->(l)
+
+
+# delivery_date
+MATCH(c)
+DETACH DELETE c
+
+
+MATCH (o:order) 
+WHERE o.delivery_status = "delivered"
+RETURN avg(duration.inDays(o.delivery_date, o.ordered_date)) AS avgTimeDelivery;
