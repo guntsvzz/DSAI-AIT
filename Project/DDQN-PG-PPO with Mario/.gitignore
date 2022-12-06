@@ -1,2 +1,4 @@
-DQN with Mario self-learning\Reference\GradientPolicy\*.pdf
-DQN with Mario self-learning\Reference\Q-Learning\*.pdf
+# ignore ALL .pdf files
+
+reference/DQN/*.pdf
+reference/GradientPolicy/*.pdf
