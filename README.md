@@ -21,4 +21,8 @@
 # Inter Semester (Tentative)
 - AT82.08 Computer Vision (CV)
 
-# Semester Aug 2023 
+# Semester Aug 2024 (Tentative)
+- Thesis
+
+# Semester Jan 2024 (Tentative)
+- Thesis
