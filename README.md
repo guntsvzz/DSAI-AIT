@@ -2,7 +2,7 @@
 
 # Semester Aug 2022
 - AT70.24 Data Structures and Algorithms
-[a relative link]/Course/Algorithms%20Design%20and%20Analysis/
+[a relative link](/Course/Algorithms%20Design%20and%20Analysis/)
 - AT82.01 Computer Programming for Data Science and Artificial Intelligence 
 
 - AT82.02 Data Modeling and Management (DMM)
