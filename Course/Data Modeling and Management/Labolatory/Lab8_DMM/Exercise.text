@@ -1,0 +1,55 @@
+##Question 1
+#create Rachel and Monica User
+CREATE  (r:User { name: "Rachel", city: "London" }),
+        (m:User { name: "Monica", city: "New York" }),
+        (r)-[:FRIEND {acceptedAt:"2022-10-28"}]-> (m)
+#1.1create Phoebe and Joey User
+CREATE  (p:User { name: "Phoebe", job: "Masseuse" }),
+        (j:User { name: "Joey", job: "Actor" }),
+        (p)-[f:FRIEND {acceptedAt:"2022-10-28"}]-> (j)
+Return p, f, j
+#1.2Matching them
+MATCH (r:User), (m:User),(p:User),(j:User)
+WHERE r.name="Rachel" AND m.name="Monica" AND p.name = "Phoebe" AND j.name="Joey"
+CREATE  (m)-[:FRIEND {acceptedAt: date() }]-> (p),
+        (j)-[:FRIEND {acceptedAt: date() }]-> (r)
+RETURN r,m,p,j;
+
+
+##Question 2
+MATCH (m:User), (ph:User), (j:User)
+WHERE m.name="Monica" AND ph.name="Phoebe" AND j.name="Joey"
+CREATE (p10:Post { id:"10", message: "Hi, I'm Monica" } ),
+       (p11:Post { id:"11", message: "Hi, I'm Phoebe" } ),
+       (p12:Post { id:"12", message: "Hi, I'm Joey" } ),
+       (m)-[:POSTED]->(p10),
+       (ph)-[:POSTED]->(p11),
+       (j)-[:POSTED]->(p12),
+       (p10)<-[:REACTED { type: "Haha", createdAt: datetime() } ]-(ph),
+       (p11)<-[:REACTED { type: "Care", createdAt: datetime() } ]-(j),
+       (p12)<-[:REACTED { type: "Love", createdAt: datetime() } ]-(m),
+       (j)-[:COMMENTED { message: "This is awesome.", createdAt: date() }]->(p10),
+       (m)-[:COMMENTED { message: "Omg! Love it.", createdAt: date() }]->(p11),
+       (ph)-[:COMMENTED { message: "Wow! Mind blowing.", createdAt: date() }]->(p12)
+RETURN m,ph,j,p10,p11,p12;
+
+
+##Question3
+#3.1
+MATCH (n:User)-[:REACTED]->(p:Post)<-[:POSTED]-(m:User)
+WHERE m.name = "Monica"
+RETURN n;
+#3.2
+MATCH (f:User)<-[:FRIEND]-(n:User)-[:REACTED]->(p:Post)<-[:POSTED]-(m:User)
+WHERE m.name="Monica"
+RETURN f
+
+##Question4
+#4.1
+MATCH (u:User)-[:POSTED]->(p:Post)
+RETURN u.name, count(p);
+
+#4.2
+MATCH (u:User)-[:FRIEND]->(m:User)
+RETURN u.name, collect(m) AS FriendsName
+ 
