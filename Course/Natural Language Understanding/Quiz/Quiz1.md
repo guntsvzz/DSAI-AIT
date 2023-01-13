@@ -1,4 +1,4 @@
-## Quiz 1 : Word2Vec
+# Quiz 1 : Word2Vec
 
 1. Word2vec does not work well with (Out of Vocabulary) OOV. What is one possible way to solve this?
     - Use character based or sub-words embedding
