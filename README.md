@@ -12,7 +12,7 @@
 [project](/Project/Data%20Modeling/)
 - AT82.03 Machine Learning (ML)
 [Course](/Course/Machine%20Learning/) |
-[project](../ML_Project/)
+[project](../DDQN-PG-PPO-with-Mario/)
 
 # Semester Jan 2023 
 - AT82.04 Business Intelligence and Analytics (BIA)
