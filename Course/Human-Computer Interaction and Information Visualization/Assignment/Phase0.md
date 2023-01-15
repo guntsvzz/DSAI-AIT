@@ -33,4 +33,4 @@ game industry to expand more game design experiment.
 - https://www.youtube.com/watch?v=hHwLUmJkmhU&list=PLqhXYFYmZ-VerXJTwe05Jh_fNcsQGbb-_&index=284
 - Objective : the negative emotions has outcome  contemplative experiences and long-term memory.
 - Related Field : EEG emotion
-- Why interesting : It is curious why positive emotions doesn't outperform than negatvie emotions. 
+- Why interesting : I am curious why positive emotions doesn't outperform than negatvie emotions. 
