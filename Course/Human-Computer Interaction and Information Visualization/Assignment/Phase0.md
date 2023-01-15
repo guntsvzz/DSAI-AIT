@@ -7,29 +7,24 @@ Try to focus on something related to AI + emotion/cognition/health/elderly.
 
 The key goal is to make you comfortable with what HCI is and to get some inspiration.
 ```
-```
+
 1. EmoBalloon - Conveying Emotional Arousal in Text Chats with Speech Balloons
-https://www.youtube.com/watch?v=Xc-cDLnx0DU&list=PLqhXYFYmZ-VerXJTwe05Jh_fNcsQGbb-_&index=5
-- Related Field :
-
-```
-```
+- https://www.youtube.com/watch?v=Xc-cDLnx0DU&list=PLqhXYFYmZ-VerXJTwe05Jh_fNcsQGbb-_&index=5
+- Objective : emotional communication in text chat is hampered resulting in misunderstandings so they create speech balloon emotional arousal shape by GAN.
+- Related Field : EEG, NLP, GAN
 2. Impacts of Personal Characteristics on User Trust in Conversational Recommender Systems
-https://www.youtube.com/watch?v=gX-YKvpz0eY&list=PLqhXYFYmZ-VerXJTwe05Jh_fNcsQGbb-_&index=24
-
-```
-```
+- https://www.youtube.com/watch?v=gX-YKvpz0eY&list=PLqhXYFYmZ-VerXJTwe05Jh_fNcsQGbb-_&index=24
+- Objective :
+- Related Field : NLP
 3. Designing Visuo-Haptic Illusions with Proxies in Virtual Reality: Exploration of . 
-https://www.youtube.com/watch?v=dASQPl_3UEU&list=PLqhXYFYmZ-VerXJTwe05Jh_fNcsQGbb-_&index=44
-
-```
-```
+- https://www.youtube.com/watch?v=dASQPl_3UEU&list=PLqhXYFYmZ-VerXJTwe05Jh_fNcsQGbb-_&index=44
+- Objective :
+- Related Field : EEG, VR
 4. ZenVR: Design Evaluation of a Virtual Reality Learning System for Meditation
-https://www.youtube.com/watch?v=CSuB0L55l2g&list=PLqhXYFYmZ-VerXJTwe05Jh_fNcsQGbb-_&index=53
-
-```
-```
+- https://www.youtube.com/watch?v=CSuB0L55l2g&list=PLqhXYFYmZ-VerXJTwe05Jh_fNcsQGbb-_&index=53
+- Objective :
+- Related Field : EEG emotion, VR
 5. Negative Emotions, Positive Outcomes? Exploring the Communication of Negativity in Serious Data Stories
-https://www.youtube.com/watch?v=hHwLUmJkmhU&list=PLqhXYFYmZ-VerXJTwe05Jh_fNcsQGbb-_&index=284
-
-```
+- https://www.youtube.com/watch?v=hHwLUmJkmhU&list=PLqhXYFYmZ-VerXJTwe05Jh_fNcsQGbb-_&index=284
+- Objective :
+- Related Field : EEG emotion
