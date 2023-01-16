@@ -10,3 +10,10 @@
 - AT82.03 Machine Learning (ML)
     - DDQN, PG and PPO with Mario
 
+- AT82.04 Business Intelligence and Analytics (BIA)
+
+- AT82.05 Artificial Intelligence: Natural Language Understanding (NLU)
+
+- AT82.10 Recent Trends in Machine Learning (RTML)
+
+- AT82.09 Human-Computer Interaction and Information Visualization (HCI)
