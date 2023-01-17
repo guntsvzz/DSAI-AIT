@@ -41,7 +41,12 @@
 - conv 1x1 + 1(s) does not effect 
 12. mean subtraction 
 - 0-255 pixel subtract from the input imagner mean value [123.68, 116.779, 103.939]
-13. 
+13. What is auxilliary classifier
+- we dont expect this layer
+14. Polyak averaging
+- SGD to optimal but set new parameter.
+15. How image classifer to detection 
+- Selective Search give a bunch of box
 
 
 ## Discussion 3 ResNet - 2015
