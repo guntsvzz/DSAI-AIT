@@ -50,3 +50,54 @@
 
 
 ## Discussion 3 ResNet - 2015
+1. What is this paper try to convey ?
+- Residual block prevent vansihing/exploding gradient when network is deeper
+2. Why they are try to more deep rather than width. 
+-  Because previous competition attempt to use 
+3. What is vanishing/exploding gradient.
+- vanishing gradient occur when 
+- when activation is bigger over and over then exploding gradient
+4. Traditional way to prevent vanishing gradient
+- Normalization layer
+5. What is degradation phenomenal 
+- higher training error 
+6. What if they want more deeper layer, what they want to do
+- adding layers identity mapping
+7. Explaining Figure 2 Residual learning
+- 
+- linear combinations
+8. Skipping connection
+- No one 
+9. Why Residual block have same dimension
+- If it doesn't equally, it cannot concatenation
+10. 
+- Use transformation to collect size
+11. Where do use nonlinearity when
+- add nonlinearity between layer except the last residual block
+12. What the difference FC and Convolution
+- FC layer output is a vector adding likely sqaure 
+- Convolution multi-channel 
+13. VGG-19
+- mostly have 3x3 filters and stride 2 convolution, feature map 
+14. 34-layer plain
+- stride 2 con
+15. dashline
+- linear projection 
+16. Figure 4 what happen
+- Plain-18 layer validation lower than train, overfitting
+- Resnet-18 is almost the same
+- Resnet-34 validation overfitting add the last with straight line
+17. What option they use 
+- B
+18. Figure 5 right why they adding 1x1 conv
+- Dimension reduction
+19. How can we justify,why inception thing that Bottleneck is not a good thing
+- Inception try to keep concept of previous and current layer to continous by not removing anything inside
+- Bottleneck will losing information 256-d to 64-d
+20. Figure 6. CIFAR-10
+-
+21. Figure 7. Std of layer response
+- Resnet much lower validation across different layer
+22. How did they try in Object Detection 
+- using using Faster R-CNN and replacing VGG-net to ResNet-101
+- improve loss, improve accuaracy.
