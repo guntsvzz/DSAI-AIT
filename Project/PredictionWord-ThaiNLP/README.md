@@ -1,0 +1,8 @@
+#
+
+## Member
+
+## Objective
+
+## Reference and Dataset
+https://github.com/keon/awesome-nlp#nlp-in-thai
