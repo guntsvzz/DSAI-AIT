@@ -6,7 +6,9 @@ Append a table in a Github repo.
 
 Since this is your first week, we shall warm up and give you two weeks for your first paper.
 
-PS:  Note that you may not completely understand everything, but just try your best.   Once you reach the mark of 50+ papers, you will start to understand and become superman.
+PS:  Note that you may not completely understand everything, but just try your best.
+   
+Once you reach the mark of 50+ papers, you will start to understand and become superman.
 
 Enjoy reading.
 
@@ -16,10 +18,11 @@ Point criteria:
 2:  With good, clear, precise, personal explanations in own words
 ```
 
+```
 Paper : Thai Nested Named Entity Recognition Corpus
 Link : https://aclanthology.org/2022.findings-acl.116/
 Github : https://github.com/vistec-AI/Thai-NNER
-
+```
 
 | Topic     | Answer |
 | ---      | ---       |
