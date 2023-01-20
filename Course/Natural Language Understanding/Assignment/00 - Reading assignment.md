@@ -1,4 +1,4 @@
-| Name     | Character |
+| Topic     | Answer |
 | ---      | ---       |
 | Question | `         |
 | Related Work     | \|        |
