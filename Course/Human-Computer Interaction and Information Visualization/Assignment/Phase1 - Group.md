@@ -11,6 +11,8 @@ Supporting Serendipitous Discovery and Balanced Analysis of Online Product Revie
 https://dl.acm.org/doi/10.1145/3491102.3517649
 
 # Unconsiderationn
+“I Don’t Want To Shoot The Android”: Players Translate Real-Life Moral Intuitions to In-Game Decisions in Detroit: Become Human
+https://dl.acm.org/doi/10.1145/3491102.3502019
 Enabling Tangible Interaction on Non-touch Displays with Optical Mouse Sensor and Visible Light Communication
 https://dl.acm.org/doi/10.1145/3491102.3517666
 Telling Stories from Computational Notebooks: AI-Assisted Presentation Slides Creation for Presenting Data Science Work
@@ -21,8 +23,6 @@ Discovering the Syntax and Strategies of Natural Language Programming with Gener
 https://dl.acm.org/doi/10.1145/3491102.3501870
 “Guilty of Talking Too Much”: How Psychotherapists Gamify Therapy
 https://dl.acm.org/doi/10.1145/3491102.3517437
-“I Don’t Want To Shoot The Android”: Players Translate Real-Life Moral Intuitions to In-Game Decisions in Detroit: Become Human
-https://dl.acm.org/doi/10.1145/3491102.3502019
 Q-Chef: The impact of surprise-eliciting systems on food-related decision-making
 https://dl.acm.org/doi/10.1145/3491102.3501862
 Design Guidelines for Prompt Engineering Text-to-Image Generative Models
