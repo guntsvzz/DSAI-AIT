@@ -15,6 +15,10 @@
 1:  Ok
 2:  With good, clear, precise, personal explanations in own words
 
+Paper : Thai Nested Named Entity Recognition Corpus
+Link : https://aclanthology.org/2022.findings-acl.116/
+Github : https://github.com/vistec-AI/Thai-NNER
+
 | Topic     | Answer |
 | ---      | ---       |
 | Question | `         |
