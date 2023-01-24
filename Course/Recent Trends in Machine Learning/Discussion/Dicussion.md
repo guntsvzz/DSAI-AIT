@@ -101,3 +101,48 @@
 22. How did they try in Object Detection 
 - using using Faster R-CNN and replacing VGG-net to ResNet-101
 - improve loss, improve accuaracy.
+
+## Discussion 4 Batch Normalization - 2015
+1. What is this paper try to convey ?
+- BN helps the network train faster amd achieve higher accuracy.
+- Eliminating internal coveriat shift helps model train gaster with better performacne
+- Transforming activation distributions to standatd normals accelerates amd strengthens learning
+2. Why do use many mini-batch
+- more accurate 
+3. What is covariate shift 
+- how coreelation to random varaible are 
+- covariance : you got some random variable that depends on 
+4. What is internal covariate shift
+- change of distribution during learning
+5. What is equation l = F2(F1(u,theta1),theta2)
+- l depends on distribution of x that why it called covariance shift
+6. how would it help in accelerate normalize to saturate non-linearity
+- saturate non-linearity
+7. What is whitening 
+- transforming to have mean zero and unit variances. PCA
+8. What about bias during normalization
+- changing b is no effect but calculaing gradient b, u get some varaible then change b by some amount. it doesn't effect loss remain
+9. what is equation mean x = Norm(x,X)
+- In some situations, normalize entire the data set.
+10. What is wrong with whitening 
+-  high computation : a sqaure of nubmer of the layers.
+- z-scaling
+11. What the main gamma and beta
+- each input 
+- scale and shift with limited region
+12. explain patial derivative  
+- 
+13. What 
+- 
+14. what is batch norm go 
+- go before the non-linearity
+15. BN claim that enable u higher learning rate  
+- increase the scale of layer parameters
+16. BN does not need drop out
+- BN introducr random 
+
+## Discussion 5 Adam - 2014
+- Adam is invaraint to diagonal rescaling of the gradients
+- sparse gradient is a gradient vector in which most of the elements have a value of zero which benefit to reduce the amount of computation required and improve the training speed.
+
+## DenseNet - 2017
