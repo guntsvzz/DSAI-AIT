@@ -146,3 +146,4 @@
 - sparse gradient is a gradient vector in which most of the elements have a value of zero which benefit to reduce the amount of computation required and improve the training speed.
 
 ## DenseNet - 2017
+- the preceding layers improve performance and reduce parameters
