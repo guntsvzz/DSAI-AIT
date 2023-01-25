@@ -30,7 +30,7 @@
 
 # Inter Semester (Tentative)
 - AT82.08 Computer Vision (CV) (Sit-in)
-
+- AT82.13 Internship/Co-op
 # Semester Aug 2024 (Tentative)
 - Thesis
 
