@@ -142,8 +142,56 @@
 - BN introducr random 
 
 ## Discussion 5 Adam - 2014
-- Adam is invaraint to diagonal rescaling of the gradients
-- sparse gradient is a gradient vector in which most of the elements have a value of zero which benefit to reduce the amount of computation required and improve the training speed.
+1. What is this paper try to convey ?
+- Adam is invaraint to diagonal rescaling of the gradients 
+- Optimization with momentum and adaptive step size outperform other methods
+2. First order and higher order
+- higher order
+3. why first order is suitable to large scale optimization
+- loss function respect to each functions
+4. SGD noisy
+- dropout, mini-btach
+5. Adam is
+- Adaptive Moment Estimation
+6. What is expectation of E[f(/theta)]
+- mean sampliing, population mean f() = cost function
+- experiment perform the different function
+7. What is f1, f2, and so on
+- loss at the timestep
+8. what is gt
+- gradient with specific timestep
+9. what is mt
+- moving average of gradient
+10. what is vt
+- moving average of the squared gradient
+11. what is bias
+- average something with 0 add bias
+12. update rule
+- 
+13. If B is larger
+- decay rate are small
+14. If epsilon is 0
+- gradient will be same
+15. minist experiment
+- adam covnerges as fast as Adagard
+- sparse feature
+- learing rate
 
-## DenseNet - 2017
+## Discussion 5 DenseNet - 2017
+1. What is this paper try to convey ?
 - the preceding layers improve performance and reduce parameters
+2. DenseNet characteristic
+- skipping connection 
+3. What is DenseNet to 
+- concentanate from previous output
+4. what is k
+- number of feature map 
+5. transalation layer
+- add projection
+6. DenseNet comparing with ResNet
+- ResNet have to learn previous block otherwise DenseNet becuase they concatenate which improve flow training
+7. x = H(x0,x1,...xl-1)
+- H is composite function : BN, ReLU, pooling 
+8. why adding pooling, conv
+- down-sampling , dimension reduction
+9. 
