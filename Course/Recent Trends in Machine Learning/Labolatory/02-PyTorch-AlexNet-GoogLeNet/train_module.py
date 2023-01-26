@@ -72,12 +72,13 @@ def train_model(model, dataloaders, criterion, optimizer, device, num_epochs=25,
                     # calculate the loss on.
                     if is_inception and phase == 'train':
                         # From https://discuss.pytorch.org/t/how-to-optimize-inception-model-with-auxiliary-classifiers/7958
-                        outputs, aux_outputs = model(inputs)
+                        outputs, aux_outputs2, aux_outputs3 = model(inputs)
                         loss1 = criterion(outputs, labels)
-                        loss2 = criterion(aux_outputs, labels)
-                        loss = loss1 + 0.4 * loss2
+                        loss2 = criterion(aux_outputs2, labels)
+                        loss3 = criterion(aux_outputs3, labels)
+                        loss = loss1 + 0.4 * loss2 + 0.3*loss3
                     else:
-                        outputs = model(inputs)
+                        outputs, aux_outputs2, aux_outputs3 = model(inputs)
                         loss = criterion(outputs, labels)
 
                     _, preds = torch.max(outputs, 1)
