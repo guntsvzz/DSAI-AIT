@@ -24,12 +24,12 @@ Link : https://aclanthology.org/2022.findings-acl.116/
 Github : https://github.com/vistec-AI/Thai-NNER
 ```
 
-| Topic     | Answer |
-| ---      | ---       |
-| Question | `         |
-| Related Work     | \|        |
-| Method     | \|        |
-| Model     | \|        |
-| Result     | \|        |
-| Conclusion   | \|        |
-| Future Work     | \|        |
+| Topic        | Thai Nested Named Entity Recognition Corpus                                                            |
+|--------------|--------------------------------------------------------------------------------------------------------|
+| Question     | N-NER benefits to downstream tasks; however, low-resources languages cannot be reliable to NNER models |
+| Related Work | NNE, GENIA, ACE-2005 (English) ; NoSta-D (German) ; VLSP-2018 (Vietnamese)                             |
+| Solution     | Vistec create own dataset from new articles ([Prachathai](https://huggingface.co/datasets/prachathai67k)) and resturant reviews ([Wongnai](https://github.com/wongnai/wongnai-corpus))                |
+| Method       |                                                                                                        |
+| Result       |                                                                                                        |
+| Conclusion   |                                                                                                        |
+| Future Work  |                                                                                                        |
