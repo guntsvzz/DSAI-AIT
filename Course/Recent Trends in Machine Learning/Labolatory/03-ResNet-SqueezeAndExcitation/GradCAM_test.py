@@ -3,8 +3,14 @@ from pytorch_grad_cam import GradCAM, HiResCAM, ScoreCAM, GradCAMPlusPlus, Ablat
 from pytorch_grad_cam.utils.model_targets import ClassifierOutputTarget
 from pytorch_grad_cam.utils.image import show_cam_on_image, preprocess_image
 from torchvision.models import resnet50
+import torch
 import cv2
 import numpy as np
+
+# Set device to GPU or CPU
+
+device = torch.device("cuda:2" if torch.cuda.is_available() else "cpu")
+
 model = resnet50(pretrained=True)
 print(model)
 
@@ -48,3 +54,22 @@ grayscale_cam = grayscale_cam[0, :]
 print(grayscale_cam.shape)
 print(rgb_img.shape)
 visualization = show_cam_on_image(rgb_img, grayscale_cam, use_rgb=True)
+
+# %%
+from pytorch_grad_cam import GuidedBackpropReLUModel
+from pytorch_grad_cam.utils.image import deprocess_image
+
+cam_image = cv2.cvtColor(visualization, cv2.COLOR_RGB2BGR)
+
+gb_model = GuidedBackpropReLUModel(model=model, use_cuda=True)
+gb = gb_model(input_tensor, target_category=None)
+
+print(gb.shape)
+
+cam_mask = cv2.merge([grayscale_cam, grayscale_cam, grayscale_cam])
+cam_gb = deprocess_image(cam_mask * gb)
+gb = deprocess_image(gb)
+
+cv2.imwrite(f'ex_cam.jpg', cam_image)
+cv2.imwrite(f'ex_gb.jpg', gb)
+cv2.imwrite(f'ex_cam_gb.jpg', cam_gb)
