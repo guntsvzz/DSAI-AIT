@@ -14,6 +14,6 @@ Boltzman Machine (2011) <br /> 6. a Temporal Restricted
 Boltzman Machine (2013) |
 | Solution     | propose transition-based dependency parser using dense feature instead. |
 | Method       | input layer contain : words, POS tages, and arc labels |
-| Result       | transition-based perform well in LAS espeacially fine-grained label set|
+| Result       | 1. transition-based perform well in LAS espeacially fine-grained label set  <br />2. POS tags' embeddings is the important feature due to capture most of the label information |
 | Conclusion   |  outperform accuracy and speed than other greedy parsers that using sparse features. |
 | Limitation   |  only rely on dense features (POS tags and arc labels(dependency))|
