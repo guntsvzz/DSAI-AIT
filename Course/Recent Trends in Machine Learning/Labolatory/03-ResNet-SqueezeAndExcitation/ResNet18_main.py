@@ -1,4 +1,6 @@
 # %%
+import warnings
+warnings.filterwarnings("ignore")
 import torch
 import torchvision
 from torchvision import datasets, models, transforms
@@ -12,7 +14,7 @@ import torch.nn.functional as F
 import numpy as np
 # Set device to GPU or CPU
 
-device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+device = torch.device("cuda:2" if torch.cuda.is_available() else "cpu")
 
 # Allow augmentation transform for training set, no augementation for val/test set
 
@@ -69,26 +71,27 @@ resnet = ResNet18().to(device)
 criterion = nn.CrossEntropyLoss()
 params_to_update = resnet.parameters()
 # Now we'll use Adam optimization
-optimizer = optim.SGD(params_to_update, lr=0.01)
-# optimizer = optim.SGD(params_to_update, lr=0.01, weight_decay = 0.0005)
+# optimizer = optim.SGD(params_to_update, lr=0.01, momentum=0.9)
+optimizer = optim.SGD(params_to_update, lr=0.01, weight_decay = 0.0001, momentum=0.9)
 # optimizer = optim.Adam(params_to_update, lr=0.01)
-# optimizer = optim.Adam(params_to_update, lr=0.01, weight_decay = 0.0005)
+# optimizer = optim.Adam(params_to_update, lr=0.01, weight_decay = 0.0001)
 
-best_model, val_acc_history, loss_acc_history = train_model(resnet, dataloaders, criterion, optimizer, device, 25, 'resnet18_bestsofar')
+best_model, val_acc_history, loss_acc_history = train_model(resnet, dataloaders, criterion, optimizer, device, 25, 'resnet18SGD_WD_bestsofar')
 
 #%%
+import numpy as np
 # Save the validation accuracy history and the training loss history
 val_acc_history = np.array(val_acc_history)
-np.save('./plot/resnetSGD_val_acc_history.npy', val_acc_history)
+np.save('./plot/resnet18SGD_WD_val_acc_history.npy', val_acc_history)
 
 loss_history = np.array(loss_acc_history)
-np.save('./plot/resnetSGD_loss_history.npy', loss_history)
+np.save('./plot/resnet18SGD_WD_loss_history.npy', loss_history)
 
 # %%
 # load the model to test
-from test import test_model
+from test_model import test_model
 
-resnet.load_state_dict(torch.load('resnet18_bestsofar.pth'))
+resnet.load_state_dict(torch.load('resnet18SGD_WD_bestsofar.pth'))
 
 test_dataloaders = { 'test': test_dataloader }
 test_acc, test_loss = test_model(resnet, test_dataloaders, criterion, device)
