@@ -194,4 +194,10 @@
 - H is composite function : BN, ReLU, pooling 
 8. why adding pooling, conv
 - down-sampling , dimension reduction
-9. 
+9. Table 2
+-
+10. 
+
+
+
+## Discussion 6 Faster R-CNN - 2017
