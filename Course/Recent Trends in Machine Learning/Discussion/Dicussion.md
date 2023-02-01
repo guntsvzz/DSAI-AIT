@@ -200,4 +200,48 @@
 
 
 
-## Discussion 6 Faster R-CNN - 2017
+## Discussion 6 YOLOv1 - 2016
+1. What is this paper try to convey ?
+- end-to-end optimization of CNN detection performance yield fast.
+2.  
+- train seperate past and well not optimize
+3. single regression problem 
+- bounding box coordinates and class probability
+4. Titan X
+- 45 fps 
+5. YOLO less error background
+- 
+6. Art Work
+-
+7. What is each grid respond for
+- For predicting particular center point
+8. 
+-
+9. class probability
+-
+10. boundiing box consist of
+- 
+11. why only + C
+- this is a problem when grid is hesitate that image is dog or bicycle. it cannot predict what it is.
+12. pretrain
+- the first 20 convolutional layers followed by a average-pooling layer and a fully connected layer
+13. 
+- one dimension to 7x7x30
+14. how 7x7x30 bound  
+- predicts both class probabilities and bounding box coordinates
+15. activation
+- leaky ReLU
+16. limitation
+- large 
+17. Fast YOLO
+- fewer layer (9 instead of 24)
+18. Fast R-CNN vs YOLO
+- Fast R-CNN perform localize better than YOLO but fail in background 3 times of YOLO instead
+
+## Discussion 6 YOLOv4 - 2020
+1. What is this paper try to convey ?
+carefully slection detector training and inference modules greatly improves performance.
+2. stand-alone process management and human input reduction 
+-
+3. single GPU training
+- fast enough
