@@ -7,17 +7,27 @@ import torch
 import cv2
 import numpy as np
 
+from resnet_model import ResNet18
+import torch
 # Set device to GPU or CPU
 
 device = torch.device("cuda:2" if torch.cuda.is_available() else "cpu")
 
-model = resnet50(pretrained=True)
+resnet = ResNet18().to(device)
+resnet.load_state_dict(torch.load('resnet18SGD_WD_bestsofar.pth'))
+
+# Set device to GPU or CPU
+
+device = torch.device("cuda:2" if torch.cuda.is_available() else "cpu")
+
+model = resnet
 print(model)
 
 #%%
 target_layers = [model.layer4[-1]]
 
-rgb_img = cv2.imread("example01.jpeg", 1)[:, :, ::-1]
+# rgb_img = cv2.imread("example01.jpeg", 1)[:, :, ::-1]
+rgb_img = cv2.imread('./PASCALVOC2012/2008_000012.jpeg', 1)[:, :, ::-1]
 rgb_img = np.float32(rgb_img) / 255
 print(rgb_img.shape)
 input_tensor = preprocess_image(rgb_img,
@@ -44,7 +54,8 @@ cam = GradCAM(model=model, target_layers=target_layers, use_cuda=True)
 
 # 281: tabby, tabby cat
 # 229: Old English sheepdog, bobtail
-targets = [ClassifierOutputTarget(254)]
+targets = [ClassifierOutputTarget(0), ClassifierOutputTarget(1), ClassifierOutputTarget(2), ClassifierOutputTarget(3), ClassifierOutputTarget(4),
+        ClassifierOutputTarget(5), ClassifierOutputTarget(6), ClassifierOutputTarget(7), ClassifierOutputTarget(8)]
 
 # You can also pass aug_smooth=True and eigen_smooth=True, to apply smoothing.
 grayscale_cam = cam(input_tensor=input_tensor, targets=targets)
@@ -70,6 +81,6 @@ cam_mask = cv2.merge([grayscale_cam, grayscale_cam, grayscale_cam])
 cam_gb = deprocess_image(cam_mask * gb)
 gb = deprocess_image(gb)
 
-cv2.imwrite(f'ex_cam.jpg', cam_image)
-cv2.imwrite(f'ex_gb.jpg', gb)
-cv2.imwrite(f'ex_cam_gb.jpg', cam_gb)
+cv2.imwrite(f'check_ex_cam.jpg', cam_image)
+# cv2.imwrite(f'ex_gb.jpg', gb)
+# cv2.imwrite(f'ex_cam_gb.jpg', cam_gb)
