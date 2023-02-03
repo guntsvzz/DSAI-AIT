@@ -6,8 +6,8 @@ Venue: EMNLP
 
 | Topic        | Paraphrase Generation: A Survey of the State of the Art |
 |--------------|---------------------------------------------------------|
-| Question     | |
-| Related Work | |
+| Question     | paraphrase generation |
+| Related Work | <br />|
 | Solution     | |
 | Method       | |
 | Result       | |
