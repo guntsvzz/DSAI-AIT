@@ -1,6 +1,7 @@
 ```
 Paper : A Fast and Accurate Dependency Parser using Neural Networks
 Link : https://aclanthology.org/D14-1082.pdf
+Venue : EMNLP
 ```
 
 | Topic        | A Fast and Accurate Dependency Parser using Neural Networks |

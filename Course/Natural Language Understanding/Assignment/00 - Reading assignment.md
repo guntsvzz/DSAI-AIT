@@ -22,6 +22,7 @@ Point criteria:
 Paper : Thai Nested Named Entity Recognition Corpus
 Link : https://aclanthology.org/2022.findings-acl.116/
 Github : https://github.com/vistec-AI/Thai-NNER
+Venue : ACL
 ```
 
 | Topic        | Thai Nested Named Entity Recognition Corpus                                                            |

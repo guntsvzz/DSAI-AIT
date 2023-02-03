@@ -20,10 +20,12 @@ This summary will later help in your project framing.  So do it carefully, for y
 
 Submit the PDF.   One group one submission.
 
-
-# Paper 2021
+## Gamification
 - Better, Funner, Stronger: A Gameful Approach to Nudge People into Making Less Predictable Graphical Password Choices
 https://dl.acm.org/doi/pdf/10.1145/3411764.3445658
+
+“I Didn’t Catch That, But I’ll Try My Best”: Anticipatory Error Handling in a Voice Controlled Game
+- https://dl.acm.org/doi/10.1145/3491102.3502115
 
 ”Chat Has No Chill”: A Novel Physiological Interaction For Engaging Live Streaming Audiences
 - https://dl.acm.org/doi/10.1145/3491102.3501934
@@ -31,5 +33,27 @@ https://dl.acm.org/doi/pdf/10.1145/3411764.3445658
 RoleSeer: Understanding Informal Social Role Changes in MMORPGs via Visual Analytics
 - https://dl.acm.org/doi/10.1145/3491102.3517712
 
-“I Didn’t Catch That, But I’ll Try My Best”: Anticipatory Error Handling in a Voice Controlled Game
-- https://dl.acm.org/doi/10.1145/3491102.3502115
+Here Comes No Boom! The Lack of Sound Feedback Efects on Performance and User Experience in a Gamified Image Classification Task
+- https://dl.acm.org/doi/abs/10.1145/3491102.3517581
+
+Emotional Exploration and the Eudaimonic Gameplay Experience: A Grounded Theory
+- https://dl.acm.org/doi/10.1145/3491102.3502002
+
+## NLP
+Automatically Generating and Improving Voice Command Interface from Operation Sequences on Smartphone
+- https://dl.acm.org/doi/10.1145/3491102.3517459
+
+TaleBrush: Sketching Stories with Generative Pretrained Language Models
+- https://dl.acm.org/doi/10.1145/3491102.3501819
+
+## GAN
+Vinci: An Intelligent Graphic Design System for Generating Advertising Posters
+- https://dl.acm.org/doi/10.1145/3411764.3445117
+
+Exploring Generative Models with Middle School Students
+- https://dl.acm.org/doi/10.1145/3411764.3445226
+
+Play With Your Emotions: Exploring Possibilities of Emotions as Game Input in NERO
+- https://dl.acm.org/doi/10.1145/3491101.3516485
+
+How do you imagine the characters in a book? : text-to-image generate deepfake using GAN 
