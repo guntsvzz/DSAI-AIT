@@ -21,4 +21,15 @@ This summary will later help in your project framing.  So do it carefully, for y
 Submit the PDF.   One group one submission.
 
 
-# Paper 
+# Paper 2021
+- Better, Funner, Stronger: A Gameful Approach to Nudge People into Making Less Predictable Graphical Password Choices
+https://dl.acm.org/doi/pdf/10.1145/3411764.3445658
+
+”Chat Has No Chill”: A Novel Physiological Interaction For Engaging Live Streaming Audiences
+- https://dl.acm.org/doi/10.1145/3491102.3501934
+
+RoleSeer: Understanding Informal Social Role Changes in MMORPGs via Visual Analytics
+- https://dl.acm.org/doi/10.1145/3491102.3517712
+
+“I Didn’t Catch That, But I’ll Try My Best”: Anticipatory Error Handling in a Voice Controlled Game
+- https://dl.acm.org/doi/10.1145/3491102.3502115
