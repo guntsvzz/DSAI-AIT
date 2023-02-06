@@ -6,3 +6,14 @@
 
 ## Classical Paper
 - A Fast and Accurate Dependency Parser using Neural Networks - 2014 [click](./Assignment/03%20-%20A%20Fast%20and%20Accurate%20Dependency%20Parser%20using%20Neural%20Networks.md)
+- Assessing the Ability of LSTMs to Learn Syntax-Sensitive Dependencies - 2016
+- On the difficulty of training recurrent neural networks - 2013
+- Long short-term memory, Hochreiter and Schmidhuber - 1997
+- Learning to Forget: Continual Prediction with LSTM, Gers - 2000
+- Learning Phrase Representations using RNN Encoder–Decoder for Statistical Machine Translation - 2014
+- Massive Exploration of Neural Machine Translation Architectures - 2017
+- Fully Character-Level Neural Machine Translation without Explicit Segmentation - 2017
+- Achieving Open Vocabulary Neural Machine Translation with Hybrid Word-Character Models - 2016
+- Enriching Word Vectors with Subword Information - 2017
+- Semi-supervised sequence tagging with bidirectional language models - 2017
+- Deep contextualized word representations - 2018
