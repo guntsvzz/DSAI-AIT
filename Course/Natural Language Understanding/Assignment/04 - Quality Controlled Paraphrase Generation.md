@@ -11,9 +11,7 @@ Venue: ACL
 manipulated to produce either lexically or syntactically</br> 3. constituency tree as the syntax </br> 4. reinforcement
 learning with quality-oriented reward |
 | Solution     | QCPG, a quality-guided controlled paraphrase generation model which present by 3-dimension vector of semantic similairity, and syntactic and lexical distances|
-| Method       | 1. Quantifying Paraphrase Quality </br>- syntatic score normalized tree edit distance</br>- lexcical normalzed character-level minimum edit distnace btw bag of words </br> - semantic score normalized using the sigmoid function </br> 2. the control values should be determined with respect to the input sentence
-|
-| Result       | 1. increasing the input offset gobe good control mechanism</br>2.manipulating the input offset
-control o to meet her desired quality values</br>3. |
+| Method       | 1. Quantifying Paraphrase Quality </br>- syntatic score normalized tree edit distance</br>- lexcical normalzed character-level minimum edit distnace btw bag of words </br> - semantic score normalized using the sigmoid function </br> 2. the control values should be determined with respect to the input sentence |
+| Result       | 1. increasing the input offset gobe good control mechanism</br>2.manipulating the input offset control o to meet her desired quality values</br>3. |
 | Conclusion   | |
 | Limitation   | |
