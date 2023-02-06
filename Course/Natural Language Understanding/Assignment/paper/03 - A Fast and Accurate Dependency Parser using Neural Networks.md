@@ -5,7 +5,7 @@ Venue : EMNLP
 ```
 
 | Topic        | A Fast and Accurate Dependency Parser using Neural Networks |
-|--------------|--------------------------------------------------------------------------------------------------------|
+|--------------|-------------------------------------------------------------|
 | Question     | sparse feature is poor generealization and costly computational parsing speed.|
 | Related Work |  1. localist one-hot word representations (1999) <br /> 2. a shift reduce constituency parser with one-hot word representations and subsequent parsing work (2005) <br /> 3. a simple synchrony network (2007) <br /> 4. Incremental Sigmoid Belief Network (2007) <br /> 5. a Temporal Restricted Boltzman Machine (2011) <br /> 6. a Temporal Restricted Boltzman Machine (2013) |
 | Solution     | propose transition-based dependency parser using dense feature instead. |
