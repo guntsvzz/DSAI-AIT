@@ -1,17 +1,15 @@
 from flask import Flask, render_template, request, redirect, url_for, session, flash
 from flask_wtf import FlaskForm
-from wtforms import SubmitField,StringField, BooleanField, RadioField, SelectField, TextAreaField
+from wtforms import SubmitField,StringField, BooleanField, RadioField, SelectField, TextAreaField,FileField
 from wtforms.validators import DataRequired
 from werkzeug.utils import secure_filename
+from wtforms.validators import InputRequired
 import os
 from pdf import *
 
-UPLOAD_FOLDER = '../Flask/uploads'
-ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
-
 app = Flask(__name__)
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-app.config['MAX_CONTENT_LENGTH'] = 16 * 1000 * 1000   
+app.config['SECRET_KEY'] = 'supersecretkey'
+app.config['UPLOAD_FOLDER'] = 'static/files' 
 
 @app.route('/')
 def index():
@@ -21,37 +19,25 @@ def index():
 def about():
     return render_template("about.html")
 
-def allowed_file(filename):
-    return '.' in filename and \
-           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
-
-from flask import send_from_directory
-
-@app.route('/uploads/<name>')
-def download_file(name,num_page):
-    skills, educations = readPDF(name,num_page)
-    # return send_from_directory(app.config["UPLOAD_FOLDER"], name)
-    return render_template("result.html",skills=skills,educations=educations)
+class UploadFileForm(FlaskForm):
+    file = FileField("File", validators=[InputRequired()])
+    submit = SubmitField("Upload File")
 
 @app.route('/upload', methods=['GET', 'POST'])
 def upload_file():
-    if request.method == 'POST':
-        # check if the post request has the file part
-        if 'file' not in request.files:
-            flash('No file part')
-            return redirect(request.url)
-        file = request.files['file']
-        # If the user does not select a file, the browser submits an
-        # empty file without a filename.
-        if file.filename == '':
-            flash('No selected file')
-            return redirect(request.url)
-        if file and allowed_file(file.filename):
-            filename = secure_filename(file.filename)
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            return redirect(url_for('download_file', name=filename, num_page=0))
+    form = UploadFileForm()
+    if form.validate_on_submit():
+        file = form.file.data # First grab the file
+        file.save(os.path.join(os.path.abspath(os.path.dirname(__file__)),app.config['UPLOAD_FOLDER'],secure_filename(file.filename))) # Then save the file
+        # return "File has been uploaded."
+        return redirect(url_for('convert_file', name=file))
+    return render_template('upload.html', form=form)
 
-    return render_template("upload.html")
+@app.route('/result/<name>')
+def convert_file(name,num_page=0):
+    skills, educations = readPDF(name,num_page)
+    # return send_from_directory(app.config["UPLOAD_FOLDER"], name)
+    return render_template("result.html",skills=skills,educations=educations)
 
 @app.route('/lab05')
 def classification():

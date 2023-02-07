@@ -4,7 +4,7 @@ import spacy
 from spacy.lang.en.stop_words import STOP_WORDS
 
 nlp = spacy.load('en_core_web_md')
-skill_path = "../data/skills.jsonl"
+skill_path = "static/skills.jsonl"
 
 ruler = nlp.add_pipe("entity_ruler")
 ruler.from_disk(skill_path)
