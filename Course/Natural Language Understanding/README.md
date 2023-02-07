@@ -7,7 +7,7 @@
 ## Classical Paper
 - A Fast and Accurate Dependency Parser using Neural Networks - 2014 [click](./Assignment/paper/03%20-%20A%20Fast%20and%20Accurate%20Dependency%20Parser%20using%20Neural%20Networks.md)
 
-## Inprogress
+## In-progress
 - Assessing the Ability of LSTMs to Learn Syntax-Sensitive Dependencies - 2016 
 - On the difficulty of training recurrent neural networks - 2013
 - Long short-term memory, Hochreiter and Schmidhuber - 1997
