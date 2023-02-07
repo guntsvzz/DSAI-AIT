@@ -57,3 +57,20 @@ Play With Your Emotions: Exploring Possibilities of Emotions as Game Input in NE
 - https://dl.acm.org/doi/10.1145/3491101.3516485
 
 How do you imagine the characters in a book? : text-to-image generate deepfake using GAN 
+
+Hidden Emotion Detection using Multi-modal Signals
+- https://dl.acm.org/doi/abs/10.1145/3411763.3451721
+
+
+
+
+# Don't do 'difficult' topic.
+
+1. Easy-clear problem
+- text entry
+- menu slection
+- which finger have the highest
+*Note* Clear IV and DV
+
+2. Difficult
+- Education -> many factors!
