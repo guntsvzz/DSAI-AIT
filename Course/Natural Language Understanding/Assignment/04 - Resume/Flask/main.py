@@ -1,11 +1,11 @@
 from flask import Flask, render_template, request, redirect, url_for, session, flash
 from flask_wtf import FlaskForm
-from wtforms import SubmitField,StringField, BooleanField, RadioField, SelectField, TextAreaField,FileField
+from wtforms import SubmitField, StringField, BooleanField, RadioField, SelectField, TextAreaField, FileField
 from wtforms.validators import DataRequired
 from werkzeug.utils import secure_filename
 from wtforms.validators import InputRequired
 import os
-from pdf import *
+from dataConversion import *
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'supersecretkey'
@@ -21,23 +21,32 @@ def about():
 
 class UploadFileForm(FlaskForm):
     file = FileField("File", validators=[InputRequired()])
-    submit = SubmitField("Upload File")
+    submit = SubmitField("Submit")
 
 @app.route('/upload', methods=['GET', 'POST'])
 def upload_file():
     form = UploadFileForm()
     if form.validate_on_submit():
         file = form.file.data # First grab the file
-        file.save(os.path.join(os.path.abspath(os.path.dirname(__file__)),app.config['UPLOAD_FOLDER'],secure_filename(file.filename))) # Then save the file
+        filename = secure_filename(file.filename)
+        file.save(os.path.join(
+            os.path.abspath(
+                os.path.dirname(__file__)), app.config['UPLOAD_FOLDER'], filename)) # Then save the file
         # return "File has been uploaded."
-        return redirect(url_for('convert_file', name=file))
+        return redirect(url_for('convert_file', name=filename))
     return render_template('upload.html', form=form)
 
+
 @app.route('/result/<name>')
-def convert_file(name,num_page=0):
-    skills = readPDF(name,num_page)
-    # return send_from_directory(app.config["UPLOAD_FOLDER"], name)
-    return render_template("result.html",skills=skills)
+def convert_file(name):
+    path = os.path.join(
+        os.path.join(
+            os.path.abspath(
+                os.path.dirname(__file__)), app.config['UPLOAD_FOLDER'], name))
+    print(path)
+    skills,educations = readPDF(path)
+    os.remove(path)
+    return render_template("result.html",skills=set(skills),educations=set(educations))
 
 @app.route('/lab05')
 def classification():

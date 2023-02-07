@@ -1,5 +1,31 @@
 {% extends "layout.html" %}
 {% block content %}
-    {{skills}}
-    {{education}}
+    <div class="container">
+        <table>
+            <tr>
+              <!-- <th>Skill</th>
+              <th>Education</th> -->
+            </tr>
+            <tr>
+
+            </tr>
+            <tr>
+
+            </tr>
+        </table>
+    <h1>Skill</h1>
+    </br>
+        {% for skill in skills %}
+            <p>{{skill}}</p>
+        {% endfor %}
+        
+    <h1>Education</h1>
+    </br>
+        {% for education in educations %}
+            <p>{{education}}</p>
+        {% endfor %}
+
+        <!-- Skill : {{skills}}
+        Education :{{educations}} -->
+    </div>
 {% endblock %}
