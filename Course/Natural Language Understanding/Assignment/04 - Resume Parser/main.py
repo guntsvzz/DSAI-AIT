@@ -46,7 +46,7 @@ def convert_file(name):
     print(path)
     skills,educations = readPDF(path)
     os.remove(path)
-    return render_template("result.html",skills=set(skills),educations=set(educations))
+    return render_template("result.html",skills=skills,educations=educations)
 
 @app.route('/lab05')
 def classification():

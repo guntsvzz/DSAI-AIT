@@ -24,7 +24,6 @@ def preprocessing(sentence):
 
     return " ".join(cleaned_tokens)
 
-
 def readPDF(cv_path, page=5):
     reader = PdfReader(cv_path)
     page = reader.pages[page]
@@ -33,17 +32,11 @@ def readPDF(cv_path, page=5):
     doc = nlp(text)
 
     skills = []
-    education = []
+    educations = []
 
     for ent in doc.ents:
-        # all_lab.append(ent.label_)
         if ent.label_ == 'SKILL':
             skills.append(ent.text)
         if ent.label_ == 'EDUCATION':
-            education.append(ent.text)
-    return skills, education
-
-    # colors = {"SKILL": "linear-gradient(90deg, #aa9cfc, #fc9ce7)"}
-    # options = {"colors": colors}
-
-# displacy.render(doc, style="ent", options=options)
+            educations.append(ent.text)
+    return set(skills), set(educations)
