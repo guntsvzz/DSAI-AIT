@@ -242,6 +242,42 @@
 1. What is this paper try to convey ?
 carefully slection detector training and inference modules greatly improves performance.
 2. stand-alone process management and human input reduction 
--
+- 
 3. single GPU training
 - fast enough
+4. data augmentation
+-
+5. bag of freebies
+-
+6. class imbalance
+- hard negative example mining and online hard hard example mining
+- focal loss 
+7. negative class 
+- dont have object detection
+8. association
+- soft label
+- one-hot label
+8. mish activation
+- smoothly transition
+
+## Discussino 7 YOLOR - 2021
+1. What is this paper try to convey ? 
+- a unified network which serve various tasks
+2. explicit knowledge
+- shallow layers
+3. implicit learning
+- bike bicycle
+4. general representation
+- some informations are throwed away
+- CNN transformation -> multi-task 
+5. knowleadge modelling
+- embedding, sparse, memory
+6. implicit knowledge work
+- tensor
+7. Manifold space reduction
+- pose check in x axis 
+- classififcation in y axis
+8. Kernel space alignment
+- due to multi-task each output wil not align together
+9. More function
+
