@@ -20,8 +20,8 @@ def preprocessing(sentence):
     cleaned_tokens = []
 
     for token in doc:
-        if token.text not in stopwords and token.pos_ != 'PUNCT' and token.pos_ != 'SPACE' and \
-            token.pos_ != 'SYM':
+        if token.text not in stopwords and token.pos_ != 'PUNCT' and \
+            token.pos_ != 'SPACE' and token.pos_ != 'SYM':
                 cleaned_tokens.append(token.lemma_.lower().strip())
     
     return " ".join(cleaned_tokens)
@@ -44,4 +44,4 @@ def readPDF(pdf,num_page = 0):
         if ent.label_ == 'EDUCATION':
             educations.append(ent.text)
 
-    return set(skills),set(educations)
+    return set(skills) #set(educations)
