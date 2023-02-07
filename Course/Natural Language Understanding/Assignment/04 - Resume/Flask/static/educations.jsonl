@@ -1,0 +1,19 @@
+{"label":"EDUCATION","pattern":[{"TEXT":"post-doctoral"}]}
+{"label":"EDUCATION","pattern":[{"TEXT":"post"}, {"IS_PUNCT": "True"}, {"TEXT":"doctoral"}]}
+{"label":"EDUCATION","pattern":[{"TEXT": "post-doc"}]}
+{"label":"EDUCATION","pattern":[{"TEXT":"post"}, {"IS_PUNCT": "True"}, {"TEXT":"doc"}]}
+{"label":"EDUCATION","pattern":[{"TEXT":"postdoctoral"}]}
+{"label":"EDUCATION","pattern":[{"TEXT":"postdoc"}]}
+{"label":"EDUCATION","pattern":[{"TEXT":"doctoral"}]}
+{"label":"EDUCATION","pattern":[{"TEXT": "phd"}]}
+{"label":"EDUCATION","pattern":[{"TEXT": "ph.d."}]}
+{"label":"EDUCATION","pattern":[{"TEXT": "ph.d"}, {"IS_PUNCT": "True"}]}
+{"label":"EDUCATION","pattern":[{"TEXT":"master"}]}
+{"label":"EDUCATION","pattern":[{"TEXT": "msc"}]}
+{"label":"EDUCATION","pattern":[{"TEXT": "ms.c."}]}
+{"label":"EDUCATION","pattern":[{"TEXT": "ms.c"}, {"IS_PUNCT": "True"}]}
+{"label":"EDUCATION","pattern":[{"TEXT": "mba"}]}
+{"label":"EDUCATION","pattern":[{"TEXT": "mba", "IS_PUNCT": "True"}]}
+{"label":"EDUCATION","pattern":[{"TEXT": "m"}, {"IS_PUNCT": "True"}, {"TEXT": "b"}, {"IS_PUNCT": "True"}, {"TEXT": "a"}]}
+{"label":"EDUCATION","pattern":[{"TEXT": "m"}, {"IS_PUNCT": "True"}, {"TEXT": "b"}, {"IS_PUNCT": "True"}, {"TEXT": "a"}, {"IS_PUNCT": "True"}]}
+{"label":"EDUCATION","pattern":[{"TEXT":"bachelor"}]}

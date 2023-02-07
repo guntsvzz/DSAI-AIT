@@ -35,9 +35,9 @@ def upload_file():
 
 @app.route('/result/<name>')
 def convert_file(name,num_page=0):
-    skills, educations = readPDF(name,num_page)
+    skills = readPDF(name,num_page)
     # return send_from_directory(app.config["UPLOAD_FOLDER"], name)
-    return render_template("result.html",skills=skills,educations=educations)
+    return render_template("result.html",skills=skills)
 
 @app.route('/lab05')
 def classification():
