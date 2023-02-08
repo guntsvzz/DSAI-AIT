@@ -280,10 +280,22 @@ carefully slection detector training and inference modules greatly improves perf
 8. Kernel space alignment
 - due to multi-task each output wil not align together
 9. More function
+10. conventional network
+11. panoptic segmentation
+12. Feature alignment
+- Kernel space 
+13. Prediction refinement
+- add tensor to yolo output vector
+14. 
 
-
-
-## Discussino 8 Mask RCNN
-1. 
- 
-2. 
+## Discussino 8 Mask RCNN - 2017
+1. What is this paper try to convey ? 
+- Faster rcnn with mask branch perform instance segmentation 
+2. segmentation
+3. Mask branch
+- predict an mxm mask from each ROI using an FCN
+4. RPN
+5. ROIPool 
+6. ROIAlign is better than ROIPool
+7. Lmask
+- sigmoid and binary
