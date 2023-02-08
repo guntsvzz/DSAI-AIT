@@ -299,3 +299,4 @@ carefully slection detector training and inference modules greatly improves perf
 6. ROIAlign is better than ROIPool
 7. Lmask
 - sigmoid and binary
+8. 
