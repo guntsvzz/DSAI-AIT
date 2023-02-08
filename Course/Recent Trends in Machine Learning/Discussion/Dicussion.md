@@ -281,3 +281,9 @@ carefully slection detector training and inference modules greatly improves perf
 - due to multi-task each output wil not align together
 9. More function
 
+
+
+## Discussino 8 Mask RCNN
+1. 
+ 
+2. 
