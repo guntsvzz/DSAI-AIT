@@ -2,6 +2,7 @@
 
 ## Upload Page
 <img src = "./figures/01_Upload.jpg" width=800>
+
 ## Result
 <img src = "./figures/02_Result.jpg" width=800>
 
