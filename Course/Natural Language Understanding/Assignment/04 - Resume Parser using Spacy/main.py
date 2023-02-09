@@ -26,6 +26,7 @@ class UploadFileForm(FlaskForm):
 @app.route('/upload', methods=['GET', 'POST'])
 def upload_file():
     form = UploadFileForm()
+    # print(form.validate_on_submit())
     if form.validate_on_submit():
         file = form.file.data # First grab the file
         filename = secure_filename(file.filename)
