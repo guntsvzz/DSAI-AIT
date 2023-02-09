@@ -1,4 +1,5 @@
 # Resume Parser
+Resume Parser to extract skill and educational from Resume or CV
 
 ## Upload Page
 <img src = "./figures/01_Upload.jpg" width=800>
