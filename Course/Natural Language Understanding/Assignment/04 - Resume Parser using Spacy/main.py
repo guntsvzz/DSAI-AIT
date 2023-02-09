@@ -36,7 +36,6 @@ def upload_file():
         return redirect(url_for('convert_file', name=filename))
     return render_template('upload.html', form=form)
 
-
 @app.route('/result/<name>')
 def convert_file(name):
     path = os.path.join(
