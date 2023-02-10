@@ -62,8 +62,6 @@ Hidden Emotion Detection using Multi-modal Signals
 - https://dl.acm.org/doi/abs/10.1145/3411763.3451721
 
 
-
-
 # Don't do 'difficult' topic.
 
 1. Easy-clear problem
@@ -74,3 +72,20 @@ Hidden Emotion Detection using Multi-modal Signals
 
 2. Difficult
 - Education -> many factors!
+
+## Deeaf
+Exploring the Design and Evaluation of an Educational Game for Deaf and Hard-of-Hearing Students in Thailan
+- https://dl.acm.org/doi/abs/10.5555/3014393.3014401
+
+Model for Analysis of Serious Games for Literacy in Deaf Children from a User Experience Approach
+- https://dl.acm.org/doi/10.1145/2829875.2829885
+
+Analyzing the Use of Sounds in FPS games and its Impact for Hearing
+Impaired Users
+- https://homepages.dcc.ufmg.br/~chaimo/public/SBGames12-denise.pdf
+
+Endless Running Game to Support Sign Language Learning by Deaf Children
+- https://dl.acm.org/doi/abs/10.1007/978-3-030-78095-1_3
+
+SignFind: A Synchronized Sign Language and Chinese Character Teaching Game for Chinese Deaf Children Using Gesture Recognition
+- https://dl.acm.org/doi/10.1145/3491101.3519697
