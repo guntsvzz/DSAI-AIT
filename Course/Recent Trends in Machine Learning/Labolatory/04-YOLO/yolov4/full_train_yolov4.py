@@ -18,7 +18,7 @@ from torch.autograd import Variable
 from torch.utils.data import Subset
 import torch.optim as optim
 import torch.nn.functional as F
-
+from torch.utils.data import DataLoader
 import torchvision
 from torchvision import datasets, models, transforms
 
@@ -27,7 +27,7 @@ from util import *
 import albumentations as A
 
 # Set device to GPU or CPU
-gpu = "2"
+gpu = "0"
 device = torch.device("cuda:{}".format(gpu) if torch.cuda.is_available() else "cpu")
 
 img_size = 416
@@ -65,15 +65,16 @@ train_dataset = Subset(CustomCoco(root = path2data_train,
 val_dataset = Subset(CustomCoco(root = path2data_val,
                                 annFile = path2json_val, transform=eval_transform), list(range(0,20)))
 
-train_dataloader = torch.utils.data.DataLoader(train_dataset, batch_size=BATCH_SIZE,
-                                               shuffle=True, num_workers=0, collate_fn=collate_fn)
-val_dataloader = torch.utils.data.DataLoader(val_dataset, batch_size=BATCH_SIZE,
+train_dataloader = DataLoader(train_dataset, batch_size=BATCH_SIZE,
+                                               shuffle=True, num_workers=1, collate_fn=collate_fn)
+val_dataloader = DataLoader(val_dataset, batch_size=BATCH_SIZE,
                                             shuffle=False, num_workers=1, collate_fn=collate_fn)
 
 # %%                                               
 from darknet import Darknet
 print("Loading network.....")
 model = Darknet("cfg/yolov4.cfg")
+model.module_list[114].conv_114 = nn.Conv2d(2048, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
 # load pretrained
 model.load_weights("yolov4.weights")
 # model.load_weights("csdarknet53-omega_final.weights", backbone_only=True)
@@ -87,7 +88,7 @@ n_epoch = 5
 img_size = 416
 save_every_batch = False
 save_every_epoch = True
-ckpt_dir = "../checkpoints"
+ckpt_dir = "./checkpoints"
 
 # %%
 from training import run_training
