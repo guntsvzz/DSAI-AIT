@@ -10,6 +10,7 @@ import pandas as pd
 import random
 from copy import copy, deepcopy
 import matplotlib.pyplot as plt
+# apt install libgl1-mesa-glx
 
 import torch 
 import torch.nn as nn
@@ -29,12 +30,11 @@ import albumentations as A
 gpu = "2"
 device = torch.device("cuda:{}".format(gpu) if torch.cuda.is_available() else "cpu")
 
-# %%
 img_size = 416
 train_transform = A.Compose([
     #A.SmallestMaxSize(256),
     A.Resize(img_size, img_size),
-    # A.RandomCrop(width=224, height=224),
+    A.RandomCrop(width=224, height=224),
     # A.HorizontalFlip(p=0.5),
     # A.RandomBrightnessContrast(p=0.2),
 ], bbox_params=A.BboxParams(format='coco', label_fields=['category_ids']),
@@ -43,16 +43,16 @@ train_transform = A.Compose([
 eval_transform = A.Compose([
     A.Resize(img_size, img_size),
     #A.SmallestMaxSize(256),
-    #A.CenterCrop(width=224, height=224),
+    A.CenterCrop(width=224, height=224),
 ], bbox_params=A.BboxParams(format='coco', label_fields=['category_ids']),
 )
 # %%
+print('Load Dataset')
+path2data_train="/root/Datasets/coco/images/train2014/"
+path2json_train="/root/Datasets/coco/annotations/instances_train2014.json"
 
-path2data_train="../home2/mdailey/Datasets/coco/images"
-path2json_train="../home2/mdailey/Datasets/coco/coco_annotation.json"
-
-path2data_val="../home2/mdailey/Datasets/coco/images"
-path2json_val="../home2/mdailey/Datasets/coco/coco_annotation.json"
+path2data_val="/root/Datasets/coco/images/val2014"
+path2json_val="/root/Datasets/coco/annotations/instances_val2014.json"
 
 BATCH_SIZE = 10
 def collate_fn(batch):
@@ -62,15 +62,21 @@ from custom_coco import CustomCoco
 
 train_dataset = Subset(CustomCoco(root = path2data_train,
                                 annFile = path2json_train, transform=train_transform), list(range(0,20)))
+val_dataset = Subset(CustomCoco(root = path2data_val,
+                                annFile = path2json_val, transform=eval_transform), list(range(0,20)))
+
 train_dataloader = torch.utils.data.DataLoader(train_dataset, batch_size=BATCH_SIZE,
                                                shuffle=True, num_workers=0, collate_fn=collate_fn)
-                                               
-# %%
+val_dataloader = torch.utils.data.DataLoader(val_dataset, batch_size=BATCH_SIZE,
+                                            shuffle=False, num_workers=1, collate_fn=collate_fn)
+
+# %%                                               
 from darknet import Darknet
 print("Loading network.....")
 model = Darknet("cfg/yolov4.cfg")
 # load pretrained
-model.load_weights("csdarknet53-omega_final.weights")
+model.load_weights("yolov4.weights")
+# model.load_weights("csdarknet53-omega_final.weights", backbone_only=True)
 print("Network successfully loaded")
 
 model.to(device)
