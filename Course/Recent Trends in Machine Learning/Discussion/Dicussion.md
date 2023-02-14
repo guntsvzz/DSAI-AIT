@@ -260,7 +260,7 @@ carefully slection detector training and inference modules greatly improves perf
 8. mish activation
 - smoothly transition
 
-## Discussino 7 YOLOR - 2021
+## Discussion 7 YOLOR - 2021
 1. What is this paper try to convey ? 
 - a unified network which serve various tasks
 2. explicit knowledge
@@ -288,7 +288,7 @@ carefully slection detector training and inference modules greatly improves perf
 - add tensor to yolo output vector
 14. 
 
-## Discussino 8 Mask RCNN - 2017
+## Discussion 8 Mask RCNN - 2017
 1. What is this paper try to convey ? 
 - Faster rcnn with mask branch perform instance segmentation 
 2. segmentation
@@ -299,4 +299,35 @@ carefully slection detector training and inference modules greatly improves perf
 6. ROIAlign is better than ROIPool
 7. Lmask
 - sigmoid and binary
-8. 
+
+## Discussion 9 YOLACT - 2019
+1. What is this paper try to convey ? 
+- parallel subtask is given faster real-time instance segemtation
+2. Why other take a long time
+- RCN and ROIpool take a long possessing
+3. How YOLACT fix
+- generating prototype mask and coefficient mask
+4. How fast as it inference time
+- 5 ms to evaluate
+5. YOLOACT architecture
+6. Rationale
+- coherent work in convolutional layer
+ึ7. Protonet Architecture
+- after P3 
+8. k
+- number of prototype mask
+9. ReLU in protonet
+- To be unbounded, interpretable prototypes stricly positive size
+10. Why tanh to k mask coeffient
+- extra bonus from positive 
+11. Why sigmoid in final mask
+- it give keep range 0-1. it easier of mask
+12. Mask predict one by one how YOLOACT work
+- mask produce coefficient predict anchor box
+13. learns how to localize instances on its own via different activations in its prototypes
+- 
+14. YOLOACT
+- 5 different scale 24,48,96,192,384
+15. FAST NMS
+- sequential in IoU then sort descending by score 
+16.
