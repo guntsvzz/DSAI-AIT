@@ -330,4 +330,37 @@ carefully slection detector training and inference modules greatly improves perf
 - 5 different scale 24,48,96,192,384
 15. FAST NMS
 - sequential in IoU then sort descending by score 
-16.
+
+## Discussion 10 GAN - 2014
+1. What is this paper try to convey ? 
+- generators train adversarially to fool discriminatiors capture complex data distribution
+2. discriminatve model
+- logistic regression, alexnet
+3. Generative model
+- driven by noise
+4. Generative model
+- No latent variable
+5. deep boltzmann machine
+- try to probability estimation
+6. auto-encoders variational (VAEs)
+- 
+7. property of output this model
+- 
+8. prior
+- generate sample fake data
+9. generative mapping
+- 
+10. loss function for d
+- maximzie 0 to 1 in binary cross entropy
+11. loss function for
+- minimize log(1-D(G(z)))
+12. why nested loop in equation 1
+- min over g then max over d
+13. In practice
+- G is poor D can classify fake then D(G(z)) is close to 0 thus log(1-D(G(z))) is not practical
+14. Parzen window-based
+- how to evaluate unsupervised
+
+## Discussion 11 cGAN - 2014
+
+## Discussion 12 wGAN - 2014

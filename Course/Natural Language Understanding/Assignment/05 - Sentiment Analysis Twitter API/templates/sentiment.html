@@ -10,7 +10,9 @@
         {{form.submit()}}
     </form>
     {% if name %}
+        Topics : <strong>{{name}}</strong>
     {% else %}
-    {% end if %}
+        Not Found
+    {% endif %}
 </div>
 {% endblock %}

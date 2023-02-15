@@ -43,17 +43,14 @@ def sentiment():
     form = MyForm()
     if form.validate_on_submit():
         name = form.name.data 
+        form.name.data = ""
+        # subreddit = reddit.subreddit(name)
+        # topics = [*subreddit.top(limit=50)] # top posts all time
+        # # print(len(topics))
+        # title = [n.title for n in topics]
+        # df_topics = pd.DataFrame({"title": title})
+        # results = prediction(df_topics['title'])
     return render_template("sentiment.html",form=form,name=name)
-
-# @app.route('/result')
-# def result():
-#     subreddit = reddit.subreddit('bitcoin')
-#     topics = [*subreddit.top(limit=None)] # top posts all time
-#     # print(len(topics))
-#     title = [n.title for n in topics]
-#     df_topics = pd.DataFrame({"title": title})
-#     results = prediction(df_topics['title'])
-#     return render_template("result.html",results=results)
 
 if __name__ == "__main__":
     app.run(debug=True)
