@@ -1,4 +1,5 @@
 import torch.nn as nn
+import torch
 
 class LSTM(nn.Module):
     def __init__(self,input_dim, emb_dim, hid_dim, output_dim, num_layers, bidirectional, dropout, pad_ix):
