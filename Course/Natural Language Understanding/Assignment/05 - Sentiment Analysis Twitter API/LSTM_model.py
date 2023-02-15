@@ -1,8 +1,9 @@
 import torch.nn as nn
+from torchtext.vocab import FastText
 import torch
 
 class LSTM(nn.Module):
-    def __init__(self,input_dim, emb_dim, hid_dim, output_dim, num_layers, bidirectional, dropout, pad_ix):
+    def __init__(self,input_dim, emb_dim, hid_dim, output_dim, num_layers, bidirectional, dropout,pad_ix):
         super().__init__()
         #input dim = how many vocab you have
         #emb dim = 300 --> we use fasttext

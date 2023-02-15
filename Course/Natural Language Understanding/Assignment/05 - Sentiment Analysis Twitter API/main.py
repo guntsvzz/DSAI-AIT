@@ -1,10 +1,12 @@
 from flask import Flask, render_template, request, redirect, url_for, session, flash
 from flask_wtf import FlaskForm
-from wtforms import SubmitField, StringField, BooleanField, RadioField, SelectField, TextAreaField, FileField
+from wtforms import SubmitField, StringField
 from wtforms.validators import DataRequired
 from werkzeug.utils import secure_filename
 from wtforms.validators import InputRequired
 import os
+# from LSTM_predict import *
+import pandas as pd
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'supersecretkey'
@@ -22,10 +24,36 @@ def index():
 def about():
     return render_template("about.html")
 
-@app.route('/sentiment')
+####Reddit API Part
+# reddit crawler
+import pandas as pd
+import praw
+your_client_id='ElyKc6o3du1IMb5LP2HYjg'
+your_client_secret='YimfVn3bTLyVFu_XkJuLxrNkR3vHAQ'
+your_user_name='guntsv'
+
+reddit = praw.Reddit(client_id=your_client_id,
+                     client_secret=your_client_secret,
+                     user_agent=your_user_name,
+                     check_for_async=False)
+
+@app.route('/sentiment',methods = ['GET','POST'])
 def sentiment():
+    name = False
     form = MyForm()
-    return render_template("sentiment.html",form=form)
+    if form.validate_on_submit():
+        name = form.name.data 
+    return render_template("sentiment.html",form=form,name=name)
+
+# @app.route('/result')
+# def result():
+#     subreddit = reddit.subreddit('bitcoin')
+#     topics = [*subreddit.top(limit=None)] # top posts all time
+#     # print(len(topics))
+#     title = [n.title for n in topics]
+#     df_topics = pd.DataFrame({"title": title})
+#     results = prediction(df_topics['title'])
+#     return render_template("result.html",results=results)
 
 if __name__ == "__main__":
     app.run(debug=True)

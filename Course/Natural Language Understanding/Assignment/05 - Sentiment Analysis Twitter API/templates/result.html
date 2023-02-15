@@ -10,23 +10,11 @@
             <table class="w3-table-all">
             <!-- <h1>Skills</h1> -->
                 <tr class="w3-blue">
-                    <th>Skills</th>
+                    <th>Classification</th>
                 </tr>
-                {% for skill in skills %}
+                {% for result in results %}
                 <tr>
-                    <td>{{skill}}</td>
-                </tr>
-                {% endfor %}
-            </table>
-
-            <!-- <h1>Educations</h1> -->
-            <table class="w3-table-all">
-                <tr class="w3-blue">
-                    <th>Educations</th>
-                </tr>
-                {% for education in educations %}
-                <tr>
-                    <td>{{education}}</td>
+                    <td>{{result}}</td>
                 </tr>
                 {% endfor %}
             </table>

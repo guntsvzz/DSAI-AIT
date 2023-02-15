@@ -1,9 +1,16 @@
 {% extends "layout.html" %}
 {% block content %}
+<div class="w3-container">
     <img src="../static/chihuahua-1.jpg", srcset="", alt="">
     </br>
-    <h1>Insert your topic</h1>
-    {{form.name}}
-    {{form.submit}}
-
+    <form action="POST">
+        {{form.name.label}}
+        {{form.name()}}
+        <br>
+        {{form.submit()}}
+    </form>
+    {% if name %}
+    {% else %}
+    {% end if %}
+</div>
 {% endblock %}
