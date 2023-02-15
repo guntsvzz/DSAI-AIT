@@ -1,38 +1,33 @@
 {% extends "layout.html" %}
 {% block content %}
-<html>
-    <title>W3.CSS</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <body>
-        <div class="w3-container">
-            <form action="" method="POST">
-                {{form.csrf_token}}
-                {{form.name.label}}
-                {{form.name()}}
-                <br>
-                {{form.submit()}}
-            </form>
-            <hr>
-            {% if name %}
-                Topics : <strong>{{name}}<strong>
-            {% else %}
-                Not Found
-            {% endif %}
-            <hr>
-            <table class="w3-table-all">
-                <tr class="w3-blue">
-                    <th>Sentence</th>
-                    <th>Rating</th>
-                </tr>
-                {% for sentence,rating in results %}
-                <tr>
-                    <td>{{sentence}}</td>
-                    <td>{{rating}}</td>
-                </tr>
-                {% endfor %}
-            </table>
-        </div>
-    </body>
-</html>
+    <div class="w3-container">
+        <form action="" method="POST">
+            {{form.csrf_token}}
+            {{form.name.label}}
+            {{form.name()}}
+            <br>
+            {{form.submit()}}
+        </form>
+        <hr>
+        {% if name %}
+            Topics : <strong>{{name}}<strong>
+        {% else %}
+            Not Found
+        {% endif %}
+        <hr>
+
+        <table class="w3-table-all">
+        <tr class="w3-blue">
+            <th>Sentence</th>
+            <th>Rating</th>
+        </tr>
+
+        {% for sentence,rating in results %}
+        <tr>
+            <td>{{sentence}}</td>
+            <td>{{rating}}</td>
+        </tr>
+        {% endfor %}
+        </table>
+    </div>
 {% endblock %}
