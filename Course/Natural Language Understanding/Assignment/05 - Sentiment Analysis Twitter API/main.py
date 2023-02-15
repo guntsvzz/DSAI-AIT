@@ -4,16 +4,15 @@ from wtforms import SubmitField, StringField
 from wtforms.validators import DataRequired
 from werkzeug.utils import secure_filename
 from wtforms.validators import InputRequired
-import os
-# from LSTM_predict import *
+from LSTM_predict import *
 import pandas as pd
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'supersecretkey'
+app.config['SECRET_KEY'] = 'mykey'
 app.config['UPLOAD_FOLDER'] = 'static/files' 
 
 class MyForm(FlaskForm):
-    name = StringField('Insert your topic',validators=[DataRequired()])
+    name = StringField('Insert your topic', validators=[DataRequired()])
     submit = SubmitField('Submit')
 
 @app.route('/')
@@ -37,20 +36,20 @@ reddit = praw.Reddit(client_id=your_client_id,
                      user_agent=your_user_name,
                      check_for_async=False)
 
-@app.route('/sentiment',methods = ['GET','POST'])
+@app.route('/sentiment', methods = ['GET','POST'])
 def sentiment():
     name = False
     form = MyForm()
     if form.validate_on_submit():
         name = form.name.data 
         form.name.data = ""
-        # subreddit = reddit.subreddit(name)
-        # topics = [*subreddit.top(limit=50)] # top posts all time
-        # # print(len(topics))
-        # title = [n.title for n in topics]
-        # df_topics = pd.DataFrame({"title": title})
-        # results = prediction(df_topics['title'])
-    return render_template("sentiment.html",form=form,name=name)
+        subreddit = reddit.subreddit(name)
+        topics = [*subreddit.top(limit=50)] # top posts all time
+        # print(len(topics))
+        title = [n.title for n in topics]
+        df_topics = pd.DataFrame({"title": title})
+        results = prediction(df_topics['title'])
+    return render_template("sentiment.html",form=form,name=name,results=results)
 
 if __name__ == "__main__":
     app.run(debug=True)

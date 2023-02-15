@@ -1,18 +1,26 @@
 {% extends "layout.html" %}
 {% block content %}
 <div class="w3-container">
-    <img src="../static/chihuahua-1.jpg", srcset="", alt="">
-    </br>
-    <form action="POST">
+    <!-- <img src="../static/chihuahua-1.jpg", srcset="", alt="">
+    <br> -->
+    <form method="POST">
         {{form.name.label}}
         {{form.name()}}
         <br>
         {{form.submit()}}
     </form>
+    <hr>
     {% if name %}
-        Topics : <strong>{{name}}</strong>
+        Topics : <strong>{{name}}<strong>
     {% else %}
         Not Found
     {% endif %}
+    <hr>
+    {% for sentence,rating in results %}
+    <tr>
+        <td>{{sentence}}</td>
+        <td>{{rating}}</td>
+    </tr>
+    {% endfor %}
 </div>
 {% endblock %}
