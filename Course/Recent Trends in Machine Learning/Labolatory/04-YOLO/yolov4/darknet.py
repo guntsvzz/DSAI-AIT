@@ -7,8 +7,6 @@ from torch.autograd import Variable
 import numpy as np
 from util import * 
 
-
-
 def get_test_input():
     img = cv2.imread("dog-cycle-car.png")
     img = cv2.resize(img, (608,608))          #Resize to the input dimension
@@ -267,7 +265,10 @@ class Darknet(nn.Module):
         return detections
 
 
-    def load_weights(self, weightfile):
+    def load_weights(self, weightfile, backbone=False):
+        '''
+        Load pretrained weight
+        '''
         #Open the weights file
         fp = open(weightfile, "rb")
     
@@ -283,12 +284,34 @@ class Darknet(nn.Module):
         weights = np.fromfile(fp, dtype = np.float32)
         
         ptr = 0
+        ''' 
+            0: looking for start point
+            1: Loading weight
+            2: End point
+        '''
+        stage = 1
+    
+        if(backbone):
+            stage = 0
+
         for i in range(len(self.module_list)):
             module_type = self.blocks[i + 1]["type"]
     
             #If module_type is convolutional load weights
             #Otherwise ignore.
+            if(backbone):
+                # print(stage, self.blocks[i + 1])
+                if(stage == 2): break
+
+                if("backbone" in self.blocks[i + 1] and int(self.blocks[i + 1]["backbone"]) == 0):
+                    stage = 1
+                elif("backbone" in self.blocks[i + 1] and int(self.blocks[i + 1]["backbone"]) == 1):
+                    stage = 2
+
+                if(stage == 0): continue
             
+            # print(self.blocks[i + 1])
+            # Load weight
             if module_type == "convolutional":
                 model = self.module_list[i]
                 try:
@@ -353,5 +376,4 @@ class Darknet(nn.Module):
                 
                 conv_weights = conv_weights.view_as(conv.weight.data)
                 conv.weight.data.copy_(conv_weights)
-
 
