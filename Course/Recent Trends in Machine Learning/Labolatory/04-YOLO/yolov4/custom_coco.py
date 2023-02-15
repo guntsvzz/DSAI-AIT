@@ -435,7 +435,7 @@ def CIOU_xywh_torch(boxes1,boxes2):
 
 def calculate_APs(iou_threshold, batches, targets):
     from pycocotools.coco import COCO
-    coco = COCO('/root/COCO/annotations/instances_val2017.json')
+    coco = COCO("/root/Datasets/coco/annotations/instances_val2014.json")
     ids = list(sorted(coco.imgs.keys()))
 
     # img_id = ids[index]
