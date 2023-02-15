@@ -1,4 +1,4 @@
-# Sentiment Analysi Twitter API
+# Sentiment Analysi API
 BI-LSTM sentiment classification on Standford Sentiment Treebank dataset
 
 Due to Twitter API does not provide permission. Therefore, I have change to Reddit API instead
