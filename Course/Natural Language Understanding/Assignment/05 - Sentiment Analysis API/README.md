@@ -19,3 +19,7 @@ Due to Twitter API does not provide permission. Therefore, I have change to Redd
 
 ## Top words / entities inside positive comments, and negative comments
 <img src = "./figures/02 - FrequentWord.jpg" width=800>
+
+## Future Work
+- remove some entities word such as pronoun.
+- optimize speed website
