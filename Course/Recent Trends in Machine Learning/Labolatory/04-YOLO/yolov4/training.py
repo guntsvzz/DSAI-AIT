@@ -3,15 +3,17 @@ import numpy as np
 import torch.nn as nn
 from util import *
 import math
+from torch.autograd import Variable
 
 def run_training(model, optimizer, dataloader, device, img_size, n_epoch, every_n_batch, every_n_epoch, ckpt_dir):
     losses = None
     for epoch_i in range(n_epoch):
         running_loss = 0.0
         for inputs, labels, bboxes in dataloader:
-            inputs = torch.from_numpy(np.array(inputs)).squeeze(1).permute(0,3,1,2).float()
+            inputs = Variable(torch.from_numpy(np.array(inputs)).squeeze(1).permute(0,3,1,2).float(),requires_grad=True)
             inputs = inputs.to(device)
-            labels = torch.stack(labels).to(device)
+            labels = Variable(torch.stack(labels),requires_grad=True)
+            labels = labels.to(device)
             #print(inputs.shape)
 
             running_corrects = 0
