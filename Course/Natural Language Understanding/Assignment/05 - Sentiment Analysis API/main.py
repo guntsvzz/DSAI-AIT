@@ -4,7 +4,7 @@ from wtforms import SubmitField, StringField
 from wtforms.validators import DataRequired
 from werkzeug.utils import secure_filename
 from wtforms.validators import InputRequired
-from LSTM_predict import *
+from LSTM_predict import PosNeg, prediction,Reddit
 import pandas as pd
 
 app = Flask(__name__)
@@ -23,9 +23,7 @@ def about():
 # reddit crawler
 import pandas as pd
 import praw
-your_client_id='ElyKc6o3du1IMb5LP2HYjg'
-your_client_secret='YimfVn3bTLyVFu_XkJuLxrNkR3vHAQ'
-your_user_name='guntsv'
+from secretkey import *
 
 reddit = praw.Reddit(client_id=your_client_id,
                      client_secret=your_client_secret,
@@ -39,19 +37,19 @@ class MyForm(FlaskForm):
 @app.route('/sentiment', methods = ['GET','POST'])
 def sentiment():
     name = False
-    results = 0,0
+    df_result = False
+    pos = False
+    neg = False
     form = MyForm()
     print(form.validate_on_submit())
     if form.validate_on_submit():
         name = form.name.data 
         form.name.data = ""
-        subreddit = reddit.subreddit(name)
-        topics = [*subreddit.top(limit=50)] # top posts all time
-        # print(len(topics))
-        title = [n.title for n in topics]
-        df_topics = pd.DataFrame({"title": title})
-        results = prediction(df_topics['title'])
-    return render_template("sentiment.html",form=form,name=name,results=results)
+        #Reddit Part
+        result = Reddit(name,reddit,50)
+        #Pos/Neg Part
+        pos,neg = PosNeg(result)
+    return render_template("sentiment.html",form=form,name=name,results=result,pos=pos,neg=neg)
 
 if __name__ == "__main__":
     app.run(debug=True)

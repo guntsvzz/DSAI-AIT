@@ -15,6 +15,5 @@ Due to Twitter API does not provide permission. Therefore, I have change to Redd
 ## Upload Page
 <img src = "./figures/01 - Classification.jpg" width=800>
 
-
 ## Top words / entities inside positive comments, and negative comments
-In-progress
+<img src = "./figures/02 - FrequentWord.jpg" width=800>

@@ -4,7 +4,7 @@ import pytreebank
 import spacy
 from torchtext.data.utils import get_tokenizer
 from torchtext.vocab import build_vocab_from_iterator
-
+import pandas as pd
 #Load GPU
 device = torch.device('cuda:2' if torch.cuda.is_available() else 'cpu')
 
@@ -54,3 +54,54 @@ def prediction(test_str_list):
         predicted = torch.max(output.data, 1)[1].detach().cpu().numpy()[0]
         result.append((test_str, predicted))
     return result
+
+from collections import Counter
+from spacy.lang.en.stop_words import STOP_WORDS
+import spacy
+nlp = spacy.load('en_core_web_md')
+
+def Reddit(name,reddit,limit):
+    subreddit = reddit.subreddit(name)
+    topics = [*subreddit.top(limit=limit)] # top posts all time
+    # print(len(topics))
+    df_topics = pd.DataFrame({"title": [n.title for n in topics]})
+    df_result = prediction(df_topics['title'])
+    return df_result
+
+def PosNeg(result):
+    df = pd.DataFrame(result)
+    print(df.head())
+    df = df.rename(columns={0: 'Title', 1: 'Rating'})
+    df['clean'] = df['Title'].apply(preprocessing)
+    df_pos = df[df['Rating'].isin([3,4])] #postive
+    df_neg = df[df['Rating'].isin([0,1])] #negative
+    common_words_pos = findvocab(df_pos['clean'])
+    common_words_neg = findvocab(df_neg['clean'])
+    return common_words_pos,common_words_neg
+
+def preprocessing(sentence):
+    stopwords = list(STOP_WORDS)
+    doc = nlp(sentence)
+    cleaned_tokens = []
+
+    for token in doc:
+        if token.text not in stopwords and token.pos_ != 'PUNCT' and token.pos_ != 'SPACE' and \
+                token.pos_ != 'SYM':
+            cleaned_tokens.append(token.lemma_.lower().strip())
+
+    return " ".join(cleaned_tokens)
+
+def findvocab(corpus):
+    #data tokenized
+    corpus_tokenized = [sent.split(" ") for sent in corpus]
+    #2. numericalize (vocab)
+    #2.1 get all the unique words
+    #we want to flatten unit (basically merge all list)
+    flatten = lambda l: [item for sublist in l for item in sublist]
+    vocabs = list(flatten(corpus_tokenized))
+    voc_size = len(vocabs)
+    print('Vocab Size :',voc_size)
+    word_freq = Counter(vocabs)
+    common_words = word_freq.most_common(3)
+    return common_words
+
