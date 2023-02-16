@@ -37,19 +37,20 @@ class MyForm(FlaskForm):
 @app.route('/sentiment', methods = ['GET','POST'])
 def sentiment():
     name = False
-    df_result = False
+    result = False
     pos = False
     neg = False
+    plot_url = False
     form = MyForm()
     print(form.validate_on_submit())
     if form.validate_on_submit():
         name = form.name.data 
         form.name.data = ""
         #Reddit Part
-        result = Reddit(name,reddit,50)
+        result = Reddit(name,reddit,None)
         #Pos/Neg Part
-        pos,neg = PosNeg(result)
-    return render_template("sentiment.html",form=form,name=name,results=result,pos=pos,neg=neg)
+        pos,neg,plot_url = PosNeg(result)
+    return render_template("sentiment.html",form=form,name=name,results=result,pos=pos,neg=neg,plot_url=plot_url)
 
 if __name__ == "__main__":
     app.run(debug=True)

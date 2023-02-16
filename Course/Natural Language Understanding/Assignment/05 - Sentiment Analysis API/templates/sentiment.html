@@ -27,7 +27,7 @@
                     <th>Sentence</th>
                     <th>Rating</th>
                 </tr>
-                {% for sentence,rating in results %}
+                {% for sentence,rating in results[0:10] %}
                 <tr>
                     <td>{{sentence}}</td>
                     <td>{{rating}}</td>
@@ -53,6 +53,12 @@
                 </tr>
                 {% endfor %}
             </table>
+        {% else %}
+            Not Found
+        {% endif %}
+        <hr>
+        {% if plot_url %}
+            <img src="data:image/png;base64,{{ plot_url }}">
         {% else %}
             Not Found
         {% endif %}

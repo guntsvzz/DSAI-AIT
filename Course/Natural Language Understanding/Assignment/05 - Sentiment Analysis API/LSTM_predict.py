@@ -5,6 +5,11 @@ import spacy
 from torchtext.data.utils import get_tokenizer
 from torchtext.vocab import build_vocab_from_iterator
 import pandas as pd
+
+import matplotlib.pyplot as plt
+import base64
+import io
+
 #Load GPU
 device = torch.device('cuda:2' if torch.cuda.is_available() else 'cpu')
 
@@ -70,14 +75,25 @@ def Reddit(name,reddit,limit):
 
 def PosNeg(result):
     df = pd.DataFrame(result)
-    print(df.head())
     df = df.rename(columns={0: 'Title', 1: 'Rating'})
+    print(df['Rating'].value_counts())
+    #POS/NEG
     df['clean'] = df['Title'].apply(preprocessing)
     df_pos = df[df['Rating'].isin([3,4])] #postive
     df_neg = df[df['Rating'].isin([0,1])] #negative
     common_words_pos = findvocab(df_pos['clean'])
     common_words_neg = findvocab(df_neg['clean'])
-    return common_words_pos,common_words_neg
+    #Graph
+    score = df['Rating'].value_counts().sort_index()
+    score = score.rename(index={0: "Very Negative", 1: "Negative", 2: "Normal",3: "Positive",4:"Very Positive"})
+    score.plot.barh()
+    plt.title('Sentiment classification')
+    plt.xlabel('Sentiment')
+    plt.ylabel('Frequency')
+    output = io.BytesIO() #Retrieve the entire contents of the BytesIO object
+    plt.savefig(output, format='png')
+    plot_url = base64.b64encode(output.getvalue()).decode('utf-8')
+    return common_words_pos,common_words_neg,plot_url
 
 def preprocessing(sentence):
     stopwords = list(STOP_WORDS)
