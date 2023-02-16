@@ -1,7 +1,6 @@
 import twint
 # pip3 install twint
 # pip3 install --user --upgrade git+https://github.com/twintproject/twint.git@origin/master#egg=twint
-# Configure Twint to search for tweets containing a certain keyword
 
 def scraper(keyword):
     c = twint.Config()

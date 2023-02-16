@@ -11,7 +11,9 @@ Due to Twitter API does not provide permission. Therefore, I have change to Redd
 - Spacy Library
     - https://spacy.io/usage/spacy-101
     - en_web_core_sm 
-
+- Twint : Implement Further
+    - https://github.com/twintproject/twint
+    
 ## Upload Page
 <img src = "./figures/01 - Classification.jpg" width=800>
 
