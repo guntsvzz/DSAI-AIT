@@ -21,7 +21,7 @@ https://drive.google.com/drive/u/2/folders/1OPFng8cOE2D4HaxDtqqskQ9QgFRpti_2
 [project](/Project)
 - AT82.05 Artificial Intelligence: Natural Language Understanding (NLU)
 [Course](/Course/Natural%20Language%20Understanding/) |
-[project](/Project)
+[project](../Thai-Paraphase/)
 - AT82.09 Human-Computer Interaction and Information Visualization (HCI)
 [Course](/Course/Human-Computer%20Interaction%20and%20Information%20Visualization/) |
 [project](/Project)
