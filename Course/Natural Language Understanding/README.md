@@ -10,7 +10,7 @@
 - FastText - 2017 [click](./Assignment/paper/FastText.md)
 - TagLM - 2017 [click](./Assignment/paper/TagLM.md)
 - ELMo - 2018 [click](./Assignment/paper/ELMo.md)
-- Seq2Seq - 2014 
+- Seq2Seq - 2014 [click](./Assignment/paper/seq2seq.md)
 - BLEU - 2002
 - Transformer - 2017
 
