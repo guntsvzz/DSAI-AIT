@@ -8,7 +8,7 @@
 ## Classical Paper
 - A Fast and Accurate Dependency Parser using Neural Networks - 2014 [click](./Assignment/paper/A%20Fast%20and%20Accurate%20Dependency%20Parser%20using%20Neural%20Networks.md)
 - FastText - 2017 [click](./Assignment/paper/FastText.md)
-- TagLM - 2017 [click](./Assignment/paper/TagLM.md.md)
+- TagLM - 2017 [click](./Assignment/paper/TagLM.md)
 - ELMo - 2018 [click](./Assignment/paper/ELMo.md)
 - Seq2Seq - 2014 
 - BLEU - 2002
