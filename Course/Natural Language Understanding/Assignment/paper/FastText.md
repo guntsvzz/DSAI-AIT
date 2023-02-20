@@ -1,7 +1,7 @@
 ```
 Paper : Enriching Word Vectors with Subword Information
 Link : https://arxiv.org/abs/1607.04606
-Venue: 
+Venue: ACL
 ```
 
 | Topic        | Enriching Word Vectors with Subword Information        |
