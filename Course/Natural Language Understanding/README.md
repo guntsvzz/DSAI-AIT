@@ -1,8 +1,8 @@
 #  AT82.05 Artificial Intelligence: Natural Language Understanding (NLU)
 
 ## This is read paper
-- Thai Nested Named Entity Recognition - 2022 [click](./Assignment/paper/Thai%20Nested%20Named%20Entity%20Recognition%20Corpus.md)
-- Quality Controlled Paraphrase Generation - 2021 [click](./Assignment/paper/Quality%20Controlled%20Paraphrase%20Generation.md)
+- Thai Nested Named Entity Recognition - 2022 [click](./Assignment/paper/ThaiNNER.md)
+- Quality Controlled Paraphrase Generation - 2021 [click](./Assignment/paper/QCPG.md)
 - WangchanBERTa Pretraining transformer-based Thai Language Models - 2021
 
 ## Classical Paper
