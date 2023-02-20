@@ -9,6 +9,9 @@
 - FastText - 2017 [click](./Assignment/paper/FastText.md)
 - TagLM - 2017 [click](./Assignment/paper/TagLM.md.md)
 - ELMo - 2018 [click](./Assignment/paper/ELMo.md)
+- Seq2Seq - 2014 
+- BLEU - 2002
+- Transformer - 2017
 
 ## In-progress
 - A Neural Probabilistic Language Model
