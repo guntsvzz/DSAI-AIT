@@ -12,4 +12,4 @@ Venue: ACL
 | Method       | considering subword units, and representing words by a sum of its chatacter n-grams|
 | Result       | fast and capture OOV, 3-6-gram is optimal|
 | Conclusion   | subword representations relying on morphological analysis|
-| Limitation   | high memory requirement such WHERE with 3-gram: <wh, whe, her, ere, re> such subword is not necessary|
+| Limitation   | 1. high memory requirement such WHERE with 3-gram: <wh, whe, her, ere, re> such subword is not necessary <br> 2. It doesn't consider context word|
