@@ -10,6 +10,6 @@ Venue: ACL
 | Related Work | Subword information, Unsupervised language model (TagLM)|
 | Solution     | combination of the intermediate layer representations in the biLM |
 | Method       | 1. 2biLSTM layer : lower-level for syntaax and higher-layer for semantics<br> 2. Use weight average instead of last hidden state<br> 3. Freeze weight of ELMo<br> 4. Concatenating into intermediate layers same as TagLM<br>|
-| Result       | |
-| Conclusion   | Adding ELMp improve NLP many tasks|
+| Result       | Achieved SOAT results on a wide range of NLP tasks |
+| Conclusion   | Generateing word embeddings that are contextualized based |
 | Limitation   | Adding ELMo in small training sets is not different slightly much comparing with baseline|
