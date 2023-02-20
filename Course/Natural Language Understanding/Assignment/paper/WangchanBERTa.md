@@ -1,11 +1,11 @@
 ```
 Paper : WangchanBERTa Pretraining transformer-based Thai Language Models
 Link : https://arxiv.org/abs/2101.09635
-Venue: 
+Venue: NAACL 
 ```
 
 | Topic        | WangchanBERTa Pretraining transformer-based Thai Language Models |
-|--------------|---------------------------------------------------------|
+|--------------|------------------------------------------------------------------|
 | Question     | |
 | Related Work | |
 | Solution     | |

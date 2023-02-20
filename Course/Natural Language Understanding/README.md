@@ -12,7 +12,7 @@
 - ELMo - 2018 [click](./Assignment/paper/ELMo.md)
 - Seq2Seq - 2014 [click](./Assignment/paper/seq2seq.md)
 - BLEU - 2002
-- Transformer - 2017
+- Transformer - 2017 [click](./Assignment/paper/transformer.md)
 
 ## In-progress
 - A Neural Probabilistic Language Model
