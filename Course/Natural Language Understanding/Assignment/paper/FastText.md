@@ -8,7 +8,7 @@ Venue: ACL
 |--------------|--------------------------------------------------------|
 | Question     | How to improve out-of-vocabulary (OOV) |
 | Related Work | morphological information, character n-gram representation|
-| Solution     | subword information adding "<" and ">" to perform prefix and suffix |
+| Solution     | character-based : subword information adding "<" and ">" to perform prefix and suffix |
 | Method       | considering subword units, and representing words by a sum of its chatacter n-grams|
 | Result       | fast and capture OOV, 3-6-gram is optimal|
 | Conclusion   | subword representations relying on morphological analysis|
