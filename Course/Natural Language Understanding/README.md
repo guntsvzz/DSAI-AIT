@@ -1,11 +1,11 @@
 #  AT82.05 Artificial Intelligence: Natural Language Understanding (NLU)
 
 ## This is read paper
-- Thai Nested Named Entity Recognition - 2022 [click](./Assignment/paper/00%20-%20Thai%20Nested%20Named%20Entity%20Recognition%20Corpus.md)
-- Quality Controlled Paraphrase Generation - 2021 [click](./Assignment/paper/04%20-%20Quality%20Controlled%20Paraphrase%20Generation.md)
+- Thai Nested Named Entity Recognition - 2022 [click](./Assignment/paper/Thai%20Nested%20Named%20Entity%20Recognition%20Corpus.md)
+- Quality Controlled Paraphrase Generation - 2021 [click](./Assignment/paper/Quality%20Controlled%20Paraphrase%20Generation.md)
 
 ## Classical Paper
-- A Fast and Accurate Dependency Parser using Neural Networks - 2014 [click](./Assignment/paper/03%20-%20A%20Fast%20and%20Accurate%20Dependency%20Parser%20using%20Neural%20Networks.md)
+- A Fast and Accurate Dependency Parser using Neural Networks - 2014 [click](./Assignment/paper/A%20Fast%20and%20Accurate%20Dependency%20Parser%20using%20Neural%20Networks.md)
 - FastText - 2017 [click](./Assignment/paper/FastText.md)
 - TagLM - 2017 [click](./Assignment/paper/TagLM.md.md)
 - ELMo - 2018 [click](./Assignment/paper/ELMo.md)
