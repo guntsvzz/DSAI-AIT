@@ -4,6 +4,7 @@
 <workbook original-version='18.1' source-build='2022.4.0 (20224.22.1117.1841)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
   <document-format-change-manifest>
     <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <MapboxVectorStylesAndLayers />
     <_.fcp.MarkAnimation.true...MarkAnimation />
     <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
     <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
@@ -654,6 +655,7 @@
       <column-instance column='[bodily_injuries]' derivation='Avg' name='[avg:bodily_injuries:qk]' pivot='key' type='quantitative' />
       <column-instance column='[age]' derivation='Sum' name='[sum:age:qk]' pivot='key' type='quantitative' />
       <column-instance column='[bodily_injuries]' derivation='Sum' name='[sum:bodily_injuries:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[injury_claim]' derivation='Sum' name='[sum:injury_claim:qk]' pivot='key' type='quantitative' />
       <column-instance column='[months_as_customer]' derivation='Sum' name='[sum:months_as_customer:qk]' pivot='key' type='quantitative' />
       <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
       <style>
@@ -664,6 +666,9 @@
             </map>
             <map to='#4e79a7'>
               <bucket>&quot;[federated.0ie7bpt0h6kj2u17zgmhf0e9qoe9].[sum:age:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.0ie7bpt0h6kj2u17zgmhf0e9qoe9].[sum:injury_claim:qk]&quot;</bucket>
             </map>
             <map to='#76b7b2'>
               <bucket>&quot;[federated.0ie7bpt0h6kj2u17zgmhf0e9qoe9]&quot;</bucket>
@@ -729,41 +734,159 @@
       </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
     </datasource>
   </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
   <worksheets>
-    <worksheet name='Sheet 1'>
+    <worksheet name='City vs indicident type'>
       <table>
         <view>
           <datasources>
             <datasource caption='insurance_claims_data-Subset (insurance_claims_data-Subset)' name='federated.0ie7bpt0h6kj2u17zgmhf0e9qoe9' />
           </datasources>
-          <datasource-dependencies datasource='federated.0ie7bpt0h6kj2u17zgmhf0e9qoe9' />
+          <datasource-dependencies datasource='federated.0ie7bpt0h6kj2u17zgmhf0e9qoe9'>
+            <column caption='Incident City' datatype='string' name='[incident_city]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column caption='Incident Type' datatype='string' name='[incident_type]' role='dimension' type='nominal' />
+            <column caption='Injury Claim' datatype='integer' name='[injury_claim]' role='measure' type='quantitative' />
+            <column-instance column='[incident_city]' derivation='None' name='[none:incident_city:nk]' pivot='key' type='nominal' />
+            <column-instance column='[incident_type]' derivation='None' name='[none:incident_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[injury_claim]' derivation='Sum' name='[sum:injury_claim:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
           <aggregation value='true' />
         </view>
-        <style>
-          <style-rule element='cell'>
-            <format attr='width' field='[federated.0ie7bpt0h6kj2u17zgmhf0e9qoe9].[:Measure Names]' value='20' />
-          </style-rule>
-        </style>
+        <style />
         <panes>
-          <pane id='3' selection-relaxation-option='selection-relaxation-allow'>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow'>
             <view>
               <breakdown value='auto' />
             </view>
-            <mark class='Multipolygon' />
+            <mark class='Area' />
             <encodings>
-              <color column='[federated.0ie7bpt0h6kj2u17zgmhf0e9qoe9].[:Measure Names]' />
-              <geometry column='[federated.0ie7bpt0h6kj2u17zgmhf0e9qoe9].[Geometry (generated)]' />
+              <color column='[federated.0ie7bpt0h6kj2u17zgmhf0e9qoe9].[none:incident_type:nk]' />
             </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ie7bpt0h6kj2u17zgmhf0e9qoe9].[sum:injury_claim:qk]</rows>
+        <cols>[federated.0ie7bpt0h6kj2u17zgmhf0e9qoe9].[none:incident_city:nk]</cols>
+      </table>
+      <simple-id uuid='{8433533C-FD8B-4F59-B009-2C37527C1711}' />
+    </worksheet>
+    <worksheet name='Relationship'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='insurance_claims_data-Subset (insurance_claims_data-Subset)' name='federated.0ie7bpt0h6kj2u17zgmhf0e9qoe9' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0ie7bpt0h6kj2u17zgmhf0e9qoe9'>
+            <column caption='Bodily Injuries' datatype='integer' name='[bodily_injuries]' role='measure' type='quantitative' />
+            <column caption='Insured Relationship' datatype='string' name='[insured_relationship]' role='dimension' type='nominal' />
+            <column-instance column='[insured_relationship]' derivation='None' name='[none:insured_relationship:nk]' pivot='key' type='nominal' />
+            <column-instance column='[bodily_injuries]' derivation='Sum' name='[sum:bodily_injuries:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0ie7bpt0h6kj2u17zgmhf0e9qoe9].[none:insured_relationship:nk]</rows>
+        <cols>[federated.0ie7bpt0h6kj2u17zgmhf0e9qoe9].[sum:bodily_injuries:qk]</cols>
+      </table>
+      <simple-id uuid='{ACAA96C1-4753-49A9-9DD5-A541BB6BCCA1}' />
+    </worksheet>
+    <worksheet name='Sheet 4'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
           </pane>
         </panes>
         <rows />
         <cols />
       </table>
-      <simple-id uuid='{8433533C-FD8B-4F59-B009-2C37527C1711}' />
+      <simple-id uuid='{71EC5039-97FA-4D6B-80F0-EEB2B36783B8}' />
+    </worksheet>
+    <worksheet name='Vehicle characteristics'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='insurance_claims_data-Subset (insurance_claims_data-Subset)' name='federated.0ie7bpt0h6kj2u17zgmhf0e9qoe9' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ie7bpt0h6kj2u17zgmhf0e9qoe9'>
+            <column caption='Auto Make' datatype='string' name='[auto_make]' role='dimension' type='nominal' />
+            <column caption='Auto Model' datatype='string' name='[auto_model]' role='dimension' type='nominal' />
+            <column caption='Auto Year' datatype='integer' name='[auto_year]' role='dimension' type='quantitative' />
+            <column-instance column='[auto_make]' derivation='None' name='[none:auto_make:nk]' pivot='key' type='nominal' />
+            <column-instance column='[auto_model]' derivation='None' name='[none:auto_model:nk]' pivot='key' type='nominal' />
+            <column-instance column='[auto_year]' derivation='None' name='[none:auto_year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[vehicle_claim]' derivation='Sum' name='[sum:vehicle_claim:qk]' pivot='key' type='quantitative' />
+            <column caption='Vehicle Claim' datatype='integer' name='[vehicle_claim]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ie7bpt0h6kj2u17zgmhf0e9qoe9].[:Measure Names]'>
+            <groupfilter function='level-members' level='[:Measure Names]' />
+          </filter>
+          <slices>
+            <column>[federated.0ie7bpt0h6kj2u17zgmhf0e9qoe9].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.0ie7bpt0h6kj2u17zgmhf0e9qoe9].[sum:vehicle_claim:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0ie7bpt0h6kj2u17zgmhf0e9qoe9].[none:auto_year:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#e15759' />
+                <format attr='mark-transparency' value='255' />
+                <format attr='has-stroke' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0ie7bpt0h6kj2u17zgmhf0e9qoe9].[none:auto_make:nk] / [federated.0ie7bpt0h6kj2u17zgmhf0e9qoe9].[none:auto_model:nk])</rows>
+        <cols>[federated.0ie7bpt0h6kj2u17zgmhf0e9qoe9].[sum:vehicle_claim:qk]</cols>
+      </table>
+      <simple-id uuid='{BE94797E-9777-40EA-A363-DB6289402CC5}' />
     </worksheet>
   </worksheets>
   <windows source-height='37'>
-    <window class='worksheet' maximized='true' name='Sheet 1'>
+    <window class='worksheet' name='City vs indicident type'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -785,11 +908,85 @@
         </edge>
         <edge name='right'>
           <strip size='160'>
-            <card pane-specification-id='3' param='[federated.0ie7bpt0h6kj2u17zgmhf0e9qoe9].[:Measure Names]' type='color' />
+            <card pane-specification-id='5' param='[federated.0ie7bpt0h6kj2u17zgmhf0e9qoe9].[none:incident_type:nk]' type='color' />
           </strip>
         </edge>
       </cards>
       <simple-id uuid='{D1DEF983-1879-49EC-AFB1-F753CE369EC4}' />
+    </window>
+    <window class='worksheet' name='Vehicle characteristics'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='36'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0ie7bpt0h6kj2u17zgmhf0e9qoe9].[none:auto_year:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{68BE508E-CE4F-4E05-A87A-6DD2515CC47C}' />
+    </window>
+    <window class='worksheet' name='Relationship'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{7F6362F2-6567-45FB-83DD-34DB364F0122}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 4'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{383B2924-BE7C-4AA7-829F-29EDD37F68C7}' />
     </window>
   </windows>
 </workbook>
