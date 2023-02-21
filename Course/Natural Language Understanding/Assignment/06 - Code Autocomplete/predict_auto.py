@@ -1,4 +1,5 @@
 import torch
+import pickle
 from LSTMLanguage_Model import LSTMLanguageModel
 from torchtext.data.utils import get_tokenizer
 #Load GPU
@@ -6,7 +7,10 @@ device = torch.device('cuda:2' if torch.cuda.is_available() else 'cpu')
 
 tokenizer = get_tokenizer('spacy', language='en_core_web_sm')
 
-vocab = [line.rstrip() for line in open('vocab.txt', mode = 'r')]
+# Load data (deserialize)
+with open('vocab.pickle', 'rb') as handle:
+    vocab = pickle.load(handle)
+print(len(vocab))
 
 def generate(prompt, max_seq_len, temperature, model, tokenizer, vocab, device, seed=None):
     if seed is not None:
