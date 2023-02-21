@@ -10,6 +10,6 @@ Venue:
 | Related Work | mapping the entire input sentence to vector|
 | Solution     | use one LSTM to read the input sentence (Decoder) and another LSTM extract the output sentecne (Encoder) |
 | Method       | estimate the conditional probability using softmax then Decoder give last hidden state to Encoder |
-| Result       | 1. infomation of long sentence is not lost in LSTM <br> 2. reverseing the word extend improvement <br> 3. representations are effect to order of words <br>|
+| Result       | 1. information of long sentence is not lost in LSTM <br> 2. reverseing the sequence extend improvement <br> 3. representations are effect to order of words <br>|
 | Conclusion   | LSTM-based on limited vocabulary, can outperform SMT-based which vocabury is unlimited|
-| Limitation   | 1. train on reversed dataset difficult translating long sentences|
+| Limitation   | train on reversed dataset difficult translating long sentences|
