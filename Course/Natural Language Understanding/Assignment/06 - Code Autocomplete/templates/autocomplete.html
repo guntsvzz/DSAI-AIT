@@ -13,6 +13,14 @@
             <br>
             {{form.submit()}}
         </form>
+        <hr>
+        {% if name %}
+            Type    : {{name}}
+            Predict : {{code}}
+        {% else %}
+            Not Found
+        {% endif %}
+        <hr>
     </div>
 </html>
 {% endblock%}

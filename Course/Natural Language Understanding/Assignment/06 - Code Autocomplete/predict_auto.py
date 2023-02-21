@@ -6,6 +6,8 @@ device = torch.device('cuda:2' if torch.cuda.is_available() else 'cpu')
 
 tokenizer = get_tokenizer('spacy', language='en_core_web_sm')
 
+vocab = [line.rstrip() for line in open('vocab.txt', mode = 'r')]
+
 def generate(prompt, max_seq_len, temperature, model, tokenizer, vocab, device, seed=None):
     if seed is not None:
         torch.manual_seed(seed)
@@ -37,7 +39,7 @@ def generate(prompt, max_seq_len, temperature, model, tokenizer, vocab, device, 
     tokens = [itos[i] for i in indices]
     return tokens
 
-def predict(prompt,temperature):
+def predict(prompt,temperature=1):
     max_seq_len = 30
     seed = 0
                 #superdiverse       more diverse
@@ -50,7 +52,6 @@ def predict(prompt,temperature):
     generation = generate(prompt, max_seq_len, temperature, model, tokenizer, vocab, device, seed)
     return ' '.join(generation)
 
-## Change vocab
 vocab_size = len(vocab)
 emb_dim = 1024                # 400 in the paper
 hid_dim = 1024                # 1150 in the paper
@@ -58,6 +59,5 @@ num_layers = 2                # 3 in the paper
 dropout_rate = 0.65              
 lr = 1e-3                     
 model = LSTMLanguageModel(vocab_size, emb_dim, hid_dim, num_layers, dropout_rate).to(device)
-save_path = f'models/LSTM_TreeBank.pt'
+save_path = f'models/best-val-auto.pt'
 model.load_state_dict(torch.load(save_path))
-
