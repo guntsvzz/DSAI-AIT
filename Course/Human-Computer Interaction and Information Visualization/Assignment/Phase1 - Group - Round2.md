@@ -78,7 +78,6 @@ Speaking Up
 
 
 ## FPS
-
 Measuring the Impact of Game Controllers on Player Experience in FPS Games 2011 (Control in PC and Console FPS Games)
 - https://dl.acm.org/doi/pdf/10.1145/2181037.2181052
 Immersive FPS Games: User Experience and Performance 2013 (VR)
