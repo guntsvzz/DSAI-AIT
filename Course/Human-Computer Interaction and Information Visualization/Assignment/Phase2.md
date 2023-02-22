@@ -15,9 +15,13 @@ Still support FPS game
 ## Rhythm Action Games family
 - An Enhanced Musical Experience for the Deaf: Design and Evaluation of a Music Display and a Haptic Chair https://dl.acm.org/doi/10.1145/1518701.1518756
 
+- DEAFNESS AND MUSIC: CAN VIBRATION BE USED WHEN PLAYING MUSIC TOGETHER?
+    - Low level vibration on feet outperform than finger
+
 - Smartphone Drum: Gesture-based Digital Musical Instruments Application for Deaf and Hard of Hearing People https://dl.acm.org/doi/10.1145/3485279.3488285
     - Percussion instrument
 
 - Supporting Rhythm Activities of Deaf Children using Music-Sensory-Substitution Systems https://dl.acm.org/doi/abs/10.1145/3173574.3174060Conference 
 
-- TaikoNation: Patterning-focused Chart Generation for Rhythm Action Games https://arxiv.org/abs/2107.12506
+- TaikoNation: Patterning-focused Chart Generation for Rhythm Action Games 
+https://arxiv.org/abs/2107.12506
