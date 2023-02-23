@@ -362,5 +362,26 @@ carefully slection detector training and inference modules greatly improves perf
 - how to evaluate unsupervised
 
 ## Discussion 11 cGAN - 2014
+1. What is this paper try to convey ? 
+- cGAN allows feed class labels to a generator
+- Inputting y and z to a GAN allows modeling p(x|y)
+2. Benefit cGAN comparing other
+- traditional statistics model
+3. Explain equation 2 comparing to 1
+- condition probability P(z|y) to 0 if this not found
+4. Figure 1
+- z : gaussian noise
+5. Table 2
+- generated tags from cosine similiarity
 
-## Discussion 12 wGAN - 2014
+## Discussion 12 controlGAN - 2014
+1. What is this paper try to convey ? 
+- Seperate features classifer from discriminator generate detailed samples.
+2. Why classic GAN
+- generating by noise which is not effecient
+3. conditional GAN 
+- even feeding y but it cannot generate detailed features
+4. the concept of controlGAN
+- 
+5. equation 5
+- gamma
