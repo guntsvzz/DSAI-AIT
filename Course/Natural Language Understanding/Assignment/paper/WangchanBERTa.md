@@ -7,8 +7,8 @@ Venue: NAACL
 
 | Topic        | WangchanBERTa Pretraining transformer-based Thai Language Models |
 |--------------|------------------------------------------------------------------|
-| Question     | |
-| Related Work | |
+| Question     | large-scale multi-lingual pretraining doesn't consider language specific feature for low-resouce such as Thai|
+| Related Work | 1. preprocessing tokenizer family : SentencePiece tokenizer, Word-level tokenizer, Syllable-level tokenize, SEFR tokenizer<br>2. RoBERTa-base Achitecture|
 | Solution     | |
 | Method       | |
 | Result       | |
