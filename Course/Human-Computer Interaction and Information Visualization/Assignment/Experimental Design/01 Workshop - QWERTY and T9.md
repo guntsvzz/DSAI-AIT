@@ -12,9 +12,9 @@ experiment discussing:
     3. For learning, users should be able to learn Swipe and start to show a better performance than QWERTY and T9 after some bloacks of trails
     4. Swipe may have lower accuracy, since it varies based on the capabilities of the word prediction
 - Independent variables
-    -  3levels (QWERTY, T9 ,SWIPE);
+    - 3 levels (QWERTY, T9 ,SWIPE);
     - Let's say we have one more IV that is Screen size with 2 lebel (Small and Large)
-    - This becomes a 3x2 factorial desgin with 6 conditions 
+    - This becomes a 3x2 factorial desgin with *6 conditions*
 - Dependent variables
     - Speed, Accuracy, and learning over blocks
 - Any possible confounding/random/control variables
@@ -22,7 +22,7 @@ experiment discussing:
     - Random variables - past experineece
     - Confounding variables - implementation, task, order
 - Within or Between subject design
-    - leaerning can be mitigated
+    - learning can be mitigated
 - Task
     - representative numbevr of occurrences of character (perchaps use some proven dataset like http://www.yorku.ac/mack/PhraseSets.zip)
 - Order

@@ -13,7 +13,6 @@ https://www.sciencedirect.com/science/article/abs/pii/S107158191630088X
     - task : 
     - procedure :
         - testing with 2 both sides of device with 
-        - 
     - place : flatten place such as park and athelte stadium
     - partcipants : 32 participants
     - order effect : 
