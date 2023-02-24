@@ -1,5 +1,6 @@
 # Task 02
 <img src = "../images/workshop2.png" width=800>
+
 ## Source: Dim and Xiangshi 2017,
 https://www.sciencedirect.com/science/article/abs/pii/S107158191630088X
 - Research Question: Which body parts are suitable for wearable vibration feedback in walking navigation for blind people?
