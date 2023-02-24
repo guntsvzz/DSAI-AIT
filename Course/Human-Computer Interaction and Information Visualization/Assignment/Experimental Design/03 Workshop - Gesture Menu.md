@@ -1,5 +1,6 @@
 # Task 03
-## Figure: Source: Zheng et al. CHI 2018;
+<img src = "../images/workshop3.png" width=800>
+Figure: Source: Zheng et al. CHI 2018;
 https://www.youtube.com/watch?v=SBVRT_x0xYY
 - Research Question: We have proposed a gesture menu used in mobile phones - How does the newly proposed gesture menu compared to linear menu (baseline)?
 

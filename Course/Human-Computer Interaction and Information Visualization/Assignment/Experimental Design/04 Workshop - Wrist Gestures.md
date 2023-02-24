@@ -1,5 +1,5 @@
 # TASK 04 
-
+<img src = "../images/workshop4.png" width=800>
 Figure: Source: Gong et al. CHI 2018;
 https://dl.acm.org/doi/10.1145/3173574.3173755, downloads:
 https://cs.dartmouth.edu/~zheer/files/WrisText.pdf

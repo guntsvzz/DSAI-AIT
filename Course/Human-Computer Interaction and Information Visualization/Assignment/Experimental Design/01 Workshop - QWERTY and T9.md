@@ -1,4 +1,5 @@
-# Task
+# Task 01
+<img src = "../images/workshop1.png" width=800>
 ## Given two baseline input methods: QWERTY and T9, and our proposed method:
 Swiping Gestures which we claim to be faster and more accurate. Design an
 experiment discussing:
