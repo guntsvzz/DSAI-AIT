@@ -13,5 +13,4 @@ Venue: NAACL
 | Method       | replace HTML forms, empty brackets, repetitive character such as ดีมากกกกก to ดีมาก then use 4 different tokenizers |
 | Result       | 1. WangchanBERTa outperforms baselines (NBSVM, CRF and ULMFit) and multi-lingual models (XLMR and mBERT <br>|
 | Conclusion   | 1. a multi-lingual model (XLMR) is better when it include multi-lingual elements namely the English-to-Thai translated texts <br> 2. There are no difference performance for sequence/token classification tasks. |
-| Limitation   | bias-measuring datasets in
-Thai contexts |
+| Limitation   | bias-measuring datasets in Thai contexts |
