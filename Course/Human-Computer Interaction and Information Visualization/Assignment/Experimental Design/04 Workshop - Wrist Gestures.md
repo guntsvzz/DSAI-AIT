@@ -19,7 +19,7 @@ Summarize the paper into a table with the following information:
 - Research Question: How to best design wrist-based one-handed small-form-factor 
 text entry entry technique? Also, can users learn
 the technique?
-- Hypothesis: 
+- **Hypothesis**: 
     - (1) Human performance on the wrist will determine how many directions 
     they can perform with reasonable accuracy which will then can be further 
     optimized in the keyboard layout (study 1), 

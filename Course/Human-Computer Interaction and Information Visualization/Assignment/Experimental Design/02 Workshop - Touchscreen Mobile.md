@@ -24,7 +24,7 @@ https://www.sciencedirect.com/science/article/abs/pii/S107158191630088X
     4 trails = 48.something minutes
 
 ## Work Solution
-- Hypothesis could be something like Upper body parts overall performed best, Longer stimulus durations may be needed for lower body parts, Walking will generally require longer stimulus durations
+- **Hypothesis** could be something like Upper body parts overall performed best, Longer stimulus durations may be needed for lower body parts, Walking will generally require longer stimulus durations
 - Possible design: 16 body positions x 3 postures x 4 durations x 3 trials = 576 trials
 - Since each trial takes around 1s (actually 1.3s) with 2.5s in between, the total time is 3.5s x 576 - 2.5s = 2013.5s / 60 = 33.558 mins - this is fair amount of time when counting time for filling questionnaires
 - The order of body positions and stimulus duration were randomized but each body position will receive exactly 3 trials for each stimulus duration. After one posture is done, we swap to another posture. The order of posture is done using Latin-square
