@@ -1,5 +1,5 @@
 # Task 02
-<img src = "../images/workshop2.png" width=800>
+<img src = "../images/workshop2.png" width=400>
 
 ## Source: Dim and Xiangshi 2017,
 https://www.sciencedirect.com/science/article/abs/pii/S107158191630088X
