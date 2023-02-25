@@ -14,6 +14,7 @@
 
 ## In-progress
 - NMT with Attention [click](./Assignment/paper/NMTAttention.md)
+- Attention Survey of Attention Models
 - BLEU - 2002 [click](./Assignment/paper/BLEU.md)
 - Transformer - 2017 [click](./Assignment/paper/transformer.md)
 
