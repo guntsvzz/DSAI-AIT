@@ -28,16 +28,20 @@ https://www.sciencedirect.com/science/article/abs/pii/S107158191630088X
     - Upper body parts overall performed best, 
     - Longer stimulus durations may be needed for lower body parts, 
     - Walking will generally require longer stimulus durations
-- Possible design: 16 body positions x 3 postures x 4 durations x 3 trials = 576 trials
-- Since each trial takes around 1s (actually 1.3s) with 2.5s in between, the total time is 3.5s x 576 - 2.5s = 2013.5s / 60 = 33.558 mins - this is fair amount of time when counting time for filling questionnaires
-- The order of body positions and stimulus duration were randomized but each body position will receive exactly 3 trials for each stimulus duration. After one posture is done, we swap to another posture. 
-- The order of posture is done using Latin-square
+- Possible design **Independent Variable** : 16 body positions x 3 postures x 4 durations x 3 trials = 576 trials
+- Since each trial takes around 1s (actually 1.3s) with 2.5s in **between**, 
+    - the total time is 3.5s x 576 - 2.5s = 2013.5s / 60 = 33.558 mins 
+    - this is fair amount of time when counting time for filling questionnaires
+- The order of body positions and stimulus duration were randomized but each body position will receive exactly 3 trials for each stimulus duration. 
+- After one posture is done, we swap to another posture. 
+    - The order of posture is done using Latin-square
 - The speed of walking must be controlled across participants (1.25m/s). The fast walking was using 4.5m/s
 - Participants could be blind people or teenagers depending on the target audience. 
     - 15 should be nice numbers since it's the 3s multiple of the Latin-square
 - Place of environment 
     - could be another IV but would require another study
-- After each posture, participants rated their perception of the vibration for each body position, with 1 - most difficult to perceive and 7 as easiest to perceive
+- After each posture, participants rated their perception of the vibration for each body position, 
+    - with 1 - most difficult to perceive and 7 as easiest to perceive
 - Devices could be any arduino vibrators like Lilypads
 
 
