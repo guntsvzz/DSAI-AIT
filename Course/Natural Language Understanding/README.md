@@ -11,14 +11,13 @@
 - TagLM - 2017 [click](./Assignment/paper/TagLM.md)
 - ELMo - 2018 [click](./Assignment/paper/ELMo.md)
 - Seq2Seq - 2014 [click](./Assignment/paper/seq2seq.md)
-
-## In-progress
 - NMT with Attention [click](./Assignment/paper/NMTAttention.md)
-- Attention Survey of Attention Models
-- BLEU - 2002 [click](./Assignment/paper/BLEU.md)
+- An Attentive Survey of Attention Models - 2019 [click](./Assignment/paper/AttentiveAttention.md)
 - Transformer - 2017 [click](./Assignment/paper/transformer.md)
 
-
+## In-progress
+- BLEU - 2002 [click](./Assignment/paper/BLEU.md)
+- BERT
 - A Neural Probabilistic Language Model
 - Assessing the Ability of LSTMs to Learn Syntax-Sensitive Dependencies - 2016 
 - On the difficulty of training recurrent neural networks - 2013
