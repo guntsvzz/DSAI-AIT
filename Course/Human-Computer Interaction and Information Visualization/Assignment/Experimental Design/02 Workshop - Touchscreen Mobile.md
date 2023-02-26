@@ -36,11 +36,11 @@ https://www.sciencedirect.com/science/article/abs/pii/S107158191630088X
 - After one posture is done, we swap to another posture. 
     - The order of posture is done using Latin-square
 - The speed of walking must be controlled across participants (1.25m/s). The fast walking was using 4.5m/s
-- Participants could be blind people or teenagers depending on the target audience. 
+- Participants could be **blind people or teenagers** depending on the target audience. 
     - 15 should be nice numbers since it's the 3s multiple of the Latin-square
 - Place of environment 
     - could be another IV but would require another study
-- After each posture, participants rated their perception of the vibration for each body position, 
+- After each posture, participants **rated their perception** of the vibration for each body position, 
     - with 1 - most difficult to perceive and 7 as easiest to perceive
 - Devices could be any arduino vibrators like Lilypads
 
