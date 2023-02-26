@@ -19,4 +19,6 @@ https://www.youtube.com/watch?v=SBVRT_x0xYY
 - Another issue is the recall and guided. Obviously we should test guided before recall since there is nothing to recall. Input method can be easily fully counterbalanced
 - For the number of trials, this needs to be prior tested before knowing how many repetitions before participants start to be good at using our menu. We found 4 trials are adequate
 - This could be a design with 2 input methods x 136 gestures (8+64+64) x 2 execution x 4 trials = 2176 trials
-- Since each trial takes around 1s with 1s in between, the total time is 2s x 2176 trials - 1s = 4350s / 60 = 72.5 mins - this amount of time could be too much for participants. Thus you may want to do only 32 gestures for depth 3. Try recalculate. How much total time?
+- Since each trial takes around 1s with 1s in between, the total time is 2s x 2176 trials - 1s = 4350s / 60 = 72.5 mins 
+    - this amount of time could be too much for participants. Thus you may want to do only 32 gestures for depth 3. 
+    - Try recalculate. How much total time?
