@@ -18,12 +18,7 @@
 - Transformer - 2017 [click](./Assignment/paper/transformer.md)
 - BLEU - 2002 [click](./Assignment/paper/BLEU.md)
 - BERT - 2018 [click](./Assignment/paper/BERT.md)
-- A Neural Probabilistic Language Model
-- Assessing the Ability of LSTMs to Learn Syntax-Sensitive Dependencies - 2016 
-- On the difficulty of training recurrent neural networks - 2013
-- Long short-term memory, Hochreiter and Schmidhuber - 1997
-- Learning to Forget: Continual Prediction with LSTM, Gers - 2000
-- Learning Phrase Representations using RNN Encoder–Decoder for Statistical Machine Translation - 2014
-- Massive Exploration of Neural Machine Translation Architectures - 2017
-- Fully Character-Level Neural Machine Translation without Explicit Segmentation - 2017
-- Achieving Open Vocabulary Neural Machine Translation with Hybrid Word-Character Models - 2016
+- spanBERT - 2019 [click]()
+- GPT - 2018 [click]()
+- GPT2 - 2018 [click]()
+- T5 - 2019 [click]()
