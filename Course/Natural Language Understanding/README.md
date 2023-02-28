@@ -5,7 +5,7 @@
 - Quality Controlled Paraphrase Generation - 2021 [click](./Assignment/paper/QCPG.md)
 - WangchanBERTa Pretraining transformer-based Thai Language Models - 2021 [click](./Assignment/paper/WangchanBERTa.md)
 
-## Classical Paper
+## Classical to State-of-the-art Paper
 - A Fast and Accurate Dependency Parser using Neural Networks - 2014 [click](./Assignment/paper/A%20Fast%20and%20Accurate%20Dependency%20Parser%20using%20Neural%20Networks.md)
 - FastText - 2017 [click](./Assignment/paper/FastText.md)
 - TagLM - 2017 [click](./Assignment/paper/TagLM.md)
