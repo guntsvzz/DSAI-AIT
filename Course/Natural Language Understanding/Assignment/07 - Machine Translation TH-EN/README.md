@@ -8,3 +8,4 @@
 <img src = "./figures/01 - UI.jpg" width=800>
 
 ## Future Work
+- Train with Full scb-mt-en-th 2020 Dataset
