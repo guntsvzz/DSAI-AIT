@@ -2,7 +2,7 @@
 {% block content %}
 
 <!DOCTYPE html>
-    <html>
+<html>
     <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
@@ -34,29 +34,28 @@
 
     </head>
     <body>
-    <div class="row">
-    <div class="column" style="background-color:#aaa;">
-        <form action="" method="GET">
-            <div class = 'source'>
-                <label for = "">Source Sentence</label>
-                <br>
-                <textarea name="source" rows="10" cols="50"></textarea>
+        <div class="row">
+            <div class="column" style="background-color:#aaa;">
+                <form action="" method="GET">
+                    <div class = 'source'>
+                        <label for = "">Source Sentence</label>
+                        <br>
+                        <textarea name="source" rows="10" cols="50"></textarea>
+                    </div>
+                    <div class = 'target'>
+                        <label for = "">Target Sentence</label>
+                        <br>
+                        <textarea name="target" rows="10" cols="50"></textarea>
+                    </div>
+                    <input type = "sumbit", value = "Translate", class = "btn btn-success">
+                </form>
             </div>
-            <div class = 'target'>
-                <label for = "">Target Sentence</label>
+            <div class="column" style="background-color:#bbb;">
+                <label for = "">Predictive Sentence</label>
                 <br>
-                <textarea name="target" rows="10" cols="50"></textarea>
+                <textarea name="source" rows="20" cols="50"></textarea>
             </div>
-            <input type = "sumbit", value = "Translate", class = "btn btn-success">
-        </form>
-    </div>
-    <div class="column" style="background-color:#bbb;">
-        <label for = "">Predictive Sentence</label>
-        <br>
-        <textarea name="source" rows="20" cols="50"></textarea>
-    </div>
-    </div>
-
+        </div>
     </body>
 </html>
 {% endblock%}
