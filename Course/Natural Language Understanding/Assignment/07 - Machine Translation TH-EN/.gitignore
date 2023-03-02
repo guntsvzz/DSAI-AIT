@@ -1,3 +1,5 @@
 /SCB_1M+TBASE_th-en_spm-spm_32000-joined_v1.0
 /scb-mt-en-th-2020
 /models
+concatenated.csv
+*.pickle
