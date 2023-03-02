@@ -20,7 +20,7 @@ import torch.nn.functional as F
 import torchvision
 from torchvision import datasets, models, transforms
 
-from util_default import *
+from util import *
 
 import albumentations as A
 
@@ -28,12 +28,11 @@ import albumentations as A
 gpu = "2"
 device = torch.device("cuda:{}".format(gpu) if torch.cuda.is_available() else "cpu")
 
+path2data_train="/root/Datasets/coco/images/train2014/"
+path2json_train="/root/Datasets/coco/annotations/instances_train2014.json"
 
-path2data_train="/path/to/train/images/"
-path2json_train="/path/to/train/coco_annotation.json"
-
-path2data_val="/path/to/validate/images/"
-path2json_val="/path/to/validate/coco_annotation.json"
+path2data_val="/root/Datasets/coco/images/val2014"
+path2json_val="/root/Datasets/coco/annotations/instances_val2014.json"
 
 img_size = 416
 
@@ -64,10 +63,10 @@ train_dataset = Subset(CustomCoco(root = path2data_train,
 train_dataloader = DataLoader(train_dataset, batch_size=BATCH_SIZE,
                                                shuffle=True, num_workers=0, collate_fn=collate_fn)
 
-from darknet_default import Darknet
+from darknet import Darknet
 
 print("Loading network.....")
 model = Darknet("cfg/yolov3.cfg")
 # load pretrained
-# model.load_weights("yolov3.weights")
+model.load_weights("yolov3.weights")
 print("Network successfully loaded")

@@ -1,6 +1,6 @@
-from yolov3.darknet_default import Darknet
+from darknet import Darknet
 import torch
-from util_default import *
+from util import *
 import cv2
 
 # blocks = darknet.parse_cfg("cfg/yolov3.cfg")
