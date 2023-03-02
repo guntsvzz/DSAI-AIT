@@ -29,11 +29,11 @@ https://drive.google.com/drive/u/2/folders/1OPFng8cOE2D4HaxDtqqskQ9QgFRpti_2
 [Course](/Course/Recent%20Trends%20in%20Machine%20Learning/) |
 [project](/Project)
 
-# Inter Semester (Tentative)
+# Inter Semester
 - AT82.13 Internship/Co-op
-# Semester Aug 2024 (Tentative)
+# Semester Aug 2024
 - AT82.9001 Selected Topic: DSAI Seminar
 - Thesis
 
-# Semester Jan 2024 (Tentative)
+# Semester Jan 2024 
 - Thesis
