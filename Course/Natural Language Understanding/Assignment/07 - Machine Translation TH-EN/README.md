@@ -5,5 +5,6 @@
 - scb-mt-en-th-2020 Dataset | [paper](https://arxiv.org/pdf/2007.03541.pdf) | [download](https://airesearch.in.th/releases/machine-translation-datasets/)
 
 ## Type and Translation
+<img src = "./figures/01 - UI.jpg" width=800>
 
 ## Future Work
