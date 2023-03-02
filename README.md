@@ -30,9 +30,9 @@ https://drive.google.com/drive/u/2/folders/1OPFng8cOE2D4HaxDtqqskQ9QgFRpti_2
 [project](/Project)
 
 # Inter Semester (Tentative)
-- AT82.08 Computer Vision (CV) (Sit-in)
 - AT82.13 Internship/Co-op
 # Semester Aug 2024 (Tentative)
+- AT82.9001 Selected Topic: DSAI Seminar
 - Thesis
 
 # Semester Jan 2024 (Tentative)
