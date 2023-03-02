@@ -59,7 +59,11 @@ def initialize_weights(m):
 
 def translation(source, variants, save_path, device):
     src_text = text_transform[SRC_LANGUAGE](source).to(device)
+    target = "It is fake target"*20
+    trg_text = text_transform[TRG_LANGUAGE](target).to(device)
+    trg_text = trg_text.reshape(-1, 1)
     src_text = src_text.reshape(-1, 1)  #because batch_size is 1
+    print('src_text and trg_text shape',src_text.shape, trg_text.shape)
     text_length = torch.tensor([src_text.size(0)]).to(dtype=torch.int64)
 
     input_dim   = len(vocab_transform[SRC_LANGUAGE])
@@ -76,18 +80,12 @@ def translation(source, variants, save_path, device):
     model = Seq2SeqPackedAttention(enc, dec, SRC_PAD_IDX, device).to(device)
     model.apply(initialize_weights)
     # print(model)
-    
-    weight = torch.load(save_path)
-    del weight['encoder.embedding.weight']
-    del weight['decoder.embedding.weight']
-    del weight['decoder.fc.weight']
-    del weight['decoder.fc.bias']
-    
-    model.load_state_dict(weight, strict=False)
+
+    model.load_state_dict(torch.load(save_path))
     model.eval()
 
     with torch.no_grad():
-        output, attentions = model(src_text, text_length, None, device) #turn off teacher forcing
+        output, attentions = model(src_text, text_length, trg_text, 0) #turn off teacher forcing
     #trg_len, batch_size, trg_output_dim
     output = output.squeeze(1)
     #trg_len, trg_output_dim
@@ -97,6 +95,9 @@ def translation(source, variants, save_path, device):
 
     predict_setence = []
     for token in output_max:
+        if mapping[token.item()] == '<eos>':
+            return ' '.join(predict_setence)
+        
         predict_setence.append(mapping[token.item()])
 
-    return predict_setence
+    return ' '.join(predict_setence)

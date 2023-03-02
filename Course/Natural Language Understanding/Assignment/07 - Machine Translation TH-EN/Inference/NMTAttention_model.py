@@ -104,17 +104,17 @@ class Decoder(nn.Module):
         self.fc = nn.Linear((hid_dim * 2) + hid_dim + emb_dim, output_dim)
         self.dropout = nn.Dropout(dropout)
         
-    def forward(self, hidden, encoder_outputs, mask):
+    def forward(self, input, hidden, encoder_outputs, mask):
         
         #input = [batch size]
         #hidden = [batch size, hid dim]
         #encoder_outputs = [src len, batch size, hid dim * 2]
         #mask = [batch size, src len]
         
-        # input = input.unsqueeze(0)
+        input = input.unsqueeze(0)
         #input = [1, batch size]
         
-        # embedded = self.dropout(self.embedding(input))
+        embedded = self.dropout(self.embedding(input))
         #embedded = [1, batch size, emb dim]
         
         a = self.attention(hidden, encoder_outputs, mask)
@@ -131,9 +131,8 @@ class Decoder(nn.Module):
         
         weighted = weighted.permute(1, 0, 2)
         #weighted = [1, batch size, hid dim * 2]
-
-        rnn_input = weighted
-        # rnn_input = torch.cat((embedded, weighted), dim = 2)
+        
+        rnn_input = torch.cat((embedded, weighted), dim = 2)
         #rnn_input = [1, batch size, (hid dim * 2) + emb dim]
         
         output, hidden = self.gru(rnn_input, hidden.unsqueeze(0))
@@ -168,21 +167,21 @@ class Seq2SeqPackedAttention(nn.Module):
         return mask
 
         
-    def forward(self, src, src_len, trg, teacher_forcing_ratio = 0):
+    def forward(self, src, src_len, trg, teacher_forcing_ratio = 0.5):
         
         #src: [src len, batch size]
-        # src len: [batch size]
+        #src len: [batch size]
         #trg: [trg len, batch size]
         
         batch_size = src.shape[1]
-        # trg_len    = trg.shape[0]
+        trg_len    = trg.shape[0]
         trg_vocab_size = self.decoder.output_dim #define in decoder
         
         #because decoder decodes each step....let's create a list that gonna append the result to this guy
-        outputs = torch.zeros(src_len, batch_size, trg_vocab_size).to(self.device)
+        outputs = torch.zeros(trg_len, batch_size, trg_vocab_size).to(self.device)
         
         #because decoder decodes each step....let's memorize the attention done in each step....
-        attentions = torch.zeros(src_len, batch_size, src.shape[0]).to(self.device)
+        attentions = torch.zeros(trg_len, batch_size, src.shape[0]).to(self.device)
         
         #let's start!!!
         #1. encoder
@@ -191,17 +190,16 @@ class Seq2SeqPackedAttention(nn.Module):
         #hidden: [batch size, hid dim]
         
         #set the first input to the decoder
-        # input_ = trg[0,:]  #basically <sos>
+        input_ = trg[0,:]  #basically <sos>
         
         #create the mask for use in this step
         mask = self.create_mask(src)
         
         #2. for each of trg word
-        for t in range(1, 100):
+        for t in range(1, trg_len):
 
             #3. decode (hidden is always carry forward)
-            # output, hidden, attention = self.decoder(input_, hidden, encoder_outputs, mask)
-            output, hidden, attention = self.decoder(hidden, encoder_outputs, mask)
+            output, hidden, attention = self.decoder(input_, hidden, encoder_outputs, mask)
             #output:   [batch size, output_dim]
             #hidden:   [batch size, hid_dim]
             #attention::[batch size, src len]  ==> how each of src token is important to input_ 
@@ -222,3 +220,5 @@ class Seq2SeqPackedAttention(nn.Module):
         return outputs, attentions #outputs for predicting the word, attentions to see which word is important
         
         
+
+
