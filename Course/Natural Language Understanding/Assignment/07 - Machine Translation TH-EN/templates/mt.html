@@ -1,27 +1,62 @@
 {% extends "layout.html" %}
 {% block content %}
-<html>
-<title>W3.CSS</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<body>
-    <div class="w3-container">
-        <form action="" method="POST">
-            {{form.csrf_token}}
-            {{form.source.label}}
-            {{form.source()}}
-            <br>
-            {{form.submit()}}
+
+<!DOCTYPE html>
+    <html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    * {
+    box-sizing: border-box;
+    }
+
+    /* Create three equal columns that floats next to each other */
+    .column {
+    float: left;
+    width: 50%;
+    padding: 50px;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+
+    /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+    }
+    </style>
+
+    </head>
+    <body>
+    <div class="row">
+    <div class="column" style="background-color:#aaa;">
+        <form action="" method="GET">
+            <div class = 'source'>
+                <label for = "">Source Sentence</label>
+                <br>
+                <textarea name="source" rows="10" cols="50"></textarea>
+            </div>
+            <div class = 'target'>
+                <label for = "">Target Sentence</label>
+                <br>
+                <textarea name="target" rows="10" cols="50"></textarea>
+            </div>
+            <input type = "sumbit", value = "Translate", class = "btn btn-success">
         </form>
-        <hr>
-        {% if source %}
-            Type    : {{source}}
-            <br>
-            Predict : {{target}}
-        {% else %}
-            Not Found
-        {% endif %}
-        <hr>
     </div>
+    <div class="column" style="background-color:#bbb;">
+        <label for = "">Predictive Sentence</label>
+        <br>
+        <textarea name="source" rows="20" cols="50"></textarea>
+    </div>
+    </div>
+
+    </body>
 </html>
 {% endblock%}
