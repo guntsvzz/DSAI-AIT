@@ -14,6 +14,7 @@
 - Seq2Seq - 2014 [click](./Assignment/paper/seq2seq.md)
 - NMT with Attention - 2014 [click](./Assignment/paper/NMTAttention.md)
 - Transformer - 2017 [click](./Assignment/paper/transformer.md)
+- LN - 2017 [click]()
 - GPT - 2018 [click](./Assignment/paper/GPT.md)
 - BERT - 2018 [click](./Assignment/paper/BERT.md)
 
