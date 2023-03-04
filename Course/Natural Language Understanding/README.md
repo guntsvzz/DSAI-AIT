@@ -14,11 +14,12 @@
 - Seq2Seq - 2014 [click](./Assignment/paper/seq2seq.md)
 - NMT with Attention - 2014 [click](./Assignment/paper/NMTAttention.md)
 - Transformer - 2017 [click](./Assignment/paper/transformer.md)
+- GPT - 2018 [click](./Assignment/paper/GPT.md)
+- BERT - 2018 [click](./Assignment/paper/BERT.md)
 
 ## In-progress
 - An Attentive Survey of Attention Models - 2019 [click](./Assignment/paper/AttentiveAttention.md)
 - BLEU - 2002 [click](./Assignment/paper/BLEU.md)
-
 - BERT - 2018 [click](./Assignment/paper/BERT.md)
 - spanBERT - 2019 [click]()
 - RoBERT - 2019 [click]()
