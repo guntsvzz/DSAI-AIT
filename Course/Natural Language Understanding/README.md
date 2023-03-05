@@ -17,22 +17,24 @@
 - LN - 2017 [click]()
 - GPT - 2018 [click](./Assignment/paper/GPT.md)
 - BERT - 2018 [click](./Assignment/paper/BERT.md)
+- RoBERTa - 2019 [click](./Assignment/paper/RoBERTa.md)
+- spanBERT - 2019 [click](./Assignment/paper/spanBERT.md)
+- sentence-BERT - 2019 [click](./Assignment/paper/SBERT.md)
 
 ## In-progress
 - An Attentive Survey of Attention Models - 2019 [click](./Assignment/paper/AttentiveAttention.md)
 - BLEU - 2002 [click](./Assignment/paper/BLEU.md)
-- BERT - 2018 [click](./Assignment/paper/BERT.md)
-- spanBERT - 2019 [click]()
-- RoBERT - 2019 [click]()
-- sentence-BERT - 2019 [click]()
-- ELECTRA - 2020 [click]()
-- T5 - 2020 [click]()
 
-- GPT - 2018 [click]()
+- ULMFit - 2018 [click]()
+- simCSE - 2021 [click]()
+- T5 - 2020 [click]()
+- BART - 2019 [click]()
+
+- ELECTRA - 2020 [click]()
+
 - GPT2 - 2018 [click]()
 - GPT3 - 2020 [click]()
 - ChatGPT - 2022 [click]()
 
-- simCSE - 2021 [click]()
 - Prompt - 2021 [click]()
 - AutoPrompt - 2020 [click]()
