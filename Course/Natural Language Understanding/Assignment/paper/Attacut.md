@@ -10,8 +10,7 @@ Venue:  Workshop, NeurIPS 2019
 | Question     | Other Thai segementation (Deepcut and Sertis) is slow and cannot use sub-word structues|
 | Related Work | 1. Fast and accurate entity recognition with iterated dilated convolutions<br> 2. Multi-scale context aggregation by dilated convolutions|
 | Solution     | CNN-based word segmentation model that utilizes character and syllable embeddings which reduces the number layers and computation time|
-| Method       | comprising of three one-dimension
-convolutional layers, pooling layers, and a fully-connected layer then character will be represented by a different embedding if found in a different syllable| 
+| Method       | comprising of three one-dimension convolutional layers, pooling layers, and a fully-connected layer then character will be represented by a different embedding if found in a different syllable| 
 | Result       | 1. AttaCut fail on TNHC because of poetic techniques.</br>|
 | Conclusion   | With CNN-based word segmenter, it is 5.6× faster than previous SOTA|
 | Limitation   | suffering with idiosyncratic datasets such as poetry|
