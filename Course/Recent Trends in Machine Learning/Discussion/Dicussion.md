@@ -385,3 +385,44 @@ carefully slection detector training and inference modules greatly improves perf
 - 
 5. equation 5
 - gamma
+
+
+## Discussion 13 WGAN - 2017
+1. What is this paper try to convey ? 
+- WGAN improve stability of optimization process using EM (Earth Moving) distance
+2. What is the maximum likelihood principle
+- unknwon distribution, we want to estimate it from a finite sample
+- we posit a parameterization of the distribution. For example, Gaussian
+- parameters : theta, we find argmax P(x;theta)
+3. Kullback-Leibler divergane KL(P||Q) Pr, Ptheta
+- ideally minizied KL(Pr || Ptheta)
+4. Asymptotically, KL minized, maximum likelihood maximize
+- For a specific sample X, ML estimate of Ptheta will not be exactly equal to Pr because different distribution (only closer)
+5. model manifold
+- donut
+6. support the true distribution
+- 
+7. adding noise when ML
+- true distribtion is not divergence
+8. why VAE focus on likelihood
+- need some distance
+9. total varitional distance
+- supremum and intrimum
+10. KL divergence 
+- 
+11. Earth Moving distance
+- cost of optimal transport plan from Pr to pg {0,1}
+Pr = {P(0)=1/4, P(1)=3/4} Pg = {P(0)=1/2, P(1)=1/2}
+How to move Pr to Pg ? Move mass of 1/4 from P(1) to P(0)
+12. infinum
+- lower bounce of 
+13. Earth Mover learning parallel lines
+- 
+14. Theorem 1 
+- 
+15. Theorem 2
+- 
+16. Theorem 3
+-
+17. Why it want Critic(smooth)
+- they limit the weight box avoiding lead to exploding gradient  
