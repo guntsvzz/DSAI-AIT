@@ -20,16 +20,14 @@
 - RoBERTa - 2019 [click](./Assignment/paper/RoBERTa.md)
 - spanBERT - 2019 [click](./Assignment/paper/spanBERT.md)
 - sentence-BERT - 2019 [click](./Assignment/paper/SBERT.md)
+- simCSE - 2021 [click]()
+- BART - 2019 [click]()
 
 ## In-progress
 - An Attentive Survey of Attention Models - 2019 [click](./Assignment/paper/AttentiveAttention.md)
 - BLEU - 2002 [click](./Assignment/paper/BLEU.md)
 
-- ULMFit - 2018 [click]()
-- simCSE - 2021 [click]()
 - T5 - 2020 [click]()
-- BART - 2019 [click]()
-
 - ELECTRA - 2020 [click]()
 
 - GPT2 - 2018 [click]()
