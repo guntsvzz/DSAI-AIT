@@ -20,8 +20,8 @@
 - RoBERTa - 2019 [click](./Assignment/paper/RoBERTa.md)
 - spanBERT - 2019 [click](./Assignment/paper/spanBERT.md)
 - sentence-BERT - 2019 [click](./Assignment/paper/SBERT.md)
-- simCSE - 2021 [click]()
-- BART - 2019 [click]()
+- simCSE - 2021 [click](./Assignment/paper/simCSE.md)
+- BART - 2019 [click](./Assignment/paper/BART.md)
 
 ## In-progress
 - An Attentive Survey of Attention Models - 2019 [click](./Assignment/paper/AttentiveAttention.md)
