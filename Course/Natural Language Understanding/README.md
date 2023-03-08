@@ -5,7 +5,8 @@
 - Quality Controlled Paraphrase Generation - 2021 [click](./Assignment/paper/QCPG.md)
 - WangchanBERTa Pretraining transformer-based Thai Language Models - 2021 [click](./Assignment/paper/WangchanBERTa.md)
 - AttaCut - 2019 [click](./Assignment/paper/Attacut.md)
-- Generating Syntactically Controlled Paraphrases without Using Annotated Parallel Pairs - 2021 
+- Generating Syntactically Controlled Paraphrases without Using Annotated Parallel Pairs - 2021 [click](./Assignment/paper/)
+
 ## Classical to State-of-the-art Paper
 - A Fast and Accurate Dependency Parser using Neural Networks - 2014 [click](./Assignment/paper/A%20Fast%20and%20Accurate%20Dependency%20Parser%20using%20Neural%20Networks.md)
 - FastText - 2017 [click](./Assignment/paper/FastText.md)
@@ -22,8 +23,8 @@
 - sentence-BERT - 2019 [click](./Assignment/paper/SBERT.md)
 - simCSE - 2021 [click](./Assignment/paper/simCSE.md)
 - BART - 2019 [click](./Assignment/paper/BART.md)
-- GPT2 - 2018 [click]()
-- GPT3 - 2020 [click]()
+- GPT2 - 2018 [click](./Assignment/paper/)
+- GPT3 - 2020 [click](./Assignment/paper/)
 
 ## In-progress
 - An Attentive Survey of Attention Models - 2019 [click](./Assignment/paper/AttentiveAttention.md)
