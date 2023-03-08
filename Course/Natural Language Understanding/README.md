@@ -22,6 +22,8 @@
 - sentence-BERT - 2019 [click](./Assignment/paper/SBERT.md)
 - simCSE - 2021 [click](./Assignment/paper/simCSE.md)
 - BART - 2019 [click](./Assignment/paper/BART.md)
+- GPT2 - 2018 [click]()
+- GPT3 - 2020 [click]()
 
 ## In-progress
 - An Attentive Survey of Attention Models - 2019 [click](./Assignment/paper/AttentiveAttention.md)
@@ -29,9 +31,6 @@
 
 - T5 - 2020 [click]()
 - ELECTRA - 2020 [click]()
-
-- GPT2 - 2018 [click]()
-- GPT3 - 2020 [click]()
 - ChatGPT - 2022 [click]()
 
 - Prompt - 2021 [click]()
