@@ -1,4 +1,4 @@
-# Story Generator using Transformer
+# Story Generator using Decoder Transformer
 
 
 ## Dependencies 
