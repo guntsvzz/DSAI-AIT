@@ -6,7 +6,7 @@
 <img src = "./figures/01-HPLovecraft.jpg" width=200>
 
 ## Story Generator
-<img src = "./figures/02-StoryGenerator.jpg" width=200>
+<img src = "./figures/02-StoryGenerator.png" width=200>
 
 ## Limitation
 - Unable to put beam-search and greedy-search yet
