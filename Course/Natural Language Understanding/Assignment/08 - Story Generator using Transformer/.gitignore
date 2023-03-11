@@ -3,3 +3,5 @@ assets/
 datasets/
 models/
 *.pickle
+DecoderTransformer.py
+Predict_Nextword.py
