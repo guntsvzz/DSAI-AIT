@@ -10,5 +10,3 @@
 
 ## Limitation
 - Unable to put beam-search and greedy-search yet
-- Model still predict randomly
-- Longer training, worse PPL
