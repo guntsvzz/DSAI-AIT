@@ -6,3 +6,9 @@
 <img src = "./figures/01 - HPLovecraft.jpg" width=200>
 
 ## Story Generator
+
+
+## Limitation
+- Unable to put beam-search and greedy-search yet
+- Model still predict randomly
+- Longer training, worse PPL
