@@ -10,3 +10,8 @@
 
 ## Limitation
 - Unable to put beam-search and greedy-search yet
+
+## Reference
+https://github.com/312shan/Pytorch-seq2seq-Beam-Search
+https://github.com/ShivamRajSharma/Transformer-Architectures-From-Scratch
+https://github.com/bentrevett/pytorch-seq2seq
