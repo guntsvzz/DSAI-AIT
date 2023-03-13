@@ -74,4 +74,4 @@ Answer the followings:
 6. The general formulation for expressing an F-test result is: F(df-between,df-within) = F-ratio, p < .05 (or n.s.),  η2p = partial eta squared value. Report just like you would in a research paper. Read this for more detail - https://shengdongzhao.com/newSite/how-to-report-statistics-in-apa-format/
 - We found that a significant effect of platform (F(df-between,df-within)=F(1) = 4.177, p < .05,  η2p = 0.099) on the number of facebook posts between iOS (Md = 24.95  SD = 7.045) and Android (Md = 30.100 SD = 8.795)
 7. In case your data cannot use ANOVA, you can use Kruskal-Wallis test, where the formulation is H(df) = statistics, p < threshold.  Report just like you would in a research paper. 
-- We fail that a significant effect of platform (H(1) = 3.053, n.s) on the number of facebook posts between iOS(m = 24.95) and Android (m = 30.100)
+- We fail that a significant effect of platform (H(1) = 3.053, n.s) on the number of facebook posts between iOS (m = 24.95) and Android (m = 30.100)
