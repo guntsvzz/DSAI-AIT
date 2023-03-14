@@ -426,3 +426,38 @@ How to move Pr to Pg ? Move mass of 1/4 from P(1) to P(0)
 -
 17. Why it want Critic(smooth)
 - they limit the weight box avoiding lead to exploding gradient  
+
+## Discussion 14 Transformer
+1. What is this paper try to convey ? 
+- self-attention can solve long dependencies and accelerate training
+2. Seq2Seq 
+- LSTM, GRU
+3. Problem of LSTM, GRU
+- parallerization
+4. What is Attention
+- weight by weight
+- softmax & independent sigmoid
+5. encoder-decoder on LSTM
+- encoder map an input sequence to a sequence of continuous representation (context vector/encoder state) then give to decoder to generate ouput one element at a time.
+- need a way to focus on appropriate part of encoder state at each timestep in decoder
+6. Transformer different from previous approach
+- no sequence of input applied parallel massive 
+7. Transformer vs CNN
+- cross entire need more layer 
+8. self-attention
+- input sequence looking at itself
+9. end-to-end memory network
+- recurrent for Q&A and LM task
+10. encoder-decoder - autoregressive
+- look previous sequence
+11. is it cheat in Masked Multi-head attention
+- if it not mask, we will not know output to look
+12. normalization
+- layer norm
+13. Scale Dot-Product Attention
+- 
+14. Multi-Head Attention
+- concatinating the stack of attention 
+15. masking out 
+- -inf softmax to 0
+16.
