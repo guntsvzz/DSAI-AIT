@@ -478,4 +478,3 @@ How to move Pr to Pg ? Move mass of 1/4 from P(1) to P(0)
 - LM are unidirectional (Transformer)
 8. BERT vs Transformer
 - only encoder part
-9. 
