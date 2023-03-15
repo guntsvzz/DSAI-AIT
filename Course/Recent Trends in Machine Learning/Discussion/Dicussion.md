@@ -460,4 +460,22 @@ How to move Pr to Pg ? Move mass of 1/4 from P(1) to P(0)
 - concatinating the stack of attention 
 15. masking out 
 - -inf softmax to 0
-16.
+
+## Discussion 15 BERT
+1. What is this paper try to convey ? 
+- Multitask pretraining and deep bidirectionally give good representation for NLU
+2. pre-training
+- train with model unsupervised data
+3. sentence-level task
+- relation pair sentence
+4. NLI
+- task of determining whether a "hypothesis" is true (entailment), false (contradiction), or undetermined (neutral) given a "premise".
+5. token-level task
+- rule-based stuffs (NET, POS)
+6. 2 technique
+- features-based and fine-tuning
+7. limitation
+- LM are unidirectional (Transformer)
+8. BERT vs Transformer
+- only encoder part
+9. 
