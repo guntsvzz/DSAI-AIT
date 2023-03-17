@@ -6,6 +6,9 @@
 - WangchanBERTa Pretraining transformer-based Thai Language Models - 2021 [click](./Assignment/paper/WangchanBERTa.md)
 - AttaCut - 2019 [click](./Assignment/paper/Attacut.md)
 - SynPG - 2021 [click](./Assignment/paper/synPG.md)
+- SCPN - 2018 [click]()
+- STRAP - 2020 [click]()
+
 
 ## Classical to State-of-the-art Paper
 - A Fast and Accurate Dependency Parser using Neural Networks - 2014 [click](./Assignment/paper/A%20Fast%20and%20Accurate%20Dependency%20Parser%20using%20Neural%20Networks.md)
