@@ -8,6 +8,7 @@
 - SynPG - 2021 [click](./Assignment/paper/synPG.md)
 - SCPN - 2018 [click]()
 - STRAP - 2020 [click]()
+- AESOP - 2021 [click]()
 - AMRPG - 2022 [click](./Assignment/paper/AMRPG.md)
 
 ## Classical to State-of-the-art Paper
