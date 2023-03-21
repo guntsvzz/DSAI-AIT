@@ -1,9 +1,9 @@
 #  AT82.05 Artificial Intelligence: Natural Language Understanding (NLU)
 
 ## Project Reading Paper
-- Thai Nested Named Entity Recognition - 2022 [click](./Assignment/paper/ThaiNNER.md)
-- Quality Controlled Paraphrase Generation - 2021 [click](./Assignment/paper/QCPG.md)
-- WangchanBERTa Pretraining transformer-based Thai Language Models - 2021 [click](./Assignment/paper/WangchanBERTa.md)
+- Thai NNER - 2022 [click](./Assignment/paper/ThaiNNER.md)
+- QCPG - 2021 [click](./Assignment/paper/QCPG.md)
+- WangchanBERTa Pretraining transformer-based Thai LM - 2021 [click](./Assignment/paper/WangchanBERTa.md)
 - AttaCut - 2019 [click](./Assignment/paper/Attacut.md)
 - SynPG - 2021 [click](./Assignment/paper/synPG.md)
 - SCPN - 2018 [click]()
