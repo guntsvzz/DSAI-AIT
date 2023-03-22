@@ -7,7 +7,7 @@
 - AttaCut - 2019 [click](./Assignment/paper/Attacut.md)
 - SynPG - 2021 [click](./Assignment/paper/synPG.md)
 - SCPN - 2018 [click]()
-- STRAP - 2020 [click]()
+- STRAP - 2020 [click](./Assignment/paper/STRAP.md)
 - AESOP - 2021 [click]()
 - AMRPG - 2022 [click](./Assignment/paper/AMRPG.md)
 
