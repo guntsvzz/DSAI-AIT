@@ -29,7 +29,7 @@
 - BART - 2019 [click](./Assignment/paper/BART.md)
 - GPT2 - 2018 [click](./Assignment/paper/GPT2.md)
 - GPT3 - 2020 [click](./Assignment/paper/GPT3.md)
-
+- Knowleadge distillation - 2014 [click](./Assignment/paper/KD.md)
 ## In-progress
 - An Attentive Survey of Attention Models - 2019 [click](./Assignment/paper/AttentiveAttention.md)
 - BLEU - 2002 [click](./Assignment/paper/BLEU.md)
