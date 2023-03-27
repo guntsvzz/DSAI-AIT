@@ -55,7 +55,7 @@ File used: posts.sav
 
 Repeated measures ANOVA is within subject
 ANOVA - between subject
-
+(partial eta)
 0.01 : Small effect size
 0.06 : Medium effect size
 0.14 or higher: Large effect size
@@ -75,3 +75,30 @@ Answer the followings:
 - We found that a significant effect of platform (F(df-between,df-within)=F(1,38) = 4.177, p < .05,  η2p = 0.099) on the number of facebook posts between iOS (Md = 24.95  SD = 7.045) and Android (Md = 30.100 SD = 8.795)
 7. In case your data cannot use ANOVA, you can use Kruskal-Wallis test, where the formulation is H(df) = statistics, p < threshold.  Report just like you would in a research paper. 
 - We fail that a significant effect of platform (H(1) = 3.053, n.s) on the number of facebook posts between iOS (m = 24.95) and Android (m = 30.100)
+
+# Task 3: One-way ANOVA with 3 or more levels 
+1. What is the output of the normality test? Is the data normal?
+- Q-Q plot look aligned. SW test confirms the normality (p > 0.05)
+- Normality Test iOS = 0.647 Android = 0.461 desktop = 0.660
+- Data is normal (checking P-value of SW > 0.05)
+2. Was this a one-way, two-way, or three-way analysis of variance? What is/are the factor(s)? What are each factor’s levels?
+- One way becaise of only one IV
+- Platform - 3 (iOS, Android, desktop)
+3. How many data points are there for each level of Platform? What are the means and standard deviations for each level?
+- 20 partcipants per one-level
+- iOS (M = 24.95, SD = 7.045)
+- Android (M = 30.1, SD = 8.795)
+- Desktop (M = 31.7, SD = 7.623)
+4. In this case, the overall, or omnibus, F-test is testing for whether any differences exist among the levels of the independent variable. Is the F-test significant at the α = .05 level? What is the F-ratio? What is the p-value?
+- F-ratio = 4.033, P-value = 0.023
+- Normal data using None setting
+5. The omnibus F-test does not tell us whether all three levels of Platform are different from one another, or whether just two levels (and which two?) are different. 
+For this, we need post hoc comparisons, which are justified only when the omnibus F-test is significant. 
+Examine the Post Hoc Tests output. What is the interpretation?  Does Tukey and Bonferroni converge to the same interpretation?  
+(FYI: A Bonferroni correction divides α by the number of post hoc comparisons. In this case, with three post hoc comparisons, we would use α = .05 / 3 = .0166. (Equivalently, we can multiply our p-values by 3 and then continue using α = .05, which is what SPSS’s Bonferroni output does.) 
+- It is interpretation beacuse Ptukey and Pbonf is more than 0.0166
+6. What is the effect size in terms of partial eta squared? What is the interpretation?
+- Almost Large size 0.124
+7. Write a sentence summarizing the findings from this analysis.  Read this for how to report - https://shengdongzhao.com/newSite/how-to-report-statistics-in-apa-format/
+- p-value (0.023) < alpha (0.05)
+- We found that a significant effect of platform (F(df-between,df-within) = F(2,57) = 4.033, p < .05,  η2p = 0.124) on the number of facebook posts among iOS (M = 24.95, SD = 7.045), Android (M = 30.1, SD = 8.795) and Desktop (M = 31.7, SD = 7.623)
