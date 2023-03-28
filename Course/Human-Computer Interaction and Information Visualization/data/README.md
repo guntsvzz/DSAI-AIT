@@ -193,4 +193,5 @@ Express the design using N1 × N2 × … × Nn notation.
 - Day Quite Quite Small
 - Platform*Day Small
 8. Write the result in APA format.
-- A Shapiro-Wilk test confirms the normality of the data. *** A Two-Way Repeated Measures ANOVA with Platform as the between-subject factor shows the main effect of Platform (F(1, 18) = 5.716, p < .05, η ) on Posts between iOS 𝑝2 = 0. 241 (M = 49.900 , SD = 8.863) and Android (M = 60.200 , SD = 10.347). Anyhow, the test fails to find any significance of Day (F(1, 18) = 0.712, n.s.) on Posts between weekday (M = 26.300, SD = 8.430) and weekend (M = 28.750, SD = 8.168 ) nor the interaction effect of Platform * Day (F(1, 18) = 0.00003, n.s.).
+- A Shapiro-Wilk test confirms the normality of the data. *** A Two-Way Repeated Measures ANOVA with Platform as the between-subject factor shows the main effect of Platform (F(1, 18) = 5.716, p < .05, η ) on Posts between iOS 𝑝2 = 0. 241 (M = 49.900 , SD = 8.863) and Android (M = 60.200 , SD = 10.347). 
+Anyhow, the test fails to find any significance of Day (F(1, 18) = 0.712, n.s.) on Posts between weekday (M = 26.300, SD = 8.430) and weekend (M = 28.750, SD = 8.168 ) nor the interaction effect of Platform * Day (F(1, 18) = 0.00003, n.s.).

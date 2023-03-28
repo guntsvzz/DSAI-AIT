@@ -54,8 +54,8 @@ setClusterCompareWord $net $name $clusterCompareWord
 deIconizeCluster $net $name
 set name {1Service Level Agreement}
 set desc {}
-set x -9
-set y -2
+set x 0
+set y 0
 set color {#F0F8FF}
 set iconUU {}
 set font {myDefaultFontNode}
@@ -65,8 +65,19 @@ setNodeColor $net $name $color
 setNodeFont $net $name $font
 set name {2CustomerSatisfactionRecord}
 set desc {}
-set x -10
-set y 25
+set x 0
+set y 35
+set color {#F0F8FF}
+set iconUU {}
+set font {myDefaultFontNode}
+makeNode $net $clusterName $name $desc $x $y
+setNodeIconUU $net $name $iconUU
+setNodeColor $net $name $color
+setNodeFont $net $name $font
+set name {3ServiceLevelAgreement(SLA)Compliance}
+set desc {}
+set x 0
+set y 70
 set color {#F0F8FF}
 set iconUU {}
 set font {myDefaultFontNode}
@@ -105,7 +116,7 @@ makeNode $net $clusterName $name $desc $x $y
 setNodeIconUU $net $name $iconUU
 setNodeColor $net $name $color
 setNodeFont $net $name $font
-set name {2Compliance}
+set name {2NetworkSecurity}
 set desc {}
 set x 0
 set y 35
@@ -127,8 +138,8 @@ makeNode $net $clusterName $name $desc $x $y
 setNodeIconUU $net $name $iconUU
 setNodeColor $net $name $color
 setNodeFont $net $name $font
-set x 728
-set y 365
+set x 376
+set y 369
 set desc {}
 set name {2_3Financial}
 set color gainsboro
@@ -147,6 +158,39 @@ setClusterTitleFont $net $name $winFont
 setClusterWinSize $net $name $width $height
 setClusterCompareWord $net $name $clusterCompareWord
 deIconizeCluster $net $name
+set name {1Pricing&Costs}
+set desc {}
+set x 0
+set y 0
+set color {#F0F8FF}
+set iconUU {}
+set font {myDefaultFontNode}
+makeNode $net $clusterName $name $desc $x $y
+setNodeIconUU $net $name $iconUU
+setNodeColor $net $name $color
+setNodeFont $net $name $font
+set name {2PaymentTerms}
+set desc {}
+set x 0
+set y 35
+set color {#F0F8FF}
+set iconUU {}
+set font {myDefaultFontNode}
+makeNode $net $clusterName $name $desc $x $y
+setNodeIconUU $net $name $iconUU
+setNodeColor $net $name $color
+setNodeFont $net $name $font
+set name {3FinancialStability}
+set desc {}
+set x 0
+set y 70
+set color {#F0F8FF}
+set iconUU {}
+set font {myDefaultFontNode}
+makeNode $net $clusterName $name $desc $x $y
+setNodeIconUU $net $name $iconUU
+setNodeColor $net $name $color
+setNodeFont $net $name $font
 set x 23
 set y 365
 set desc {}
@@ -200,8 +244,8 @@ makeNode $net $clusterName $name $desc $x $y
 setNodeIconUU $net $name $iconUU
 setNodeColor $net $name $color
 setNodeFont $net $name $font
-set x 1134
-set y 332
+set x 725
+set y 364
 set desc {}
 set name {3Alternatives}
 set color gainsboro
@@ -275,6 +319,24 @@ setFormulaType $net 0
 catch {limitPowerOptions $net 2 0}
 c-network readAllCompares -network $net -source {
 6
+1Goal
+1
+1Selecting the best vendor for outsourcing IT services
+2_1ServiceQuality
+3
+1Service Level Agreement
+2CustomerSatisfactionRecord
+3ServiceLevelAgreement(SLA)Compliance
+2_2Security
+3
+1DataSecurity
+2NetworkSecurity
+3Confidentiality
+2_3Financial
+3
+1Pricing&Costs
+2PaymentTerms
+3FinancialStability
 2Criteria
 3
 1ServiceQuality
@@ -286,20 +348,6 @@ c-network readAllCompares -network $net -source {
 2B_Company
 3C_Company
 4D_Company
-1Goal
-1
-1Selecting the best vendor for outsourcing IT services
-2_1ServiceQuality
-2
-1Service Level Agreement
-2CustomerSatisfactionRecord
-2_2Security
-3
-1DataSecurity
-2Compliance
-3Confidentiality
-2_3Financial
-0
 
 0 
 0

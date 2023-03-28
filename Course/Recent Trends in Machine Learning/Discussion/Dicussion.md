@@ -478,3 +478,30 @@ How to move Pr to Pg ? Move mass of 1/4 from P(1) to P(0)
 - LM are unidirectional (Transformer)
 8. BERT vs Transformer
 - only encoder part
+
+## Discussion 16 TFT
+1. What is this paper try to convey ? 
+- seq2seq, multihef sttention and gating enable accurate temporal prediction
+2. one-step-ahead
+- only predicting the next step
+3. multi-horizon
+- predict multiple day
+4. prediction model
+- 
+5. previous problem
+- autoregressive models and neglect important static covaraite
+6. suitable inductive biases
+- 
+7. heterogeneous 
+- they don't know which aspect of current input
+8. entity, static covariate
+- 
+9. output
+- quantile regression at 10th, 50th, 90th
+10. Gate 
+- sigmoid 
+11. out-of-sample
+- new sample to comparing with previous work
+12. Electricity and Traffic is homogenous
+13. Retail & Volatility is heterogenous
+14.  
