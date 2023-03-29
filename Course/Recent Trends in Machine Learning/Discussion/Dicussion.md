@@ -504,4 +504,17 @@ How to move Pr to Pg ? Move mass of 1/4 from P(1) to P(0)
 - new sample to comparing with previous work
 12. Electricity and Traffic is homogenous
 13. Retail & Volatility is heterogenous
-14.  
+
+
+## Discussion 17 GAT
+1. What is this paper try to convey ? 
+- Graph Attention Networks improve node embeddings for graphs
+2. limitation of GCN 
+- it cannot applied to another graph
+3. non-spectral approaches
+-  
+4. GraphSAGE
+- inductive learning represetation (looking specific case) to apply a new graph
+5. masked attention
+- nearest neighborhood
+6. 
