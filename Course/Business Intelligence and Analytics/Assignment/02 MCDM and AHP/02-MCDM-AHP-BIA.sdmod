@@ -1,6 +1,6 @@
 set top_net [getTopNet $net]
 set SAVED_WITH_VERSION {3.2.0 made on Wed, 16 Jan 2019 13:36:28 -0500.  VCRevInfo 3197.  Installed on Windows}
-setDefaultCompareMode $net switch_to_question
+setDefaultCompareMode $net switch_to_direct
 set x 12
 set y 41
 set desc {}
@@ -32,8 +32,8 @@ makeNode $net $clusterName $name $desc $x $y
 setNodeIconUU $net $name $iconUU
 setNodeColor $net $name $color
 setNodeFont $net $name $font
-set x 332
-set y 38
+set x 550
+set y 49
 set desc {}
 set name {2_1ServiceQuality}
 set color gainsboro
@@ -52,7 +52,7 @@ setClusterTitleFont $net $name $winFont
 setClusterWinSize $net $name $width $height
 setClusterCompareWord $net $name $clusterCompareWord
 deIconizeCluster $net $name
-set name {1Service Level Agreement}
+set name {1Responsiveness}
 set desc {}
 set x 0
 set y 0
@@ -85,8 +85,8 @@ makeNode $net $clusterName $name $desc $x $y
 setNodeIconUU $net $name $iconUU
 setNodeColor $net $name $color
 setNodeFont $net $name $font
-set x 777
-set y 37
+set x 595
+set y 382
 set desc {}
 set name {2_2Security}
 set color gainsboro
@@ -138,8 +138,8 @@ makeNode $net $clusterName $name $desc $x $y
 setNodeIconUU $net $name $iconUU
 setNodeColor $net $name $color
 setNodeFont $net $name $font
-set x 376
-set y 369
+set x 719
+set y 689
 set desc {}
 set name {2_3Financial}
 set color gainsboro
@@ -191,8 +191,8 @@ makeNode $net $clusterName $name $desc $x $y
 setNodeIconUU $net $name $iconUU
 setNodeColor $net $name $color
 setNodeFont $net $name $font
-set x 23
-set y 365
+set x 100
+set y 429
 set desc {}
 set name {2Criteria}
 set color gainsboro
@@ -244,8 +244,8 @@ makeNode $net $clusterName $name $desc $x $y
 setNodeIconUU $net $name $iconUU
 setNodeColor $net $name $color
 setNodeFont $net $name $font
-set x 725
-set y 364
+set x 1256
+set y 198
 set desc {}
 set name {3Alternatives}
 set color gainsboro
@@ -308,6 +308,47 @@ makeNode $net $clusterName $name $desc $x $y
 setNodeIconUU $net $name $iconUU
 setNodeColor $net $name $color
 setNodeFont $net $name $font
+set init {2Criteria}
+set final {2_1ServiceQuality}
+connectClusters $net $init $final
+set init {2Criteria}
+set final {2_2Security}
+connectClusters $net $init $final
+set init {2Criteria}
+set final {2_3Financial}
+connectClusters $net $init $final
+set init {1Goal}
+set final {2Criteria}
+connectClusters $net $init $final
+set init {2_1ServiceQuality}
+set final {3Alternatives}
+connectClusters $net $init $final
+set init {2_2Security}
+set final {3Alternatives}
+connectClusters $net $init $final
+set init {2_3Financial}
+set final {3Alternatives}
+connectClusters $net $init $final
+setNodeCompareWord  $net {1DataSecurity} {3Alternatives} {}
+setNodeCompareWord  $net {1Pricing&Costs} {3Alternatives} {}
+setNodeCompareWord  $net {1Responsiveness} {3Alternatives} {important}
+setNodeCompareDirectMult  $net {1Responsiveness} {3Alternatives} 30.0
+setNodeCompareWord  $net {1Selecting the best vendor for outsourcing IT services} {2Criteria} {important}
+setNodeCompareDirectMult  $net {1Selecting the best vendor for outsourcing IT services} {2Criteria} 11.0
+setNodeCompareWord  $net {1ServiceQuality} {2_1ServiceQuality} {important}
+setNodeCompareDirectMult  $net {1ServiceQuality} {2_1ServiceQuality} 18.0
+setNodeCompareWord  $net {2CustomerSatisfactionRecord} {3Alternatives} {important}
+setNodeCompareDirectMult  $net {2CustomerSatisfactionRecord} {3Alternatives} 20.0
+setNodeCompareWord  $net {2NetworkSecurity} {3Alternatives} {}
+setNodeCompareWord  $net {2PaymentTerms} {3Alternatives} {}
+setNodeCompareWord  $net {2Security} {2_2Security} {important}
+setNodeCompareDirectMult  $net {2Security} {2_2Security} 28.0
+setNodeCompareWord  $net {3Confidentiality} {3Alternatives} {}
+setNodeCompareWord  $net {3Financial} {2_3Financial} {important}
+setNodeCompareDirectMult  $net {3Financial} {2_3Financial} 20.0
+setNodeCompareWord  $net {3FinancialStability} {3Alternatives} {important}
+setNodeCompareWord  $net {3ServiceLevelAgreement(SLA)Compliance} {3Alternatives} {important}
+setNodeCompareDirectMult  $net {3ServiceLevelAgreement(SLA)Compliance} {3Alternatives} 24.0
 setNetCompareWord $net {important}
 setNetClusterColor $net {gainsboro}
 setNetNodeColor $net {#F0F8FF}
@@ -324,7 +365,7 @@ c-network readAllCompares -network $net -source {
 1Selecting the best vendor for outsourcing IT services
 2_1ServiceQuality
 3
-1Service Level Agreement
+1Responsiveness
 2CustomerSatisfactionRecord
 3ServiceLevelAgreement(SLA)Compliance
 2_2Security
@@ -349,24 +390,124 @@ c-network readAllCompares -network $net -source {
 3C_Company
 4D_Company
 
-0 
+6 0,0 4,1 1,2 2,3 3,4 5,5 
+ 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000 
+ 1.000000  0.000000  0.000000  0.000000  0.000000  0.000000 
+ 0.000000  1.000000  0.000000  0.000000  0.000000  0.000000 
+ 0.000000  1.000000  0.000000  0.000000  0.000000  0.000000 
+ 0.000000  1.000000  0.000000  0.000000  0.000000  0.000000 
+ 0.000000  0.000000  1.000000  1.000000  1.000000  0.000000 
 0
-0 
+1 4,0 
 
 1
-0 
+1 5,0 
 
 2
-0 
+1 5,0 
 
 3
-0 
+1 5,0 
 
 4
-0 
+3 1,0 2,1 3,2 
+ 0.000000  0.000000 
+ 0.000000 
 
 5
 0 
+
+0,0,4
+3 0,0 1,1 2,2 
+ 1.666667  1.666667 
+ 1.000000 
+
+1,0,5
+4 0,0 2,1 1,2 3,3 
+ 1.000000  2.000000  2.000000 
+ 2.000000  2.000000 
+ 1.000000 
+
+1,1,5
+4 0,0 1,1 2,2 3,3 
+ 1.750000  1.166667  2.333333 
+ 0.666667  1.333333 
+ 2.000000 
+
+1,2,5
+4 2,0 1,1 0,2 3,3 
+ 1.666667  0.625000  0.625000 
+ 0.375000  0.375000 
+ 1.000000 
+
+2,0,5
+4 1,0 0,1 2,2 3,3 
+ 0.000000  0.000000  0.000000 
+ 0.000000  0.000000 
+ 0.000000 
+
+2,1,5
+4 1,0 2,1 3,2 0,3 
+ 0.000000  0.000000  0.000000 
+ 0.000000  0.000000 
+ 0.000000 
+
+2,2,5
+4 0,0 1,1 2,2 3,3 
+ 0.000000  0.000000  0.000000 
+ 0.000000  0.000000 
+ 0.000000 
+
+3,0,5
+4 1,0 0,1 2,2 3,3 
+ 0.000000  0.000000  0.000000 
+ 0.000000  0.000000 
+ 0.000000 
+
+3,1,5
+4 0,0 1,1 2,2 3,3 
+ 0.000000  0.000000  0.000000 
+ 0.000000  0.000000 
+ 0.000000 
+
+3,2,5
+4 0,0 1,1 2,2 3,3 
+ 0.000000  0.000000  0.000000 
+ 0.000000  0.000000 
+ 0.000000 
+
+4,0,1
+3 0,0 1,1 2,2 
+ 2.000000  3.333333 
+ 1.666667 
+
+4,1,1
+0 
+
+4,2,1
+0 
+
+4,0,2
+0 
+
+4,1,2
+3 0,0 1,1 2,2 
+ 1.250000  1.000000 
+ 0.800000 
+
+4,2,2
+0 
+
+4,0,3
+0 
+
+4,1,3
+0 
+
+4,2,3
+3 0,0 1,1 2,2 
+ 1.600000  1.142857 
+ 0.714286 
 
 }
 
