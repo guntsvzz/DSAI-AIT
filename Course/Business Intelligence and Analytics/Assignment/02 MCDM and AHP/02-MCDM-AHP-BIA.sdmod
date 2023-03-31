@@ -1,6 +1,6 @@
 set top_net [getTopNet $net]
 set SAVED_WITH_VERSION {3.2.0 made on Wed, 16 Jan 2019 13:36:28 -0500.  VCRevInfo 3197.  Installed on Windows}
-setDefaultCompareMode $net switch_to_question
+setDefaultCompareMode $net switch_to_direct
 set x 12
 set y 41
 set desc {}
@@ -330,25 +330,31 @@ set init {2_3Financial}
 set final {3Alternatives}
 connectClusters $net $init $final
 setNodeCompareWord  $net {1DataSecurity} {3Alternatives} {important}
-setNodeCompareWord  $net {1Pricing&Costs} {3Alternatives} {}
+setNodeCompareDirectMult  $net {1DataSecurity} {3Alternatives} 30.0
+setNodeCompareWord  $net {1Pricing&Costs} {3Alternatives} {important}
+setNodeCompareDirectMult  $net {1Pricing&Costs} {3Alternatives} 30.0
 setNodeCompareWord  $net {1Responsiveness} {3Alternatives} {important}
-setNodeCompareDirectMult  $net {1Responsiveness} {3Alternatives} 30.0
+setNodeCompareDirectMult  $net {1Responsiveness} {3Alternatives} 27.0
 setNodeCompareWord  $net {1Selecting the best vendor for outsourcing IT services} {2Criteria} {important}
 setNodeCompareDirectMult  $net {1Selecting the best vendor for outsourcing IT services} {2Criteria} 11.0
 setNodeCompareWord  $net {1ServiceQuality} {2_1ServiceQuality} {important}
-setNodeCompareDirectMult  $net {1ServiceQuality} {2_1ServiceQuality} 18.0
+setNodeCompareDirectMult  $net {1ServiceQuality} {2_1ServiceQuality} 20.0
 setNodeCompareWord  $net {2CustomerSatisfactionRecord} {3Alternatives} {important}
-setNodeCompareDirectMult  $net {2CustomerSatisfactionRecord} {3Alternatives} 20.0
-setNodeCompareWord  $net {2NetworkSecurity} {3Alternatives} {}
-setNodeCompareWord  $net {2PaymentTerms} {3Alternatives} {}
+setNodeCompareDirectMult  $net {2CustomerSatisfactionRecord} {3Alternatives} 32.0
+setNodeCompareWord  $net {2NetworkSecurity} {3Alternatives} {important}
+setNodeCompareDirectMult  $net {2NetworkSecurity} {3Alternatives} 27.0
+setNodeCompareWord  $net {2PaymentTerms} {3Alternatives} {important}
+setNodeCompareDirectMult  $net {2PaymentTerms} {3Alternatives} 30.0
 setNodeCompareWord  $net {2Security} {2_2Security} {important}
-setNodeCompareDirectMult  $net {2Security} {2_2Security} 28.0
-setNodeCompareWord  $net {3Confidentiality} {3Alternatives} {}
+setNodeCompareDirectMult  $net {2Security} {2_2Security} 25.0
+setNodeCompareWord  $net {3Confidentiality} {3Alternatives} {important}
+setNodeCompareDirectMult  $net {3Confidentiality} {3Alternatives} 29.0
 setNodeCompareWord  $net {3Financial} {2_3Financial} {important}
-setNodeCompareDirectMult  $net {3Financial} {2_3Financial} 20.0
+setNodeCompareDirectMult  $net {3Financial} {2_3Financial} 18.0
 setNodeCompareWord  $net {3FinancialStability} {3Alternatives} {important}
+setNodeCompareDirectMult  $net {3FinancialStability} {3Alternatives} 30.0
 setNodeCompareWord  $net {3ServiceLevelAgreement(SLA)Compliance} {3Alternatives} {important}
-setNodeCompareDirectMult  $net {3ServiceLevelAgreement(SLA)Compliance} {3Alternatives} 24.0
+setNodeCompareDirectMult  $net {3ServiceLevelAgreement(SLA)Compliance} {3Alternatives} 22.0
 setNetCompareWord $net {important}
 setNetClusterColor $net {gainsboro}
 setNetNodeColor $net {#F0F8FF}
@@ -419,67 +425,67 @@ c-network readAllCompares -network $net -source {
 
 0,0,4
 3 0,0 1,1 2,2 
- 1.666667  1.666667 
- 1.000000 
+ 0.166667  1.666667 
+ 5.000000 
 
 1,0,5
 4 0,0 2,1 1,2 3,3 
- 1.000000  2.000000  2.000000 
- 2.000000  2.000000 
- 1.000000 
+ 0.888889  2.000000  1.333333 
+ 2.250002  1.500000 
+ 0.666667 
 
 1,1,5
 4 0,0 1,1 2,2 3,3 
- 1.750000  1.166667  2.333333 
- 0.666667  1.333333 
- 2.000000 
+ 0.777778  0.875000  0.875000 
+ 1.125000  1.125000 
+ 1.000000 
 
 1,2,5
 4 2,0 1,1 0,2 3,3 
- 1.666667  0.625000  0.625000 
- 0.375000  0.375000 
- 1.000000 
+ 1.250000  0.555556  1.250000 
+ 0.444444  1.000000 
+ 2.250000 
 
 2,0,5
 4 1,0 0,1 2,2 3,3 
- 0.000000  0.000000  0.000000 
- 0.000000  0.000000 
- 0.000000 
+ 0.777778  0.777778  1.400000 
+ 1.000000  1.800000 
+ 1.800000 
 
 2,1,5
 4 1,0 2,1 3,2 0,3 
- 0.000000  0.000000  0.000000 
- 0.000000  0.000000 
- 0.000000 
+ 0.857143  0.857143  0.857143 
+ 1.000000  1.000000 
+ 1.000000 
 
 2,2,5
 4 0,0 1,1 2,2 3,3 
- 0.000000  0.000000  0.000000 
- 0.000000  0.000000 
- 0.000000 
+ 0.777778  1.166667  1.000000 
+ 1.500000  1.285714 
+ 0.857143 
 
 3,0,5
 4 1,0 0,1 2,2 3,3 
- 0.000000  0.000000  0.000000 
- 0.000000  0.000000 
- 0.000000 
+ 1.166667  0.875000  0.777778 
+ 0.750000  0.666667 
+ 0.888889 
 
 3,1,5
 4 0,0 1,1 2,2 3,3 
- 0.000000  0.000000  0.000000 
- 0.000000  0.000000 
- 0.000000 
+ 1.333333  0.888889  1.142857 
+ 0.666667  0.857143 
+ 1.285714 
 
 3,2,5
 4 0,0 1,1 2,2 3,3 
- 0.000000  0.000000  0.000000 
- 0.000000  0.000000 
- 0.000000 
+ 0.777778  0.875000  1.166667 
+ 1.125000  1.500000 
+ 1.333333 
 
 4,0,1
 3 0,0 1,1 2,2 
- 2.000000  3.333333 
- 1.666667 
+ 1.000000  0.500000 
+ 0.500000 
 
 4,1,1
 0 
@@ -492,8 +498,8 @@ c-network readAllCompares -network $net -source {
 
 4,1,2
 3 0,0 1,1 2,2 
- 1.250000  1.000000 
- 0.800000 
+ 2.000000  1.000000 
+ 0.500000 
 
 4,2,2
 0 
@@ -506,8 +512,8 @@ c-network readAllCompares -network $net -source {
 
 4,2,3
 3 0,0 1,1 2,2 
- 1.600000  1.142857 
- 0.714286 
+ 2.000000  0.666667 
+ 0.333333 
 
 }
 
