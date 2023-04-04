@@ -517,4 +517,60 @@ How to move Pr to Pg ? Move mass of 1/4 from P(1) to P(0)
 - inductive learning represetation (looking specific case) to apply a new graph
 5. masked attention
 - nearest neighborhood
-6. 
+
+## Discussion 18 ViT
+1. What is this paper try to convey ? 
+- Transformer trained with hugh dataset perform well image classification
+2. Main result
+- CNN easy optimize 
+3. What Transformer do in ViT
+- using image patches instead of tokenization
+4. ResNet of comparable size
+- 
+5. inductive bias
+- translation equivariance and locality 
+6. ViT not perform well as ResNet then how to better result
+- train on bigger size
+7. Naive applications 
+- number of token -> quadratic cost
+8. Individual picture doesn't work what about other research do
+- apply self-attention to local neighborhoods
+- Sparse 
+9. ImagesNet 21k
+- 21k class
+10. Hybird Architecture 
+-  changing raw image to be feature map of CNN
+11. Fine-tuning and high resolution
+- keep the patch size
+- 2D interpolation of the pre-trained PE
+12. ResNet baseline
+- replacing BatchNorm instead of GroupNorm and standardized convo.
+13. few-shot accuracy
+- 
+14. TPUv3-core-days
+- 16 GPU of RTX 
+15. limitation
+- image classification
+- large dataset
+
+## Discussion 19 Swin Transformer 
+1. What is this paper try to convey ? 
+- Transformer can perform multiple tasks
+2. general-purpose backbone
+- 
+3. challenge
+- scale -> fine-grained scale, we want multi-scale
+- high resolution
+4. Ideal of Swin to overcome the scale
+- divide to patch 
+5. Quadratic vs Linearity
+- global
+6. summary contribution
+- shifted window is better than sliding window
+7. classification result 
+- image classificationm, object detection and semeantic segmentation
+8. ViT and DeiT cannot be a backbone
+- general-purpose performance rather than specially on classification
+9. relative position bias
+- postion within window
+10. 
