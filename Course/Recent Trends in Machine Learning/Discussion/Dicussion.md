@@ -573,4 +573,34 @@ How to move Pr to Pg ? Move mass of 1/4 from P(1) to P(0)
 - general-purpose performance rather than specially on classification
 9. relative position bias
 - postion within window
-10. 
+
+## Discussion 20 DQN
+1. What is this paper try to convey ? 
+- Deep neural network wiht experience replay estimate optimal value function
+- CNN action-value 
+2. Challenge of Sensory input
+- hand-crafted feature inputs
+3. Then how to change
+- extract high-level feature from raw input
+4. Supervised Data and RL
+- Supervisde : required label data and data are independent
+- RL : learn from reward and correlate data
+5. What ALE get
+- interal state, action, reward
+6. Value iteration impact large state
+- generalize better
+7. model-free
+- avoid to using P(s,a)
+8. off-policy 
+- learn the optimal policy rather than the optimal e-greedy policy instead
+9. TD-gammon
+- approximate the value fucntion using MLP not CNN
+10. before DQN, the first use visual input
+- NFQ using autoencoders to learn a low dimensional representation of the task
+11. experience replay
+- store the agent's experience at each time-step
+12. combine with Q-learning
+- sample whoe batch, that batch should be more diverse in sequence of state
+13. why DQN is off-policy
+- use current data is optimal -> future reward
+14. 
