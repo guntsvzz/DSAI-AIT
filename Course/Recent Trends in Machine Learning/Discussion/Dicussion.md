@@ -603,4 +603,13 @@ How to move Pr to Pg ? Move mass of 1/4 from P(1) to P(0)
 - sample whoe batch, that batch should be more diverse in sequence of state
 13. why DQN is off-policy
 - use current data is optimal -> future reward
-14. 
+
+
+## Discussion 21 DRQN
+1. What is this paper try to convey ?  
+- DQN with LSTM can handle long history observations.
+
+## Discussion 22 DDQN
+1. What is this paper try to convey ? 
+- Double Deep Q-learning eliminate maximization bias by seperating
+- DQN solve the problem of large overestimations of action value (Q-value)
