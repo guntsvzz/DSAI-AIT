@@ -608,8 +608,32 @@ How to move Pr to Pg ? Move mass of 1/4 from P(1) to P(0)
 ## Discussion 21 DRQN
 1. What is this paper try to convey ?  
 - DQN with LSTM can handle long history observations.
+2. Why do we need recurrence
+- long memory abritary
+3. 4 frame required
+- it cannot cover screen of the game for full-state
+4. equation 3
+- gradient descent (negative sign)
+5. technique DQN
+- replay memory
+- seperate Q network
+- fancy optimizer
+6. POMDP vs MDP
+- MDP get state directly but POMDP generate probability distribution.
+- set of possible observation (Omega)
+- probability distribution o - O(s)
+7. state and observation is not the same
+- observation get from probability distribution instead of each state.
+8. What a difference of replay buffer
+- replay buffer use single state
+9. why partial observability
+- mostly, game is MDP is enough to play a game. 
+10.  10 frame DQN vs 1 frame DRQN
+- recurrent network integrate information through time and serve to stacking frames of input layer CNN
+
 
 ## Discussion 22 DDQN
 1. What is this paper try to convey ? 
-- Double Deep Q-learning eliminate maximization bias by seperating
-- DQN solve the problem of large overestimations of action value (Q-value)
+- Double Deep Q-learning eliminate maximization bias by seperating Q-value
+- Double Q-learning solve the problem of large overestimations of action-value (Q-value)
+2. 
