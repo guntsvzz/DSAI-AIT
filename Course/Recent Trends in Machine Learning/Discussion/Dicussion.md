@@ -636,4 +636,47 @@ How to move Pr to Pg ? Move mass of 1/4 from P(1) to P(0)
 1. What is this paper try to convey ? 
 - Double Deep Q-learning eliminate maximization bias by seperating Q-value
 - Double Q-learning solve the problem of large overestimations of action-value (Q-value)
-2. 
+
+
+## Discussion 23 AlphaGO
+1. What is this paper try to convey ? 
+- AlphaGo combining neural networks and tree search beat human.
+- MCTS and deep RL enable playing Go
+2. optimal value function
+- 
+3. b power d
+- b is legal move/position, d is game length
+4. How can we reduce depth search
+- 
+5. Monte Carlo rollouts
+- MC perform randomize simulation 
+- rollout sample sequence tree with multiple time
+6. previous attempt before Alpha Go happen
+- limited to shallow policies or value function
+7. Monte Carlo Tree search
+- estimate the value of each statte in a search tree, policy convevrges to optimal play
+8. structure of policy network and how to train
+- 13-layer policy network with KGS GO Server
+9. RL of policy network
+- output as +1 for wining and -1 for losing
+10. how to train value network
+
+
+
+## Discussion 24 AlphaGoZero
+1. What is this paper try to convey ? 
+- Self-play RL with single neural networks & MCTS.
+- guiding MCTS with policy network with enable superhuman Go performance
+2. Tabula rasa
+- no built-in RL
+3. AlphaGo Fan
+- similarly AlphaGo 
+4. Policy network
+- 
+5. What a different of AlphaGo Zero comparing others
+- without human data
+- black and white stone as input features
+- no MC rollout
+- single network
+6. What is f(s)
+- add batch norm and non-linearity
