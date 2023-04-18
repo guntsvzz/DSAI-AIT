@@ -680,3 +680,11 @@ How to move Pr to Pg ? Move mass of 1/4 from P(1) to P(0)
 - single network
 6. What is f(s)
 - add batch norm and non-linearity
+
+
+## Discussion 25 PPO
+1. What is this paper try to convey ? 
+- A clip surrogate objective function avoid destructive large weights updates
+2. 
+
+3. 
