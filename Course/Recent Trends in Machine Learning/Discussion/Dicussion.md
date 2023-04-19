@@ -688,3 +688,55 @@ How to move Pr to Pg ? Move mass of 1/4 from P(1) to P(0)
 2. 
 
 3. 
+
+## Discussion 26 learning to drive a car
+1. What is this paper try to convey ? 
+- DDPG with expert invention drive autonomous car.
+2. problem of formal logic
+- local map but hard to scale
+3. comprehensive to drive successfully.
+- local map for obseravtion
+4. what a paper claim
+- autonomous driving as an MDP
+- canonical RL algorithm
+- efficient and safe on a real-world vehicle
+- using only on-board compuration
+5. semantic segmentation 
+- frame one map to seperate
+6. imiation learning
+- difficult to scale
+7. finite time horizon T
+- time is limited
+8. Model-based driven agent do
+- maximise cumulative reward
+9. State space
+- 
+10. how to process image
+- convolution, VAE
+11. action space
+- steering angle in the range [-1,1] and speed setpoint in km/h
+12. reward function
+- terminate an episode
+13. what a main idea of DDPG
+- continuous action space
+14. informative examples from the replay buffer
+- prioritised experience replay
+15. noise
+- adding discrete Ornstie-Uhlenbeck process noise
+- creating optimal 
+
+## Discussion 27 Towards A Rigorous Science of Interpretable Machine Learning
+1. What is this paper try to convey ? 
+- interpretability in ML should it be better
+2. auxiliary
+- safety, nondiscrimination, avoiding techinical debt, the right ot explanation
+3. evaulation
+- context of an application and quatifiable proxy
+4. interpretability
+- ability to explain in unstandable term to a human
+5. fairness and unbiasness
+- avoid discrimination
+6.  
+- 
+7. 
+- 
