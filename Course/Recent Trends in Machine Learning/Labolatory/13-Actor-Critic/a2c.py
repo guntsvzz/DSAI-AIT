@@ -52,7 +52,7 @@ def roll_out(actor_network,task,sample_nums,value_network,init_state):
         softmax_action = torch.exp(log_softmax_action)
         action = np.random.choice(ACTION_DIM,p=softmax_action.cpu().data.numpy()[0])
         one_hot_action = [int(k == action) for k in range(ACTION_DIM)]
-        next_state,reward,done,_ = task.step(action)
+        next_state,reward,done,_,_ = task.step(action)
         #fix_reward = -10 if done else 1
         actions.append(one_hot_action)
         rewards.append(reward)
@@ -60,7 +60,7 @@ def roll_out(actor_network,task,sample_nums,value_network,init_state):
         state = next_state
         if done:
             is_done = True
-            state = task.reset()
+            state, _ = task.reset()
             break
     if not is_done:
         final_r = value_network(torch.Tensor([final_state])).cpu().data.numpy()
@@ -78,7 +78,7 @@ def discount_reward(r, gamma,final_r):
 def A2C():
     # init a task generator for data fetching
     task = gym.make("CartPole-v1")
-    init_state = task.reset()
+    init_state, _ = task.reset()
 
     # init value network
     value_network = ValueNetwork(input_size = STATE_DIM,hidden_size = 40,output_size = 1)
@@ -126,12 +126,12 @@ def A2C():
                 result = 0
                 test_task = gym.make("CartPole-v1")
                 for test_epi in range(10):
-                    state = test_task.reset()
+                    state, _ = test_task.reset()
                     for test_step in range(200):
                         softmax_action = torch.exp(actor_network(torch.Tensor([state])))
                         #print(softmax_action.data)
                         action = np.argmax(softmax_action.data.numpy()[0])
-                        next_state,reward,done,_ = test_task.step(action)
+                        next_state,reward,done,_,_ = test_task.step(action)
                         result += reward
                         state = next_state
                         if done:
