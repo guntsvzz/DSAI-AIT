@@ -30,10 +30,11 @@ https://drive.google.com/drive/u/2/folders/1OPFng8cOE2D4HaxDtqqskQ9QgFRpti_2
 [project](/Project)
 
 # Inter Semester
-- AT82.13 Internship/Co-op
+- AT60.992A Selected Topic: DSAI Seminar [Special Study](https://github.com/guntsvzz/Parameter-Efficient-Fune-Tuning)
+
 # Semester Aug 2024
-- AT82.9001 Selected Topic: DSAI Seminar
 - Thesis
 
 # Semester Jan 2024 
 - Thesis
+- AT82.13 Internship/Co-op
