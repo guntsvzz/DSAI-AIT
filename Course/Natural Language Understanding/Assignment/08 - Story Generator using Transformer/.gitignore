@@ -1,5 +1,0 @@
-assets/
-datasets/
-models/
-*.pickle
-DecoderTransformer.py
