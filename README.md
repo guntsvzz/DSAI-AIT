@@ -32,9 +32,15 @@ https://drive.google.com/drive/u/2/folders/1OPFng8cOE2D4HaxDtqqskQ9QgFRpti_2
 # Inter Semester
 - AT60.992A Selected Topic: DSAI Seminar [Special Study](https://github.com/guntsvzz/Parameter-Efficient-Fune-Tuning)
 
-# Semester Aug 2024
+# Semester Aug 2023
 - Thesis
 
 # Semester Jan 2024 
 - Thesis
 - AT82.13 Internship/Co-op
+
+# Semester Aug 2024
+- AT70.03 Theory of Computation
+- AT72.03	Statistical Models and Design of Experiments	
+- AT70.25	Full Stack Application Development
+-	AT70.05	Computer Networks 
